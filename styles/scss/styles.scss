@@ -11,6 +11,7 @@ $breakpoints: ('xs': 575px,
 
 // Colors
 $color-primary: #333645;
+$color-hover: #222;
 
 // Media queries
 @mixin mq($break) {
@@ -36,10 +37,17 @@ $color-primary: #333645;
 
 // mixins
 
-@mixin header-container {
+@mixin header-container($basis, $direction) {
     display: flex;
+    flex-basis: $basis;
     align-items: center;
     height: 100%;
+    justify-items: $direction;
+}
+
+@mixin flexy-center {
+    display: flex;
+    align-items: center;
 }
 
 /* ====================================================== */
@@ -51,11 +59,16 @@ $color-primary: #333645;
 }
 
 body {
+    font-family: 'Poppins', sans-serif;
     margin: 0;
 }
 
 html {
     font-size: $base-font-size;
+}
+
+a {
+    text-decoration: none;
 }
 
 /* ====================================================== */
@@ -77,46 +90,80 @@ header {
 /* ====================================================== */
 
 .container {
-    display: flex;
+    @include flexy-center;
     flex-basis: 56px;
-    align-items: center;
     width: 90vw;
     max-width: 1072px;
-    div {
-        @include header-container;
     }
-}
 
 .logo-container {
-    flex-basis: 65%;
+    @include header-container(65%, left);
+    }
+
+.logo {
+    @include flexy-center;
     img {
         width: 100%;
-    }
+        }
 }
 
 .call-container {
-    flex-basis: 15%;
-    justify-items: right;
+        @include header-container(13%, right);
 }
 
 
 .call-icon {
+    @include flexy-center;
     margin-left: auto;
+    border-bottom: solid 2px #fff;
     &::before {
         font-family: 'icomoon';
         font-size: 1.5rem;
         color: $color-primary;
-        content: "\e9e5"
+        content: "\e9e5";
+    }
+    &:hover {
+        color: $color-hover;
+        border-bottom: solid 2px $color-hover;
+        &:before {
+            color: $color-hover;
+        }
     }
 }
 
 .menu-container {
-    flex-basis: 20%;
+    @include header-container(22%, right);
 }
 
 .hamburger {
     background-color: $color-primary;
     border-radius: 3px;
+    height: 100%;
+    width: 63px;
+    margin-left: auto;
+    padding-top: 10px;
+    :nth-child(2) {
+        margin: 5px auto;
+    }
+    &:hover {
+        background-color: $color-hover;
+    }
+}
+
+.burger-slice {
+    width: 33px;
+    height: 3px;
+    background-color: #fff;
+    margin: 0 auto;
+}
+
+.burger-text {
+    font-size: 0.75rem;
+    margin-top: 5px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+
 }
 
 .search-box {
