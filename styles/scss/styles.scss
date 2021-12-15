@@ -1,7 +1,8 @@
 // Partials imports
-@import 'reset/normalize';
+@import 'reset/normalize/import-now';
 
 // // Variables
+
 // Breakpoints
 $breakpoints: ('xs': 575px,
     'sm': 576px,
@@ -12,6 +13,9 @@ $breakpoints: ('xs': 575px,
 // Colors
 $color-primary: #333645;
 $color-hover: #222;
+$color-input-back: rgba(0,0,0,.1);
+$color-input-outline: hsla(0,0%,100%,.2);
+$color-input-border: rgba(0,0,0,.1);
 
 // Media queries
 @mixin mq($break) {
@@ -59,16 +63,22 @@ $color-hover: #222;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    
     margin: 0;
 }
 
 html {
-    font-size: $base-font-size;
+    font-size: $base-font-size!important;
+    font-family: 'Poppins', sans-serif!important;
 }
 
 a {
     text-decoration: none;
+    color: $color-primary;
+}
+
+input, textarea, select {
+    font-family: inherit;
 }
 
 /* ====================================================== */
@@ -163,9 +173,31 @@ header {
     color: #fff;
     text-transform: uppercase;
     text-align: center;
-
 }
 
-.search-box {
+.search-form {
+    @include flexy-center;
     width: 100%;
+    height: 47px;
+    padding: 5px 10px 5px 15px;
+    background-color: $color-input-back;
+    outline: 1px solid $color-input-outline;
+    border: 2px solid $color-input-border;
+    input {
+        border: none;
+        outline: none;
+        background-color: transparent;
+    }
+    a {
+        margin-left: auto;
+        border: none;
+        background-color: transparent;
+        span {
+            font-family: 'glyphicons', sans-serif;
+            font-size: 1.25rem;
+            &::before {
+                content: "\e003"
+            }
+        }
+    }
 }

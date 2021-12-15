@@ -9,3 +9,10 @@
     font-style: normal;
 
 }
+
+@font-face {
+    font-family: 'glyphicons';
+    src: url('glyphicons-halflings-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
