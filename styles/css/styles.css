@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* ====================================================== */
 /* === Base Styles                                    === */
 /* ====================================================== */
@@ -18,16 +19,63 @@ html {
 /* ====================================================== */
 header {
   display: flex;
+  flex-direction: column;
   width: 100%;
+  height: 168px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 /* ====================================================== */
 /* === Layout                                         === */
 /* ====================================================== */
 .container {
+  display: flex;
+  flex-basis: 56px;
+  align-items: center;
   width: 90vw;
-  max-width: 1000px;
-  margin: 5vw;
+  max-width: 1072px;
+}
+.container div {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.logo-container {
+  flex-basis: 65%;
+}
+.logo-container img {
+  width: 100%;
+}
+
+.call-container {
+  flex-basis: 15%;
+  justify-items: right;
+}
+
+.call-icon {
+  margin-left: auto;
+}
+.call-icon::before {
+  font-family: "icomoon";
+  font-size: 1.5rem;
+  color: #333645;
+  content: "";
+}
+
+.menu-container {
+  flex-basis: 20%;
+}
+
+.hamburger {
+  background-color: #333645;
+  border-radius: 3px;
+}
+
+.search-box {
+  width: 100%;
 }
 
 /*# sourceMappingURL=styles.css.map */
