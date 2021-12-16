@@ -471,7 +471,9 @@ a {
   color: #333645;
 }
 
-input, textarea, select {
+input,
+textarea,
+select {
   font-family: inherit;
 }
 
@@ -485,23 +487,38 @@ header {
   height: 168px;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 14px;
+  padding-top: 12px;
 }
 
 /* ====================================================== */
 /* === Layout                                         === */
 /* ====================================================== */
-.container {
+.top-container {
   display: flex;
   align-items: center;
-  flex-basis: 56px;
-  width: 90vw;
+  width: 92vw;
   max-width: 1072px;
+  flex-basis: 56px;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  width: 92vw;
+  max-width: 1072px;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 4vw;
+  z-index: 40;
 }
 
 .logo-container {
   display: flex;
-  flex-basis: 65%;
+  flex-basis: 63%;
   align-items: center;
   height: 100%;
   justify-items: left;
@@ -521,6 +538,8 @@ header {
   align-items: center;
   height: 100%;
   justify-items: right;
+  display: flex;
+  align-items: center;
 }
 
 .call-icon {
@@ -545,7 +564,7 @@ header {
 
 .menu-container {
   display: flex;
-  flex-basis: 22%;
+  flex-basis: 25%;
   align-items: center;
   height: 100%;
   justify-items: right;
@@ -574,8 +593,8 @@ header {
 }
 
 .burger-text {
+  margin-top: 7px;
   font-size: 0.75rem;
-  margin-top: 5px;
   color: #fff;
   text-transform: uppercase;
   text-align: center;
@@ -586,15 +605,18 @@ header {
   align-items: center;
   width: 100%;
   height: 47px;
-  padding: 5px 10px 5px 15px;
+  padding: 6px 10px 5px 15px;
   background-color: rgba(0, 0, 0, 0.1);
   outline: 1px solid rgba(255, 255, 255, 0.2);
   border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1) inset;
 }
 .search-form input {
   border: none;
   outline: none;
   background-color: transparent;
+  font-size: 0.9rem;
 }
 .search-form a {
   margin-left: auto;
@@ -607,6 +629,74 @@ header {
 }
 .search-form a span::before {
   content: "";
+}
+
+#about {
+  width: 100%;
+  height: calc(100vh - 166px);
+  min-height: 530px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.about-carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.about-carousel::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, black 100%);
+}
+.about-carousel img {
+  display: block;
+  height: 100%;
+  transform: translate(calc(-50% + 50vw));
+}
+
+.about-title {
+  color: #fff;
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.about-text {
+  font-size: 1.25rem;
+  line-height: 2.25rem;
+  margin-bottom: 35px;
+  color: #fff;
+  text-align: center;
+}
+
+.btn-cta {
+  display: inline-block;
+  height: auto;
+  font-size: 1.25rem;
+  line-height: 50px;
+  text-transform: uppercase;
+  padding: 5px 20px;
+  color: #fff;
+  border-radius: 3px;
+}
+
+.btn-cta {
+  background-color: #926fb1;
+}
+
+.right-arrow {
+  float: right;
+  margin: 0 -4px 0 12px;
+}
+.right-arrow::before {
+  font-family: "icomoon";
+  content: "";
 }
 
 /*# sourceMappingURL=styles.css.map */
