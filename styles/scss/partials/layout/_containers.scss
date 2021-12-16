@@ -49,5 +49,15 @@
 .services-card-deck {
     @include layout-div;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.services-card {
+    @include service-color($card-colors);
+}
+
+div[class^="services-card-icon-container"] {
+    
 }

@@ -53,6 +53,6 @@
 .btn {
     &-cta {
         @extend %btn;
-        background-color: $card-web-color;
+        background-color: map-get($map: $card-colors, $key: 'web');
     }
 }

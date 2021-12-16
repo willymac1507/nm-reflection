@@ -49,3 +49,45 @@
     height: 100%;
     overflow: hidden;
 }
+
+// Colors
+@mixin service-color($map) {
+
+    @each $theme,
+    $color, $icon in $map {
+        &-#{$theme} {
+            @include page-container;
+            height: 334px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+
+            &:hover {
+                background-color: $color;
+                color: #fff;
+
+                div {
+                    background-color: #fff;
+                    color: $color;
+                }
+            }
+        }
+
+        &-icon-container-#{$theme} {
+            height: 60px;
+            width: 60px;
+            margin: 0 auto 17px;
+            border-radius: 50%;
+            background-color: $color;
+        }
+
+        &-icon-#{$theme} {
+            color: #fff;
+        }
+
+        &-button-#{$theme} {
+            background-color: $color;
+        }
+    }
+}
