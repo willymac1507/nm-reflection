@@ -2,9 +2,16 @@
 /* === Sections                                       === */
 /* ====================================================== */
 
-#about {
+section {
     width: 100%;
+    background-color: $color-background;
+}
+
+#about {
     height: calc(100vh - 166px);
     min-height: 530px;
-    background-color: $color-input-back;
+}
+
+#services {
+    padding: 50px 0;
 }
