@@ -578,11 +578,14 @@ header {
   align-items: center;
   width: 92vw;
   max-width: 1072px;
-  height: 334px;
+  flex-direction: column;
+  position: relative;
+  height: auto;
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 3px;
   box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+  padding: 30px;
 }
 .services-card-bespoke:hover {
   background-color: #67809f;
@@ -592,29 +595,31 @@ header {
   background-color: #fff;
   color: #67809f;
 }
+.services-card-bespoke:hover .services-card-header::after {
+  background-color: #fff;
+}
 .services-card-icon-container-bespoke {
   height: 60px;
   width: 60px;
   margin: 0 auto 17px;
   border-radius: 50%;
   background-color: #67809f;
-}
-.services-card-icon-bespoke {
   color: #fff;
-}
-.services-card-button-bespoke {
-  background-color: #67809f;
+  text-align: center;
 }
 .services-card-it {
   display: flex;
   align-items: center;
   width: 92vw;
   max-width: 1072px;
-  height: 334px;
+  flex-direction: column;
+  position: relative;
+  height: auto;
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 3px;
   box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+  padding: 30px;
 }
 .services-card-it:hover {
   background-color: #4183d7;
@@ -624,29 +629,31 @@ header {
   background-color: #fff;
   color: #4183d7;
 }
+.services-card-it:hover .services-card-header::after {
+  background-color: #fff;
+}
 .services-card-icon-container-it {
   height: 60px;
   width: 60px;
   margin: 0 auto 17px;
   border-radius: 50%;
   background-color: #4183d7;
-}
-.services-card-icon-it {
   color: #fff;
-}
-.services-card-button-it {
-  background-color: #4183d7;
+  text-align: center;
 }
 .services-card-marketing {
   display: flex;
   align-items: center;
   width: 92vw;
   max-width: 1072px;
-  height: 334px;
+  flex-direction: column;
+  position: relative;
+  height: auto;
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 3px;
   box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+  padding: 30px;
 }
 .services-card-marketing:hover {
   background-color: #2ecc71;
@@ -656,29 +663,31 @@ header {
   background-color: #fff;
   color: #2ecc71;
 }
+.services-card-marketing:hover .services-card-header::after {
+  background-color: #fff;
+}
 .services-card-icon-container-marketing {
   height: 60px;
   width: 60px;
   margin: 0 auto 17px;
   border-radius: 50%;
   background-color: #2ecc71;
-}
-.services-card-icon-marketing {
   color: #fff;
-}
-.services-card-button-marketing {
-  background-color: #2ecc71;
+  text-align: center;
 }
 .services-card-telecoms {
   display: flex;
   align-items: center;
   width: 92vw;
   max-width: 1072px;
-  height: 334px;
+  flex-direction: column;
+  position: relative;
+  height: auto;
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 3px;
   box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+  padding: 30px;
 }
 .services-card-telecoms:hover {
   background-color: #d64541;
@@ -688,29 +697,31 @@ header {
   background-color: #fff;
   color: #d64541;
 }
+.services-card-telecoms:hover .services-card-header::after {
+  background-color: #fff;
+}
 .services-card-icon-container-telecoms {
   height: 60px;
   width: 60px;
   margin: 0 auto 17px;
   border-radius: 50%;
   background-color: #d64541;
-}
-.services-card-icon-telecoms {
   color: #fff;
-}
-.services-card-button-telecoms {
-  background-color: #d64541;
+  text-align: center;
 }
 .services-card-web {
   display: flex;
   align-items: center;
   width: 92vw;
   max-width: 1072px;
-  height: 334px;
+  flex-direction: column;
+  position: relative;
+  height: auto;
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 3px;
   box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+  padding: 30px;
 }
 .services-card-web:hover {
   background-color: #926fb1;
@@ -720,29 +731,31 @@ header {
   background-color: #fff;
   color: #926fb1;
 }
+.services-card-web:hover .services-card-header::after {
+  background-color: #fff;
+}
 .services-card-icon-container-web {
   height: 60px;
   width: 60px;
   margin: 0 auto 17px;
   border-radius: 50%;
   background-color: #926fb1;
-}
-.services-card-icon-web {
   color: #fff;
-}
-.services-card-button-web {
-  background-color: #926fb1;
+  text-align: center;
 }
 .services-card-security {
   display: flex;
   align-items: center;
   width: 92vw;
   max-width: 1072px;
-  height: 334px;
+  flex-direction: column;
+  position: relative;
+  height: auto;
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 3px;
   box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+  padding: 30px;
 }
 .services-card-security:hover {
   background-color: #f62459;
@@ -752,29 +765,31 @@ header {
   background-color: #fff;
   color: #f62459;
 }
+.services-card-security:hover .services-card-header::after {
+  background-color: #fff;
+}
 .services-card-icon-container-security {
   height: 60px;
   width: 60px;
   margin: 0 auto 17px;
   border-radius: 50%;
   background-color: #f62459;
-}
-.services-card-icon-security {
   color: #fff;
-}
-.services-card-button-security {
-  background-color: #f62459;
+  text-align: center;
 }
 .services-card-training {
   display: flex;
   align-items: center;
   width: 92vw;
   max-width: 1072px;
-  height: 334px;
+  flex-direction: column;
+  position: relative;
+  height: auto;
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 3px;
   box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+  padding: 30px;
 }
 .services-card-training:hover {
   background-color: #926fb1;
@@ -784,18 +799,17 @@ header {
   background-color: #fff;
   color: #926fb1;
 }
+.services-card-training:hover .services-card-header::after {
+  background-color: #fff;
+}
 .services-card-icon-container-training {
   height: 60px;
   width: 60px;
   margin: 0 auto 17px;
   border-radius: 50%;
   background-color: #926fb1;
-}
-.services-card-icon-training {
   color: #fff;
-}
-.services-card-button-training {
-  background-color: #926fb1;
+  text-align: center;
 }
 
 /* ====================================================== */
@@ -848,7 +862,7 @@ section {
 }
 
 /* Other buttons */
-.btn-cta {
+div[class^=services-card-button], .btn-cta {
   display: inline-block;
   height: auto;
   font-size: 1.25rem;
@@ -862,6 +876,40 @@ section {
 
 .btn-cta {
   background-color: #926fb1;
+}
+
+div[class^=services-card-button] {
+  font-size: 1.06rem;
+  line-height: 35px;
+}
+
+.services-card-button-bespoke {
+  background-color: #67809f;
+  color: inherit;
+}
+.services-card-button-it {
+  background-color: #4183d7;
+  color: inherit;
+}
+.services-card-button-marketing {
+  background-color: #2ecc71;
+  color: inherit;
+}
+.services-card-button-telecoms {
+  background-color: #d64541;
+  color: inherit;
+}
+.services-card-button-web {
+  background-color: #926fb1;
+  color: inherit;
+}
+.services-card-button-security {
+  background-color: #f62459;
+  color: inherit;
+}
+.services-card-button-training {
+  background-color: #926fb1;
+  color: inherit;
 }
 
 /* ====================================================== */
@@ -896,13 +944,68 @@ section {
   content: "";
 }
 
-div[class^=services-card-icon]:not(div[class^=services-card-icon-container]) {
+.services-card-icon-bespoke {
   font-family: "icomoon", serif;
-  font-size: 1.438rem;
+  font-size: 1.2rem;
   line-height: 58px;
+  color: inherit;
 }
-div[class^=services-card-icon]:not(div[class^=services-card-icon-container])::before {
+.services-card-icon-bespoke::before {
   content: "";
+}
+.services-card-icon-it {
+  font-family: "icomoon", serif;
+  font-size: 1.2rem;
+  line-height: 58px;
+  color: inherit;
+}
+.services-card-icon-it::before {
+  content: "";
+}
+.services-card-icon-marketing {
+  font-family: "icomoon", serif;
+  font-size: 1.2rem;
+  line-height: 58px;
+  color: inherit;
+}
+.services-card-icon-marketing::before {
+  content: "";
+}
+.services-card-icon-telecoms {
+  font-family: "icomoon", serif;
+  font-size: 1.2rem;
+  line-height: 58px;
+  color: inherit;
+}
+.services-card-icon-telecoms::before {
+  content: "";
+}
+.services-card-icon-web {
+  font-family: "icomoon", serif;
+  font-size: 1.2rem;
+  line-height: 58px;
+  color: inherit;
+}
+.services-card-icon-web::before {
+  content: "";
+}
+.services-card-icon-security {
+  font-family: "icomoon", serif;
+  font-size: 1.2rem;
+  line-height: 58px;
+  color: inherit;
+}
+.services-card-icon-security::before {
+  content: "";
+}
+.services-card-icon-training {
+  font-family: "icomoon", serif;
+  font-size: 1.2rem;
+  line-height: 58px;
+  color: inherit;
+}
+.services-card-icon-training::before {
+  content: "";
 }
 
 /* ====================================================== */
@@ -1001,6 +1104,33 @@ div[class^=services-card-icon]:not(div[class^=services-card-icon-container])::be
   line-height: 2.25rem;
   margin: 0 0 35px;
   color: #fff;
+  text-align: center;
+}
+
+.services-card-header {
+  font-size: 1.125rem;
+  font-weight: 400;
+  padding-bottom: 17px;
+  margin-bottom: 11px;
+  display: block;
+}
+.services-card-header::after {
+  content: "";
+  position: relative;
+  bottom: -17px;
+  margin: auto;
+  width: 28px;
+  height: 3px;
+  display: block;
+  background-color: #333645;
+}
+
+.services-card-content {
+  display: block;
+  font-size: 0.8125rem;
+  line-height: 1.375rem;
+  margin-bottom: 13px;
+  font-weight: 400;
   text-align: center;
 }
 

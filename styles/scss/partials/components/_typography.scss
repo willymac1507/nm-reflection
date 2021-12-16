@@ -16,3 +16,30 @@
     color: #fff;
     text-align: center;
 }
+
+.services-card-header {
+    font-size: 1.125rem;
+    font-weight: 400;
+    padding-bottom: 17px;
+    margin-bottom: 11px;
+    display:block;
+    &::after {
+        content: "";
+        position: relative;
+        bottom: -17px;
+        margin: auto;
+        width: 28px;
+        height: 3px;
+        display: block;
+        background-color: $color-primary;
+    }
+}
+
+.services-card-content {
+    display: block;
+    font-size: .8125rem;
+    line-height: 1.375rem;
+    margin-bottom: 13px;
+    font-weight: 400;
+    text-align: center;
+}

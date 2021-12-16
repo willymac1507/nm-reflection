@@ -54,14 +54,17 @@
 @mixin service-color($map) {
 
     @each $theme,
-    $color, $icon in $map {
+    $color in $map {
         &-#{$theme} {
             @include page-container;
-            height: 334px;
+            flex-direction: column;
+            position: relative;
+            height: auto;
             background-color: #fff;
             border: 1px solid #ccc;
             border-radius: 3px;
             box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+            padding: 30px;
 
             &:hover {
                 background-color: $color;
@@ -70,6 +73,10 @@
                 div {
                     background-color: #fff;
                     color: $color;
+                }
+
+                .services-card-header::after {
+                    background-color: #fff;
                 }
             }
         }
@@ -80,14 +87,36 @@
             margin: 0 auto 17px;
             border-radius: 50%;
             background-color: $color;
-        }
-
-        &-icon-#{$theme} {
             color: #fff;
+            text-align: center;
         }
+    }
+}
 
-        &-button-#{$theme} {
+@mixin service-icon($map) {
+
+    @each $theme,
+    $icon in $map {
+        &-#{$theme} {
+            font-family: 'icomoon', serif;
+            font-size: 1.2rem;
+            line-height: 58px;
+            color: inherit;
+
+            &::before {
+                content: $icon;
+            }
+        }
+    }
+}
+
+@mixin service-button($map) {
+
+    @each $theme,
+    $color in $map {
+        &-#{$theme} {
             background-color: $color;
+            color: inherit;
         }
     }
 }

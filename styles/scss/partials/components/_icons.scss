@@ -33,11 +33,8 @@
     }
 }
 
-div[class^="services-card-icon"]:not(div[class^="services-card-icon-container"]) {
-    font-family: 'icomoon', serif;
-    font-size: 1.438rem;
-    line-height: 58px;
-    &::before {
-        content: '\eafb';
+.services-card {
+    &-icon {
+        @include service-icon($card-icons);
     }
 }
