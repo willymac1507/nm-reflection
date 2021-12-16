@@ -798,13 +798,6 @@ header {
   background-color: #926fb1;
 }
 
-div[class^=services-card-icon-container] {
-  height: 60px;
-  width: 60px;
-  margin: 0 auto 17px;
-  border-radius: 50%;
-}
-
 /* ====================================================== */
 /* === Sections                                       === */
 /* ====================================================== */
