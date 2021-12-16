@@ -1,0 +1,50 @@
+/* ====================================================== */
+/* === Containers                                     === */
+/* ====================================================== */
+
+.top-container {
+    @include page-container;
+    flex-basis: 56px;
+}
+
+.logo-container {
+    @include header-container(63%, left);
+}
+
+.call-container {
+    @include header-container(13%, right);
+    @include flexy-center;
+}
+
+.menu-container {
+    @include header-container(25%, right);
+}
+
+.about-container {
+    @include page-container;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 4vw;
+    z-index: 40;
+}
+
+.about-carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        background: linear-gradient(to left, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 1) 100%);
+    }
+}

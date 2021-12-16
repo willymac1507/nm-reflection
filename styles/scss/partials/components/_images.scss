@@ -1,0 +1,19 @@
+/* ====================================================== */
+/* === Images                                         === */
+/* ====================================================== */
+
+.logo {
+    @include flexy-center;
+
+    img {
+        width: 100%;
+    }
+}
+
+.about-carousel {
+    img {
+        display: block;
+        height: 100%;
+        transform: translate(calc(-50% + 50vw));
+    }
+}

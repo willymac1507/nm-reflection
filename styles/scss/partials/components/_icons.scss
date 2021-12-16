@@ -1,0 +1,34 @@
+/* ====================================================== */
+/* === Icons                                          === */
+/* ====================================================== */
+
+.call-icon {
+    @include flexy-center;
+    margin-left: auto;
+    border-bottom: solid 2px #fff;
+
+    &::before {
+        font-family: 'icomoon';
+        font-size: 1.5rem;
+        color: $color-primary;
+        content: "\e9e5";
+    }
+
+    &:hover {
+        color: $color-hover;
+        border-bottom: solid 2px $color-hover;
+
+        &:before {
+            color: $color-hover;
+        }
+    }
+}
+
+.right-arrow {
+    float: right;
+    margin: 0 -4px 0 12px;
+    &::before {
+        font-family: 'icomoon';
+        content: '\ebc8';
+    }
+}

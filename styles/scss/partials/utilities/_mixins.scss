@@ -1,0 +1,43 @@
+// Media queries
+@mixin mq($break) {
+    $value: map-get($breakpoints, $break);
+    $sm: map-get($breakpoints, 'sm');
+
+    @if $value==null {
+        @error "#{$break} is not a valid breakpopint name.";
+    }
+
+    @else if $value < $sm {
+        @media (max-width: $value) {
+            @content;
+        }
+    }
+
+    @else {
+        @media (min-width: $value) {
+            @content;
+        }
+    }
+}
+
+// Page container flex attributes
+@mixin page-container {
+    @include flexy-center;
+    width: 92vw;
+    max-width: 1072px;
+}
+
+// Header container flex attributes
+@mixin header-container($basis, $direction) {
+    display: flex;
+    flex-basis: $basis;
+    align-items: center;
+    height: 100%;
+    justify-items: $direction;
+}
+
+// Center all flex items
+@mixin flexy-center {
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,25 @@
+// // Variables
+
+// Breakpoints
+$breakpoints: ('xs': 575px,
+    'sm': 576px,
+    'med': 768px,
+    'lg': 992px,
+);
+
+// Colors
+$color-primary: #333645;
+$color-hover: #222;
+$color-input-back: rgba(0, 0, 0, .1);
+$color-input-outline: hsla(0, 0%, 100%, .2);
+$color-input-border: rgba(0, 0, 0, .1);
+
+// Card colors
+$card-bespoke-color: #67809f;
+$card-it-color: #4183d7;
+$card-marketing-color: #2ecc71;
+$card-telecoms-color: #d64541;
+$card-web-color: #926fb1;
+$card-security-color: #f62459;
+$card-training-color: $card-web-color;
+
