@@ -531,7 +531,7 @@ header {
   justify-items: right;
 }
 
-.about-container {
+.carousel__container {
   display: flex;
   align-items: center;
   width: 92vw;
@@ -545,13 +545,13 @@ header {
   z-index: 40;
 }
 
-.about-carousel {
+.carousel {
   position: relative;
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
-.about-carousel::after {
+.carousel::after {
   content: "";
   position: absolute;
   left: 0;
@@ -862,7 +862,7 @@ section {
 }
 
 /* Other buttons */
-div[class^=services-card-button], .btn-cta {
+.button, div[class^=services-card-button] {
   display: inline-block;
   height: auto;
   font-size: 1.25rem;
@@ -871,10 +871,10 @@ div[class^=services-card-button], .btn-cta {
   padding: 5px 20px;
   color: #fff;
   border-radius: 3px;
+  background-color: #bbbfbc;
   cursor: pointer;
 }
-
-.btn-cta {
+.button--cta {
   background-color: #926fb1;
 }
 
@@ -1019,7 +1019,7 @@ div[class^=services-card-button] {
   width: 100%;
 }
 
-.about-carousel img {
+.carousel__image {
   display: block;
   height: 100%;
   transform: translate(calc(-50% + 50vw));
@@ -1028,7 +1028,7 @@ div[class^=services-card-button] {
 /* ====================================================== */
 /* === Nav                                            === */
 /* ====================================================== */
-.about-nav {
+.carousel__nav {
   display: flex;
   justify-content: space-around;
   z-index: 40;
@@ -1037,17 +1037,17 @@ div[class^=services-card-button] {
   width: 185px;
   height: 50px;
 }
-.about-nav-dot {
+.carousel__nav-dot {
   position: relative;
   width: 11px;
   height: 11px;
   border-radius: 30px;
   background-color: rgba(255, 255, 255, 0.5);
 }
-.about-nav-dot.active {
+.carousel__nav-dot.active {
   background-color: #fff;
 }
-.about-nav-dot.active::after {
+.carousel__nav-dot.active::after {
   content: "";
   position: absolute;
   top: -6px;
@@ -1092,14 +1092,14 @@ div[class^=services-card-button] {
 /* ====================================================== */
 /* === Typography                                     === */
 /* ====================================================== */
-.about-title {
+.carousel__title {
   color: #fff;
   font-size: 3rem;
   text-transform: uppercase;
   margin-bottom: 25px;
 }
 
-.about-text {
+.carousel__text {
   font-size: 1.25rem;
   line-height: 2.25rem;
   margin: 0 0 35px;

@@ -10,10 +10,8 @@
     }
 }
 
-.about-carousel {
-    img {
-        display: block;
-        height: 100%;
-        transform: translate(calc(-50% + 50vw));
-    }
+.carousel__image {
+    display: block;
+    height: 100%;
+    transform: translate(calc(-50% + 50vw));
 }
