@@ -5,6 +5,7 @@
 .header {
     &__top-container {
         @include page-container;
+        @include flexy-center;
         flex-basis: 56px;
     }
 
@@ -27,13 +28,14 @@
 
     &__container {
         @include page-container;
-        width: 94vw;
+        @include flexy-center;
+        width: 96vw;
         justify-content: center;
         flex-direction: column;
         height: 100%;
         position: absolute;
         top: 0;
-        left: 3vw;
+        left: 2vw;
         z-index: 40;
     }
 
@@ -51,14 +53,14 @@
 
 .services {
     @include layout-div;
-    display: flex;
+    @include flexy-center;
     flex-direction: column;
     gap: 2rem;
-    align-items: center;
 
     &__card {
         // @include service-color($card-colors);
         @include page-container;
+        @include flexy-center;
         flex-direction: column;
         position: relative;
         height: auto;
@@ -86,4 +88,9 @@
 
 .about {
     @include layout-div;
+    @include flexy-center;
+    flex-direction: column;
+    &__container {
+        @include page-container;
+    }
 }

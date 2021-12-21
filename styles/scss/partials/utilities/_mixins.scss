@@ -22,7 +22,6 @@
 
 // Page container flex attributes
 @mixin page-container {
-    @include flexy-center;
     width: 92vw;
     max-width: 1072px;
 }

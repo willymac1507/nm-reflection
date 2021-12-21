@@ -43,3 +43,25 @@
     font-weight: 400;
     text-align: center;
 }
+
+.about {
+    p {
+        margin: 0 0 25px;
+        line-height: 30px;
+    }
+
+    &__header {
+        font-size: 2.25rem;
+        font-weight: 400;
+        margin: -6px 0 28px;
+        text-transform: uppercase;
+    }
+
+    &__intro {
+        font-weight: 600;
+    }
+
+    &__content {
+        font-weight: 400;
+    }
+}

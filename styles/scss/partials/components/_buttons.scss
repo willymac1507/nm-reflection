@@ -41,8 +41,8 @@
 .button {
     display: inline-block;
     height: auto;
-    font-size: 1.25rem;
-    line-height: 50px;
+    font-size: 1.06rem;
+    line-height: 35px;
     text-transform: uppercase;
     padding: 5px 20px;
     color: #fff;
@@ -51,12 +51,19 @@
     cursor: pointer;
 
     &--cta {
+        font-size: 1.25rem;
         background-color: map-get($map: $card-colors, $key: 'web');
+        line-height: 50px;
     }
 
     &--services {
         padding: 5px 18px;
-        font-size: 1.06rem;
-        line-height: 35px;
+    }
+
+    &--about {
+        padding: 5px 15px 4px;
+        border: 1px solid #fff;
+        background-color: #fff;
+        color: $color-primary;
     }
 }
