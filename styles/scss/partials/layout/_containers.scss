@@ -2,37 +2,37 @@
 /* === Containers                                     === */
 /* ====================================================== */
 
-.top-container {
-    @include page-container;
-    flex-basis: 56px;
-}
-
-.logo-container {
-    @include header-container(63%, left);
-}
-
-.call-container {
-    @include header-container(13%, right);
-    @include flexy-center;
-}
-
-.menu-container {
-    @include header-container(25%, right);
-}
-
-.carousel__container {
-    @include page-container;
-    justify-content: center;
-    flex-direction: column;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 4vw;
-    z-index: 40;
+.header {
+    &__top-container {
+        @include page-container;
+        flex-basis: 56px;
+    }
+    &__logo-container {
+        @include header-container(63%, left);
+    }
+    &__call-container {
+        @include header-container(13%, right);
+        @include flexy-center;
+    }
+    &__menu-container {
+        @include header-container(25%, right);
+    }
 }
 
 .carousel {
     @include layout-div;
+
+    &__container {
+        @include page-container;
+        width: 94vw;
+        justify-content: center;
+        flex-direction: column;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 3vw;
+        z-index: 40;
+    }
 
     &::after {
         content: '';

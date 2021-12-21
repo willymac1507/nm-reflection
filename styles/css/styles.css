@@ -483,37 +483,35 @@ select {
 /* ====================================================== */
 /* === Header                                         === */
 /* ====================================================== */
-header {
+.header {
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 168px;
   justify-content: center;
   align-items: center;
-  gap: 14px;
+  gap: 13px;
   padding-top: 12px;
 }
 
 /* ====================================================== */
 /* === Containers                                     === */
 /* ====================================================== */
-.top-container {
+.header__top-container {
   display: flex;
   align-items: center;
   width: 92vw;
   max-width: 1072px;
   flex-basis: 56px;
 }
-
-.logo-container {
+.header__logo-container {
   display: flex;
   flex-basis: 63%;
   align-items: center;
   height: 100%;
   justify-items: left;
 }
-
-.call-container {
+.header__call-container {
   display: flex;
   flex-basis: 13%;
   align-items: center;
@@ -522,8 +520,7 @@ header {
   display: flex;
   align-items: center;
 }
-
-.menu-container {
+.header__menu-container {
   display: flex;
   flex-basis: 25%;
   align-items: center;
@@ -531,25 +528,25 @@ header {
   justify-items: right;
 }
 
-.carousel__container {
-  display: flex;
-  align-items: center;
-  width: 92vw;
-  max-width: 1072px;
-  justify-content: center;
-  flex-direction: column;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 4vw;
-  z-index: 40;
-}
-
 .carousel {
   position: relative;
   width: 100%;
   height: 100%;
   overflow: hidden;
+}
+.carousel__container {
+  display: flex;
+  align-items: center;
+  width: 92vw;
+  max-width: 1072px;
+  width: 94vw;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 3vw;
+  z-index: 40;
 }
 .carousel::after {
   content: "";
@@ -847,13 +844,13 @@ section {
 .hamburger:hover {
   background-color: #222;
 }
-.hamburger-slice {
+.hamburger__slice {
   width: 33px;
   height: 3px;
   background-color: #fff;
   margin: 0 auto;
 }
-.hamburger-text {
+.hamburger__text {
   margin-top: 7px;
   font-size: 0.75rem;
   color: #fff;
@@ -935,6 +932,14 @@ div[class^=services-card-button] {
   color: #222;
 }
 
+.search-icon {
+  font-family: "glyphicons", sans-serif;
+  font-size: 1.25rem;
+}
+.search-icon::before {
+  content: "";
+}
+
 .right-arrow {
   float: right;
   margin: 0 -4px 0 12px;
@@ -1011,11 +1016,7 @@ div[class^=services-card-button] {
 /* ====================================================== */
 /* === Images                                         === */
 /* ====================================================== */
-.logo {
-  display: flex;
-  align-items: center;
-}
-.logo img {
+.header__logo-img {
   width: 100%;
 }
 
@@ -1028,6 +1029,16 @@ div[class^=services-card-button] {
 /* ====================================================== */
 /* === Nav                                            === */
 /* ====================================================== */
+.header__logo-link {
+  display: flex;
+  align-items: center;
+}
+.header__form-link {
+  margin-left: auto;
+  border: none;
+  background-color: transparent;
+}
+
 .carousel__nav {
   display: flex;
   justify-content: space-around;
@@ -1058,35 +1069,33 @@ div[class^=services-card-button] {
   border: 2px solid #fff;
 }
 
-.search-form {
+.header__form {
   display: flex;
   align-items: center;
   width: 100%;
   height: 47px;
-  padding: 6px 10px 5px 15px;
+  padding: 6px 10px 5px 13px;
   background-color: rgba(0, 0, 0, 0.1);
   outline: 1px solid rgba(255, 255, 255, 0.2);
   border: 2px solid rgba(0, 0, 0, 0.1);
   border-radius: 2px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1) inset;
 }
-.search-form input {
+
+.input--search {
   border: none;
   outline: none;
   background-color: transparent;
   font-size: 0.9rem;
+  color: #555555;
 }
-.search-form a {
-  margin-left: auto;
-  border: none;
-  background-color: transparent;
+.input--search::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  opacity: 0.8;
 }
-.search-form a span {
-  font-family: "glyphicons", sans-serif;
-  font-size: 1.25rem;
-}
-.search-form a span::before {
-  content: "";
+.input--search::-ms-input-placeholder {
+  /* Microsoft Edge */
+  opacity: 0.8;
 }
 
 /* ====================================================== */
@@ -1100,7 +1109,7 @@ div[class^=services-card-button] {
 }
 
 .carousel__text {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   line-height: 2.25rem;
   margin: 0 0 35px;
   color: #fff;

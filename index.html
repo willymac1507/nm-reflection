@@ -16,31 +16,33 @@
 
 <body>
     <header>
-        <div class="top-container">
-            <div class="logo-container">
-                <a href="#" class="logo">
-                    <img src="images/f-logo.png" alt="Netmatters logo">
-                </a>
+        <div class="header">
+            <div class="header__top-container">
+                <div class="header__logo-container">
+                    <a href="#" class="header__logo-link">
+                        <img class="header__logo-img" src="images/f-logo.png" alt="Netmatters logo">
+                    </a>
+                </div>
+                <div class="header__call-container">
+                    <a class="call-icon" href="tel:#"></a>
+                </div>
+                <div class="header__menu-container">
+                    <a class="hamburger" href="#">
+                        <div class="hamburger__slice"></div>
+                        <div class="hamburger__slice"></div>
+                        <div class="hamburger__slice"></div>
+                        <div class="hamburger__text">menu</div>
+                    </a>
+                </div>
             </div>
-            <div class="call-container">
-                <a class="call-icon" href="tel:#"></a>
+            <div class="header__top-container">
+                <form action="get" class="header__form">
+                    <input class="input input--search" type="text" name="" id="" placeholder="Search...">
+                    <a class="header__form-link" href="#">
+                        <span class="search-icon"></span>
+                    </a>
+                </form>
             </div>
-            <div class="menu-container">
-                <a class="hamburger" href="#">
-                    <div class="hamburger-slice"></div>
-                    <div class="hamburger-slice"></div>
-                    <div class="hamburger-slice"></div>
-                    <div class="hamburger-text">menu</div>
-                </a>
-            </div>
-        </div>
-        <div class="top-container">
-            <form action="get" class="search-form">
-                <input class="search-box" type="text" name="" id="" placeholder="Search...">
-                <a href="#">
-                    <span class="search-icon"></span>
-                </a>
-            </form>
         </div>
     </header>
 
@@ -99,7 +101,8 @@
                 </div>
                 <span class="services-card-header">Digital Marketing</span>
                 <span class="services-card-content">
-                    Driving brand awareness and ROI through creative digital marketing campaigns. We review and monitor online performances. 
+                    Driving brand awareness and ROI through creative digital marketing campaigns. We review and monitor
+                    online performances.
                 </span>
                 <div class="services-card-button-marketing">read more</div>
             </a>

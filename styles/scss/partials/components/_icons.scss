@@ -24,6 +24,15 @@
     }
 }
 
+.search-icon {
+    font-family: 'glyphicons', sans-serif;
+    font-size: 1.25rem;
+
+    &::before {
+        content: "\e003"
+    }
+}
+
 .right-arrow {
     float: right;
     margin: 0 -4px 0 12px;
