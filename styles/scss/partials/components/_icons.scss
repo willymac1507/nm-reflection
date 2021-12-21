@@ -43,6 +43,9 @@
     }
 }
 
-.services-icon {
-    @include service-icon($card-icons);
+.services__icon {
+    font-family: 'icomoon', serif;
+    font-size: 1.2rem;
+    line-height: 58px;
+    color: inherit;
 }

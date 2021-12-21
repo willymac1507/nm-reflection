@@ -51,20 +51,18 @@
 }
 
 // Colors
-@mixin service-color($map) {
+@mixin service($colors, $icons) {
 
     @each $theme,
-    $color in $map {
-        &-#{$theme} {
-            @include page-container;
-            flex-direction: column;
-            position: relative;
-            height: auto;
-            background-color: #fff;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-            box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
-            padding: 30px;
+    $color in $colors {
+        &--#{$theme} {
+            .services__icon-container {
+                background-color: $color;
+            }
+
+            .button--services {
+                background-color: $color;
+            }
 
             &:hover {
                 background-color: $color;
@@ -75,38 +73,21 @@
                     color: $color;
                 }
 
-                .services-card-header::after {
+                .services__header::after {
                     background-color: #fff;
                 }
             }
         }
     }
-}
-
-@mixin service-icon($map) {
 
     @each $theme,
-    $icon in $map {
-        &-#{$theme} {
-            font-family: 'icomoon', serif;
-            font-size: 1.2rem;
-            line-height: 58px;
-            color: inherit;
-
-            &::before {
-                content: $icon;
+    $icon in $icons {
+        &--#{$theme} {
+            .services__icon {
+                &::before {
+                    content: $icon;
+                }
             }
-        }
-    }
-}
-
-@mixin service-button($map) {
-
-    @each $theme,
-    $color in $map {
-        &-#{$theme} {
-            background-color: $color;
-            color: inherit;
         }
     }
 }

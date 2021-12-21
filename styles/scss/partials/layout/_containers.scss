@@ -79,3 +79,7 @@
         text-align: center;
     }
 }
+
+.card {
+    @include service($card-colors, $card-icons);
+}

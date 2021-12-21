@@ -44,24 +44,18 @@
     font-size: 1.25rem;
     line-height: 50px;
     text-transform: uppercase;
-    padding: 5px 20px;
+    padding: 5px 18px;
     color: #fff;
     border-radius: 3px;
     background-color: $color-button;
     cursor: pointer;
+
     &--cta {
         background-color: map-get($map: $card-colors, $key: 'web');
     }
-}
 
-div[class^="services-card-button"] {
-    @extend .button;
-    font-size: 1.06rem;
-    line-height: 35px;
-}
-
-.services-card {
-    &-button {
-        @include service-button($card-colors);
+    &--services {
+        font-size: 1.06rem;
+        line-height: 35px;
     }
 }
