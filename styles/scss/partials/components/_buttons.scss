@@ -44,7 +44,7 @@
     font-size: 1.25rem;
     line-height: 50px;
     text-transform: uppercase;
-    padding: 5px 18px;
+    padding: 5px 20px;
     color: #fff;
     border-radius: 3px;
     background-color: $color-button;
@@ -55,6 +55,7 @@
     }
 
     &--services {
+        padding: 5px 18px;
         font-size: 1.06rem;
         line-height: 35px;
     }

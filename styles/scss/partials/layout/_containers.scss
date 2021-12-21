@@ -83,3 +83,7 @@
 .card {
     @include service($card-colors, $card-icons);
 }
+
+.about {
+    @include layout-div;
+}

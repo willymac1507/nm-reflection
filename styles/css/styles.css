@@ -734,21 +734,31 @@ select {
   content: "";
 }
 
+.about {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
 /* ====================================================== */
 /* === Sections                                       === */
 /* ====================================================== */
 section {
   width: 100%;
+  padding: 50px 0;
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-#about {
+#banner {
+  padding: 0;
   height: calc(100vh - 166px);
   min-height: 530px;
 }
 
-#services {
-  padding: 50px 0;
+#about {
+  background-color: #333645;
+  color: #fff;
 }
 
 /* ====================================================== */
@@ -790,7 +800,7 @@ section {
   font-size: 1.25rem;
   line-height: 50px;
   text-transform: uppercase;
-  padding: 5px 18px;
+  padding: 5px 20px;
   color: #fff;
   border-radius: 3px;
   background-color: #bbbfbc;
@@ -800,6 +810,7 @@ section {
   background-color: #926fb1;
 }
 .button--services {
+  padding: 5px 18px;
   font-size: 1.06rem;
   line-height: 35px;
 }

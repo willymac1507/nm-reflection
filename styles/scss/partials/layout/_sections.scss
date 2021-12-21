@@ -4,14 +4,17 @@
 
 section {
     width: 100%;
+    padding: 50px 0;
     background-color: $color-background;
 }
 
-#about {
+#banner {
+    padding: 0;
     height: calc(100vh - 166px);
     min-height: 530px;
 }
 
-#services {
-    padding: 50px 0;
+#about {
+    background-color: $color-primary;
+    color: #fff;
 }
