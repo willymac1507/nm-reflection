@@ -36,14 +36,13 @@
 .right-arrow {
     float: right;
     margin: 0 -4px 0 12px;
+
     &::before {
         font-family: 'icomoon';
         content: '\ebc8';
     }
 }
 
-.services-card {
-    &-icon {
-        @include service-icon($card-icons);
-    }
+.services-icon {
+    @include service-icon($card-icons);
 }

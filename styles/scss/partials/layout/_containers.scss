@@ -7,13 +7,16 @@
         @include page-container;
         flex-basis: 56px;
     }
+
     &__logo-container {
         @include header-container(63%, left);
     }
+
     &__call-container {
         @include header-container(13%, right);
         @include flexy-center;
     }
+
     &__menu-container {
         @include header-container(25%, right);
     }
@@ -46,14 +49,33 @@
     }
 }
 
-.services-card-deck {
+.services {
     @include layout-div;
     display: flex;
     flex-direction: column;
     gap: 2rem;
     align-items: center;
-}
 
-.services-card {
-    @include service-color($card-colors);
+    &__card {
+        // @include service-color($card-colors);
+        @include page-container;
+        flex-direction: column;
+        position: relative;
+        height: auto;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+    }
+
+    &__icon-container {
+        height: 60px;
+        width: 60px;
+        margin: 0 auto 17px;
+        border-radius: 50%;
+        background-color: #fff;
+        color: #fff;
+        text-align: center;
+    }
 }
