@@ -124,3 +124,10 @@
         padding-left: 20px;
     }
 }
+
+.news-form {
+    &__inputs-container {
+        display: flex;
+        flex-direction: column;
+    }
+}

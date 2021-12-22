@@ -39,10 +39,12 @@
 /* Other buttons */
 
 .button {
+    font-family: 'Poppins', sans-serif;
     display: inline-block;
     height: auto;
     padding: 5px 15px 4px;
-    font-size: 1.06rem;
+    font-size: 1.063rem;
+    font-weight: 400;
     line-height: 35px;
     text-transform: uppercase;
     color: #fff;
@@ -80,6 +82,13 @@
         background-color: $color-latest;
         &:hover {
             background-color: darken($color-latest, 10%);
+        }
+    }
+
+    &--subscribe {
+        background-color: $color-primary;
+        &:hover {
+            background-color: darken($color-primary, 10%);
         }
     }
 }

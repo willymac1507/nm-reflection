@@ -98,7 +98,7 @@
         font-size: 0.8125rem;
         line-height: 22px;
         margin: 0 0 25px;
-        color: $color-paragraph-text;
+        color: $color-secondary;
     }
 
 }
@@ -116,7 +116,11 @@
     }
 
     &__date {
-        color: $color-paragraph-text;
+        color: $color-secondary;
         font-weight: 400;
     }
+}
+
+.privacy-link {
+    text-decoration: underline;
 }
