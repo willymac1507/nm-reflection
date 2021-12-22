@@ -12,3 +12,10 @@
     height: 100%;
     transform: translate(calc(-50% + 50vw));
 }
+
+.latest__image {
+    align-self: center;
+    height: auto;
+    width: calc(100% + 62px);
+    margin: -31px 0 30px;
+}

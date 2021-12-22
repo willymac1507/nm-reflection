@@ -41,19 +41,26 @@
 .button {
     display: inline-block;
     height: auto;
+    padding: 5px 15px 4px;
     font-size: 1.06rem;
     line-height: 35px;
     text-transform: uppercase;
-    padding: 5px 20px;
     color: #fff;
+    border: none;
+    outline: none;
     border-radius: 3px;
     background-color: $color-button;
     cursor: pointer;
 
     &--cta {
+        $back-color: map-get($map: $card-colors, $key: 'web');
         font-size: 1.25rem;
-        background-color: map-get($map: $card-colors, $key: 'web');
+        background-color: $back-color;
         line-height: 50px;
+        padding: 5px 20px;
+        &:hover {
+            background-color: darken($back-color, 10%);
+        }
     }
 
     &--services {
@@ -61,9 +68,18 @@
     }
 
     &--about {
-        padding: 5px 15px 4px;
         border: 1px solid #fff;
         background-color: #fff;
         color: $color-primary;
+        &:hover {
+            background-color: darken(#fff, 10%);
+        }
+    }
+
+    &--latest {
+        background-color: $color-latest;
+        &:hover {
+            background-color: darken($color-latest, 10%);
+        }
     }
 }

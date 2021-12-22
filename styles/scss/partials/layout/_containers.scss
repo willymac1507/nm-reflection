@@ -51,25 +51,15 @@
     }
 }
 
+%card-deck {
+    flex-direction: column;
+    gap: 2rem;
+}
+
 .services {
     @include layout-div;
     @include flexy-center;
-    flex-direction: column;
-    gap: 2rem;
-
-    &__card {
-        // @include service-color($card-colors);
-        @include page-container;
-        @include flexy-center;
-        flex-direction: column;
-        position: relative;
-        height: auto;
-        background-color: #fff;
-        border: 1px solid #ccc;
-        border-radius: 3px;
-        box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
-        padding: 30px;
-    }
+    @extend %card-deck;
 
     &__icon-container {
         height: 60px;
@@ -83,14 +73,54 @@
 }
 
 .card {
+    @include page-container;
+    @include flexy-center;
+    @include card;
     @include service($card-colors, $card-icons);
+
+    &--latest {
+        margin-top: 30px;
+        align-items: flex-start;
+    }
 }
 
 .about {
     @include layout-div;
     @include flexy-center;
     flex-direction: column;
+
     &__container {
         @include page-container;
+    }
+}
+
+.latest {
+    @include layout-div;
+    @include flexy-center;
+    flex-direction: column;
+    
+    &__heading-container {
+        width: 100%;
+        padding: 40px 0px;
+        text-align: left;
+        position: relative;
+        box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+    }
+
+    &__content-container {
+        @extend %card-deck;
+        @include page-container;
+        padding-top: 20px;
+    }
+}
+.poster {
+    @include flexy-center;
+    justify-content: left;
+    width: 100%;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid #ccc;
+    &__details {
+        padding-left: 20px;
     }
 }

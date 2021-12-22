@@ -49,6 +49,18 @@
     overflow: hidden;
 }
 
+// Card container
+@mixin card {
+    flex-direction: column;
+    position: relative;
+    height: auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
 // Colors
 @mixin service($colors, $icons) {
 
@@ -61,7 +73,7 @@
 
             .button--services {
                 background-color: $color;
-            }
+                }
 
             &:hover {
                 background-color: $color;
