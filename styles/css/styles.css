@@ -1023,6 +1023,9 @@ footer {
   width: calc(100% + 62px);
   margin: -31px 0 30px;
 }
+.latest__image img {
+  width: 100%;
+}
 
 /* ====================================================== */
 /* === Nav                                            === */
@@ -1209,8 +1212,9 @@ footer {
   align-items: center;
   justify-content: center;
   position: absolute;
-  width: 29px;
-  height: 29px;
+  left: 1px;
+  width: 30px;
+  height: 30px;
   font-family: "icomoon";
   color: #fff;
   background-color: #333645;
