@@ -4,7 +4,7 @@
 
 .call-icon {
     @include flexy-center;
-    margin-left: auto;
+    margin: 0 auto;
     border-bottom: solid 2px #fff;
 
     &::before {

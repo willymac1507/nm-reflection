@@ -10,19 +10,15 @@
     }
 
     &__logo-container {
-        @include header-container(67%, left);
-        flex: 3 0 65%;
+        @include header-container(3, 0, 62%, left);
     }
 
     &__call-container {
-        @include header-container(9%, center);
-        flex: 1 0 9%;
-        @include flexy-center;
+        @include header-container(1, 0, 12%, center);
     }
 
     &__menu-container {
-        @include header-container(25%, right);
-        flex: 0 0 auto;
+        @include header-container(0, 0, auto, right);
         margin-left: auto;
     }
 }
@@ -104,7 +100,8 @@
     flex-direction: column;
     
     &__heading-container {
-        width: 100%;
+        width: calc(100% + 30px);
+        margin-left: -15px;
         padding: 40px 0px;
         text-align: left;
         position: relative;
@@ -140,11 +137,18 @@
     @include layout-div;
     @include flexy-center;
     flex-direction: column;
+
+    &__sub-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
     &__main-container {
         @include page-container;
-        @include flexy-center;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
+        // @include flexy-center;
+        display: flex;
+        flex-direction: column;
     }
     &__block {
         width: 225px;
@@ -157,19 +161,22 @@
         padding-top: 10px;
         border-top: 1px solid $color-footer-border;
     }
-    &__social {
-        flex-basis: 10%;
+    &__social-container {
+        display: flex;
+        flex: 0 0 132px;
+        margin-left: auto;
     }
 
     &__divider {
-        flex-basis: 8%;
+        flex: 0 0 8%;
     }
 
     &__sitemap {
-        flex-basis: 17%;
+        flex: 0 0 17%;
     }
 
     &__copy {
-        flex-basis: auto;
+        flex: 1 1 auto;
+        max-width: max-content;
     }
 }

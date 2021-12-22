@@ -22,14 +22,14 @@
 
 // Page container flex attributes
 @mixin page-container {
-    width: 92vw;
+    width: calc(100vw - 30px);
     max-width: 1072px;
 }
 
 // Header container flex attributes
-@mixin header-container($basis, $direction) {
+@mixin header-container($grow, $shrink, $basis, $direction) {
     display: flex;
-    flex-basis: $basis;
+    flex: $grow $shrink $basis;
     align-items: center;
     height: 100%;
     justify-items: $direction;
@@ -47,6 +47,7 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
+    padding: 0 15px;
 }
 
 // Card container
