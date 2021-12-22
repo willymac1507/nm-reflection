@@ -508,17 +508,19 @@ select {
 }
 .header__logo-container {
   display: flex;
-  flex-basis: 63%;
+  flex-basis: 67%;
   align-items: center;
   height: 100%;
   justify-items: left;
+  flex: 3 0 65%;
 }
 .header__call-container {
   display: flex;
-  flex-basis: 13%;
+  flex-basis: 9%;
   align-items: center;
   height: 100%;
-  justify-items: right;
+  justify-items: center;
+  flex: 1 0 9%;
   display: flex;
   align-items: center;
 }
@@ -528,6 +530,8 @@ select {
   align-items: center;
   height: 100%;
   justify-items: right;
+  flex: 0 0 auto;
+  margin-left: auto;
 }
 
 .carousel {
@@ -880,6 +884,7 @@ footer {
 /* ====================================================== */
 /* Hamburger Nav Button */
 .hamburger {
+  z-index: 100;
   background-color: #333645;
   border-radius: 3px;
   height: 100%;

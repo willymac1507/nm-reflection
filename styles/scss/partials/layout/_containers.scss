@@ -10,16 +10,20 @@
     }
 
     &__logo-container {
-        @include header-container(63%, left);
+        @include header-container(67%, left);
+        flex: 3 0 65%;
     }
 
     &__call-container {
-        @include header-container(13%, right);
+        @include header-container(9%, center);
+        flex: 1 0 9%;
         @include flexy-center;
     }
 
     &__menu-container {
         @include header-container(25%, right);
+        flex: 0 0 auto;
+        margin-left: auto;
     }
 }
 

@@ -5,6 +5,7 @@
 /* Hamburger Nav Button */
 
 .hamburger {
+    z-index: 100;
     background-color: $color-primary;
     border-radius: 3px;
     height: 100%;
