@@ -131,3 +131,41 @@
         flex-direction: column;
     }
 }
+
+.footer {
+    @include layout-div;
+    @include flexy-center;
+    flex-direction: column;
+    &__main-container {
+        @include page-container;
+        @include flexy-center;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    &__block {
+        width: 225px;
+        margin-bottom: 30px;
+    }
+    &__bottom {
+        @include page-container;
+        display: flex;
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px solid $color-footer-border;
+    }
+    &__social {
+        flex-basis: 10%;
+    }
+
+    &__divider {
+        flex-basis: 8%;
+    }
+
+    &__sitemap {
+        flex-basis: 17%;
+    }
+
+    &__copy {
+        flex-basis: auto;
+    }
+}

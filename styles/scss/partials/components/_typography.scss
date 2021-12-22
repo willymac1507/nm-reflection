@@ -121,6 +121,32 @@
     }
 }
 
-.privacy-link {
-    text-decoration: underline;
+.footer {
+    &__title {
+        font-weight: 400;
+        text-transform: uppercase;
+        margin-bottom: 26px;
+    }
+
+    &__item {
+        display: block;
+        font-size: .8125rem;
+        line-height: 22px;
+    }
+
+    &__bottom {
+        font-size: .8125rem;
+    }
+
+    &__copy, &__divider, &__sitemap {
+        padding-top: 5px;
+    }
+
+    &__divider {
+        text-align: center;
+    }
+}
+
+.item--tel {
+    margin-top: 22px;
 }
