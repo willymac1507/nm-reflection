@@ -11,7 +11,7 @@
         margin-left: auto;
         border: none;
         background-color: transparent;
-        @include small {
+        @include medium {
             @include flexy-center;
             justify-content: center;
             background-color: $color-nav-input-primary;
@@ -27,7 +27,7 @@
     }
 }
 
-// @include small {
+// @include medium {
     
 // }
 

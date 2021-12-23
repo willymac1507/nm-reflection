@@ -12,7 +12,7 @@
     &--logo {
         flex-basis: 62%;
 
-        @include small {
+        @include medium {
             flex-basis: 48%;
             margin-right: auto;
         }
@@ -22,7 +22,7 @@
         flex-basis: 42px;
         margin-left: auto;
         justify-content: right;
-        @include small {
+        @include medium {
             display: none;
         }
     }
@@ -30,14 +30,14 @@
     &--menu {
         flex-basis: 63px;
         margin-left: 20px;
-        @include small {
+        @include medium {
             order: 2;
         }
     }
 
     &--search {
         order: 1;
-        @include small {
+        @include medium {
             flex-basis: 237px;
             order: 1;
             margin-left: auto;
@@ -53,6 +53,7 @@
 
 .carousel {
     @include layout-div;
+    padding-top: 0;
 
     &__container {
         @include page-container;
@@ -83,7 +84,7 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    @include small {
+    @include medium {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
@@ -94,7 +95,7 @@
 }
 
 .services {
-    // @include layout-div;
+    @include layout-div;
     @include flexy-center;
     @extend %card-deck;
 
@@ -120,7 +121,7 @@
         align-items: flex-start;
     }
 
-    @include small {
+    @include medium {
         &--bespoke, &--it, &--marketing {
             width: 720px;
             height: 290px;
@@ -152,10 +153,10 @@
     @include layout-div;
     @include flexy-center;
     flex-direction: column;
+    padding-top: 0;
 
     &__heading-container {
         width: calc(100% + 30px);
-        margin-left: -15px;
         padding: 40px 0px;
         text-align: left;
         position: relative;
@@ -166,7 +167,7 @@
         @extend %card-deck;
         @include page-container;
         padding-top: 20px;
-        @include small {
+        @include medium {
             .card:nth-of-type(3) {
                 display: none;
             }
@@ -184,6 +185,22 @@
 
     &__details {
         padding-left: 20px;
+    }
+}
+
+.clients {
+    @include layout-div;
+    box-shadow: none;
+    &__container {
+        @include page-container;
+        @include flexy-center;
+    }
+
+    &__client {
+        display: inline-block;
+        width: auto;
+        padding: 0 20px;
+        height: 45px;
     }
 }
 

@@ -13,7 +13,7 @@
         box-shadow: 0 0 3px #fff;
     }
 
-    @include small {
+    @include medium {
         height: 56px;
         padding: 0;
         border: none;
@@ -42,7 +42,7 @@
             opacity: 0.8;
         }
 
-        @include small {
+        @include medium {
             height: 100%;
             width: 174px;
             padding: 5px 15px;

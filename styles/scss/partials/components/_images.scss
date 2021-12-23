@@ -24,3 +24,21 @@
     }
     
 }
+
+.img--coloured {
+    display: none;
+}
+
+.clients__client{
+    img {
+        height: 100%;
+    }
+    &:hover {
+        .img--greyscale {
+            display: none;
+        }
+        .img--coloured {
+            display: initial;
+        }
+    }
+}
