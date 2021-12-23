@@ -11,50 +11,43 @@
 
     &--logo {
         flex-basis: 62%;
+
+        @include small {
+            flex-basis: 48%;
+            margin-right: auto;
+        }
     }
 
     &--links {
         flex-basis: 42px;
         margin-left: auto;
         justify-content: right;
+        @include small {
+            display: none;
+        }
     }
 
     &--menu {
         flex-basis: 63px;
         margin-left: 20px;
+        @include small {
+            order: 2;
+        }
     }
 
-    £--search {
+    &--search {
         order: 1;
+        @include small {
+            flex-basis: 237px;
+            order: 1;
+            margin-left: auto;
+        }
     }
 
     &__hamburger-container {
         display: flex;
         width: 63px;
         height: 56px;
-    }
-}
-
-@include small  {
-    .header {
-        &--logo {
-            flex-basis: 48%;
-            margin-right: auto;
-        }
-
-        &--search {
-            flex-basis: 237px;
-            order: 1;
-            margin-left: auto;
-        }
-
-        &--links {
-            display: none;
-        }
-
-        &--menu {
-            order: 2;
-        }
     }
 }
 
@@ -70,7 +63,7 @@
         height: 100%;
         position: absolute;
         top: 0;
-        left: 2vw;
+        left: calc((100vw - 720px) / 2);
         z-index: 40;
     }
 
@@ -87,12 +80,21 @@
 }
 
 %card-deck {
+    display: flex;
     flex-direction: column;
     gap: 2rem;
+    @include small {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        width: 720px;
+        margin: 0 auto;
+    }
 }
 
 .services {
-    @include layout-div;
+    // @include layout-div;
     @include flexy-center;
     @extend %card-deck;
 
@@ -117,6 +119,23 @@
         margin-top: 30px;
         align-items: flex-start;
     }
+
+    @include small {
+        &--bespoke, &--it, &--marketing {
+            width: 720px;
+            height: 290px;
+        }
+
+        &--latest {
+            width: 345px;
+        }
+
+        &--telecoms, &--web, &--security, &--training {
+            width: 345px;
+            height: 312px;
+            // margin: 0;
+        }
+    }
 }
 
 .about {
@@ -133,7 +152,7 @@
     @include layout-div;
     @include flexy-center;
     flex-direction: column;
-    
+
     &__heading-container {
         width: calc(100% + 30px);
         margin-left: -15px;
@@ -147,8 +166,14 @@
         @extend %card-deck;
         @include page-container;
         padding-top: 20px;
+        @include small {
+            .card:nth-of-type(3) {
+                display: none;
+            }
+        }
     }
 }
+
 .poster {
     @include flexy-center;
     justify-content: left;
@@ -156,6 +181,7 @@
     margin-top: 30px;
     padding-top: 30px;
     border-top: 1px solid #ccc;
+
     &__details {
         padding-left: 20px;
     }
@@ -185,10 +211,12 @@
         display: flex;
         flex-direction: column;
     }
+
     &__block {
         width: 225px;
         margin-bottom: 30px;
     }
+
     &__bottom {
         @include page-container;
         display: flex;
@@ -196,6 +224,7 @@
         padding-top: 10px;
         border-top: 1px solid $color-footer-border;
     }
+
     &__social-container {
         display: flex;
         flex: 0 0 132px;

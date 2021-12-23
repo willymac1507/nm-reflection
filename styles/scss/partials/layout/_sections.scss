@@ -12,6 +12,10 @@ section {
     padding: 0;
     height: calc(100vh - 166px);
     min-height: 530px;
+    @include small {
+        height: calc(100vh - 110px);
+        min-height: 589px;
+    }
 }
 
 #about {
@@ -27,11 +31,4 @@ section {
     padding: 0 15px;
     color: $color-primary;
     background-color: $color-tertiary;
-}
-
-@include small  {
-    header {
-        @include flexy-center;
-        justify-content: center;
-    }
 }

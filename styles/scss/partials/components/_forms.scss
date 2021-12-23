@@ -8,9 +8,20 @@
     border: 2px solid $color-mobile-nav-input-border;
     border-radius: 2px;
     box-shadow: 0 0 5px $color-mobile-nav-input-border inset;
+
     &:focus {
         box-shadow: 0 0 3px #fff;
     }
+
+    @include small {
+        height: 56px;
+        padding: 0;
+        border: none;
+        outline: none;
+        background-color: #fff;
+        box-shadow: none;
+    }
+
 }
 
 .input {
@@ -30,28 +41,18 @@
             /* Microsoft Edge */
             opacity: 0.8;
         }
-    }
 
-}
-
-@include small  {
-    .header__form {
-        height: 56px;
-        padding: 0;
-        border: none;
-        outline: 1px solid $color-nav-input-outline;
-        border-radius: 0 3px 3px 0;
-        background-color: #fff;
-        box-shadow: none;
-    }
-
-    .input {
-        &--search {
+        @include small {
             height: 100%;
-            width: 73%;
+            width: 174px;
             padding: 5px 15px;
-            border: none;
-            // box-shadow: 
+            border: 1px solid $color-nav-input-primary;
+            transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+            &:focus {
+                border-color: #5bc0de;
+                outline: 0;
+                box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08), 0 0 8px rgba(91, 192, 222, 0.6);
+            }
         }
     }
 }

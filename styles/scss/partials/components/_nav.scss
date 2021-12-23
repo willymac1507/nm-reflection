@@ -11,12 +11,25 @@
         margin-left: auto;
         border: none;
         background-color: transparent;
+        @include small {
+            @include flexy-center;
+            justify-content: center;
+            background-color: $color-nav-input-primary;
+            border-radius: 0 3px 3px 0;
+            height: 100%;
+            width: 100%;
+            font-size: 23px;
+            color: #fff;
+            &:hover {
+                background-color: darken($color-nav-input-primary, 10%);
+            }
+        }
     }
 }
 
-@media screen and (min-width: 768) {
+// @include small {
     
-}
+// }
 
 .carousel__nav {
     display: flex;

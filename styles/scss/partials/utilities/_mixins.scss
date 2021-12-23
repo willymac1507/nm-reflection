@@ -1,29 +1,11 @@
-// Media queries
-@mixin mq($break) {
-    $value: map-get($breakpoints, $break);
-    $sm: map-get($breakpoints, 'sm');
-
-    @if $value==null {
-        @error "#{$break} is not a valid breakpopint name.";
-    }
-
-    @else if $value < $sm {
-        @media (max-width: $value) {
-            @content;
-        }
-    }
-
-    @else {
-        @media (min-width: $value) {
-            @content;
-        }
-    }
-}
-
 // Page container flex attributes
 @mixin page-container {
     width: calc(100vw - 30px);
     max-width: 1072px;
+    @include small {
+        width: 720px;
+        margin: 0 auto;
+    }
 }
 
 // Header container flex attributes
