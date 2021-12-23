@@ -4,10 +4,10 @@
     height: 47px;
     padding: 6px 10px 5px 13px;
     background-color: $color-background;
-    outline: 1px solid $color-nav-input-outline;
-    border: 2px solid $color-nav-input-border;
+    outline: 1px solid $color-mobile-nav-input-outline;
+    border: 2px solid $color-mobile-nav-input-border;
     border-radius: 2px;
-    box-shadow: 0 0 5px $color-nav-input-border inset;
+    box-shadow: 0 0 5px $color-mobile-nav-input-border inset;
     &:focus {
         box-shadow: 0 0 3px #fff;
     }
@@ -19,7 +19,7 @@
         outline: none;
         background-color: transparent;
         font-size: 0.9rem;
-        color: $color-nav-input-text;
+        color: $color-mobile-nav-input-text;
 
         &::placeholder {
             /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -34,7 +34,27 @@
 
 }
 
+@include small  {
+    .header__form {
+        height: 56px;
+        padding: 0;
+        border: none;
+        outline: 1px solid $color-nav-input-outline;
+        border-radius: 0 3px 3px 0;
+        background-color: #fff;
+        box-shadow: none;
+    }
 
+    .input {
+        &--search {
+            height: 100%;
+            width: 73%;
+            padding: 5px 15px;
+            border: none;
+            // box-shadow: 
+        }
+    }
+}
 
 .news-form {
     background-color: transparent;

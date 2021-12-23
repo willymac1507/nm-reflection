@@ -6,27 +6,55 @@
     &__top-container {
         @include page-container;
         @include flexy-center;
-        flex-basis: 56px;
+        height: 65px;
     }
 
-    &__logo-container {
-        @include header-container(3, 0, 62%, left);
+    &--logo {
+        flex-basis: 62%;
     }
 
-    &__call-container {
-        @include header-container(0, 0, 42px, right);
+    &--links {
+        flex-basis: 42px;
         margin-left: auto;
+        justify-content: right;
     }
 
-    &__menu-container {
-        @include header-container(0, 0, auto, right);
+    &--menu {
+        flex-basis: 63px;
         margin-left: 20px;
+    }
+
+    £--search {
+        order: 1;
     }
 
     &__hamburger-container {
         display: flex;
         width: 63px;
         height: 56px;
+    }
+}
+
+@include small  {
+    .header {
+        &--logo {
+            flex-basis: 48%;
+            margin-right: auto;
+        }
+
+        &--search {
+            flex-basis: 237px;
+            order: 1;
+            margin-left: auto;
+        }
+
+        &--links {
+            display: none;
+        }
+
+        &--menu {
+            order: 2;
+        }
     }
 }
 

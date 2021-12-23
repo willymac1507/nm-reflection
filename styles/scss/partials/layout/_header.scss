@@ -4,10 +4,18 @@
 
 .header {
     @include flexy-center;
-    flex-direction: column;
+    flex-wrap: wrap;
     width: 100%;
     height: 168px;
     justify-content: center;
-    gap: 13px;
-    padding-top: 12px;
+    padding: 15px;
+}
+
+@include small  {
+    .header {
+        align-items: center;
+        height: 110px;
+        width: 750px;
+        padding: 20px;
+    }
 }

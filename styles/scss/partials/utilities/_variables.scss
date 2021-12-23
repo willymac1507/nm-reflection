@@ -9,14 +9,22 @@ $breakpoints: ('xs': 575px,
 
 // Colors
 $color-background: rgba(0, 0, 0, .1);
+
 $color-primary: #333645;
 $color-secondary: #666;
 $color-tertiary: #ddd;
+
 $color-button: #bbbfbc;
 $color-hover: #222;
-$color-nav-input-text: 	#555;
-$color-nav-input-outline: hsla(0, 0%, 100%, .2);
-$color-nav-input-border: rgba(0, 0, 0, .1);
+
+$color-mobile-nav-input-text: 	#555;
+$color-mobile-nav-input-outline: hsla(0, 0%, 100%, .2);
+$color-mobile-nav-input-border: rgba(0, 0, 0, .1);
+
+$color-nav-input-outline: #ccc;
+$color-nav-input-border: #7E808A;
+
+
 $color-form-input-border: #e5e5e5;
 $color-footer-border: #888;
 $color-latest: #926fb1;

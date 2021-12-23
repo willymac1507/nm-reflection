@@ -28,3 +28,10 @@ section {
     color: $color-primary;
     background-color: $color-tertiary;
 }
+
+@include small  {
+    header {
+        @include flexy-center;
+        justify-content: center;
+    }
+}
