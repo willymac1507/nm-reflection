@@ -14,12 +14,19 @@
     }
 
     &__call-container {
-        @include header-container(1, 0, 12%, center);
+        @include header-container(0, 0, 42px, right);
+        margin-left: auto;
     }
 
     &__menu-container {
         @include header-container(0, 0, auto, right);
-        margin-left: auto;
+        margin-left: 20px;
+    }
+
+    &__hamburger-container {
+        display: flex;
+        width: 63px;
+        height: 56px;
     }
 }
 

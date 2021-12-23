@@ -515,10 +515,11 @@ select {
 }
 .header__call-container {
   display: flex;
-  flex: 1 0 12%;
+  flex: 0 0 42px;
   align-items: center;
   height: 100%;
-  justify-items: center;
+  justify-items: right;
+  margin-left: auto;
 }
 .header__menu-container {
   display: flex;
@@ -526,7 +527,12 @@ select {
   align-items: center;
   height: 100%;
   justify-items: right;
-  margin-left: auto;
+  margin-left: 20px;
+}
+.header__hamburger-container {
+  display: flex;
+  width: 63px;
+  height: 56px;
 }
 
 .carousel {
