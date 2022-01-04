@@ -604,6 +604,11 @@ h1 {
     margin: 0 auto;
   }
 }
+@media screen and (min-width: 768px) {
+  .carousel__container {
+    left: calc((100vw - 720px) / 2);
+  }
+}
 .carousel::after {
   content: "";
   position: absolute;

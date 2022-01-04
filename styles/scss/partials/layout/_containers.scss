@@ -67,9 +67,11 @@
         height: 100%;
         position: absolute;
         top: 0;
-        // left: calc((100vw - 720px) / 2);
         left: 2vw;
         z-index: 40;
+        @include medium {
+            left: calc((100vw - 720px) / 2);
+        }
     }
 
     &::after {
