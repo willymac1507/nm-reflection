@@ -497,6 +497,9 @@ h1 {
   }
 }
 
+/* ====================================================== */
+/* === Containers                                     === */
+/* ====================================================== */
 .header {
   display: flex;
   align-items: center;
@@ -514,21 +517,32 @@ h1 {
     padding: 20px;
   }
 }
-
-/* ====================================================== */
-/* === Containers                                     === */
-/* ====================================================== */
+@media screen and (min-width: 992px) {
+  .header {
+    width: 970px;
+    padding: 20px 15px;
+  }
+}
 .header__top-container {
-  width: calc(100vw - 30px);
-  max-width: 1072px;
   display: flex;
   align-items: center;
   height: 65px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 767px) {
+  .header__top-container {
+    width: calc(100vw - 30px);
+    max-width: 1072px;
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 768px) {
   .header__top-container {
     width: 720px;
     margin: 0 auto;
+  }
+}
+@media screen and (max-width: 375px) {
+  .header__top-container {
+    flex-wrap: nowrap;
   }
 }
 .header--logo {
@@ -540,10 +554,22 @@ h1 {
     margin-right: auto;
   }
 }
+@media screen and (min-width: 992px) {
+  .header--logo {
+    flex-basis: 38%;
+    align-self: flex-start;
+  }
+}
 .header--links {
   flex-basis: 42px;
   margin-left: auto;
   justify-content: right;
+}
+@media screen and (max-width: 375px) {
+  .header--links {
+    flex-basis: 30px;
+    margin-left: 0;
+  }
 }
 @media screen and (min-width: 768px) {
   .header--links {
@@ -552,7 +578,13 @@ h1 {
 }
 .header--menu {
   flex-basis: 63px;
+  flex-shrink: 0;
   margin-left: 20px;
+}
+@media screen and (max-width: 375px) {
+  .header--menu {
+    margin-left: auto;
+  }
 }
 @media screen and (min-width: 768px) {
   .header--menu {
@@ -1079,7 +1111,7 @@ section {
   padding-top: 0;
 }
 
-@media screen and (min-width: 376px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   #clients {
     display: none;
   }

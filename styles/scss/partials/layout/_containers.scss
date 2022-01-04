@@ -3,10 +3,36 @@
 /* ====================================================== */
 
 .header {
+    @include flexy-center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 168px;
+    justify-content: center;
+    padding: 15px;
+
+    @include medium {
+        align-items: center;
+        height: 110px;
+        width: 750px;
+        padding: 20px;
+    }
+
+    @include large {
+        width: 970px;
+        padding: 20px 15px;
+    }
+
     &__top-container {
-        @include page-container;
         @include flexy-center;
         height: 65px;
+
+        @include small {
+            @include page-container;
+        }
+
+        @include xsmall {
+            flex-wrap: nowrap;
+        }
     }
 
     &--logo {
@@ -16,12 +42,22 @@
             flex-basis: 48%;
             margin-right: auto;
         }
+
+        @include large {
+            flex-basis: 38%;
+            align-self: flex-start;
+        }
     }
 
     &--links {
         flex-basis: 42px;
         margin-left: auto;
         justify-content: right;
+
+        @include xsmall {
+            flex-basis: 30px;
+            margin-left: 0;
+        }
 
         @include medium {
             display: none;
@@ -30,7 +66,12 @@
 
     &--menu {
         flex-basis: 63px;
+        flex-shrink: 0;
         margin-left: 20px;
+
+        @include xsmall {
+            margin-left: auto;
+        }
 
         @include medium {
             order: 2;

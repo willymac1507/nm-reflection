@@ -8,18 +8,3 @@ header {
         justify-content: center;
     }
 }
-
-.header {
-    @include flexy-center;
-    flex-wrap: wrap;
-    width: 100%;
-    height: 168px;
-    justify-content: center;
-    padding: 15px;
-    @include medium {
-        align-items: center;
-        height: 110px;
-        width: 750px;
-        padding: 20px;
-    }
-}

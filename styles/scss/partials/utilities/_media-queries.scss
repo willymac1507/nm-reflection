@@ -5,7 +5,7 @@
 }
 
 @mixin small {
-    @media screen and (min-width: 376px) and (max-width: 767px) {
+    @media screen and (max-width: 767px) {
         @content;
     }
 }
@@ -17,7 +17,7 @@
 }
 
 @mixin large {
-    @media screen and (min-width: 991px) {
+    @media screen and (min-width: 992px) {
         @content;
     }
 }
