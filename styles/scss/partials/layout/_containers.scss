@@ -94,7 +94,6 @@
     @include medium {
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center;
         gap: 30px;
         width: 720px;
         margin: 0 auto;
@@ -114,6 +113,11 @@
         background-color: #fff;
         color: #fff;
         text-align: center;
+    }
+
+    @include medium {
+        padding-left: calc((100vw - 720px) / 2);
+        padding-right: calc((100vw - 720px) / 2);
     }
 }
 
@@ -145,7 +149,7 @@
         &--web,
         &--security,
         &--training {
-            width: 345px;
+            width: 344px;
             height: 312px;
             // margin: 0;
         }

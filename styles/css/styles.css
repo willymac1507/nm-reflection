@@ -629,7 +629,6 @@ h1 {
   .latest__content-container, .services {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 30px;
     width: 720px;
     margin: 0 auto;
@@ -654,6 +653,12 @@ h1 {
   background-color: #fff;
   color: #fff;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .services {
+    padding-left: calc((100vw - 720px) / 2);
+    padding-right: calc((100vw - 720px) / 2);
+  }
 }
 
 .card {
@@ -829,7 +834,7 @@ h1 {
     width: 345px;
   }
   .card--telecoms, .card--web, .card--security, .card--training {
-    width: 345px;
+    width: 344px;
     height: 312px;
   }
 }
@@ -1089,7 +1094,6 @@ section {
 footer {
   background-color: #333645;
   color: #fff;
-  padding: 47px 0 0;
 }
 @media screen and (min-width: 768px) {
   footer br {
@@ -1441,6 +1445,8 @@ footer {
 .news-form {
   background-color: transparent;
   padding: 50px 30px;
+  max-width: 720px;
+  margin: 0 auto;
 }
 .news-form__title {
   font-size: 2rem;

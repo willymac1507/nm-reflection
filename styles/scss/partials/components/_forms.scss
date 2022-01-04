@@ -60,6 +60,8 @@
 .news-form {
     background-color: transparent;
     padding: 50px 30px;
+    max-width: 720px;
+    margin: 0 auto;
 
     &__title {
         font-size: 2rem;
