@@ -96,3 +96,39 @@
         }
     }
 }
+
+@mixin nav-content($colors, $icons) {
+
+    @each $theme,
+    $color in $colors {
+        &--#{$theme} {
+            .main-nav__icon {
+                color: $color;
+            }
+
+            &:hover {
+                background-color: $color;
+
+                .main-nav__popunder {
+                    background-color: darken($color, 10%);
+                    display: flex;
+                }
+
+                .main-nav__icon {
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    @each $theme,
+    $icon in $icons {
+        &--#{$theme} {
+            .main-nav__icon {
+                &::before {
+                    content: $icon;
+                }
+            }
+        }
+    }
+}

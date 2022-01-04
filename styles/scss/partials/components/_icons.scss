@@ -22,6 +22,10 @@
             color: $color-hover;
         }
     }
+
+    @include large {
+        display: none;
+    }
 }
 
 .search-icon {
@@ -48,4 +52,36 @@
     font-size: 1.2rem;
     line-height: 58px;
     color: inherit;
+}
+
+.support-icon,
+.contact-icon {
+    margin-right: 5px;
+
+    &::before {
+        font-family: 'icomoon';
+        font-size: 1.4rem;
+        margin-bottom: -2px;
+    }
+}
+
+.support-icon {
+    &::before {
+        content: '\e901';
+    }
+}
+
+.contact-icon {
+    &::before {
+        content: '\e900';
+    }
+}
+
+.main-nav {
+    &__icon {
+        font-family: 'icomoon';
+        font-size: 1.125rem;
+        line-height: 1.125rem;
+        margin: auto 0;
+    }
 }

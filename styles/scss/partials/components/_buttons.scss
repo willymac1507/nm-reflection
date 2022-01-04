@@ -92,4 +92,28 @@
             background-color: darken($color-primary, 10%);
         }
     }
+
+    &--support, &--contact {
+        display: flex;
+        line-height: 43.5px;
+        align-items: center;
+        font-size: 1.125rem;
+    }
+
+    &--support {
+        $back-color: map-get($map: $card-colors, $key: 'it');
+        background-color: $back-color;
+        margin-right: 20px;
+        &:hover {
+            background-color: darken($back-color, 10%);
+        }
+    }
+
+    &--contact {
+        $back-color: $color-nav-input-primary;
+        background-color: $back-color;
+        &:hover {
+            background-color: darken($back-color, 10%);
+        }
+    }
 }

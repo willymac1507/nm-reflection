@@ -44,8 +44,9 @@
         }
 
         @include large {
-            flex-basis: 38%;
+            flex-basis: 40%;
             align-self: flex-start;
+            margin-right: 20px;
         }
     }
 
@@ -61,6 +62,11 @@
 
         @include medium {
             display: none;
+        }
+
+        @include large {
+            display: flex;
+            align-items: center;
         }
     }
 
@@ -86,6 +92,21 @@
             order: 1;
             margin-left: auto;
         }
+
+        @include large {
+            flex-basis: 63px;
+            margin-left: 20px;
+        }
+    }
+
+    &__button-container {
+        display: none;
+
+        @include large {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
     }
 
     &__hamburger-container {
@@ -95,9 +116,35 @@
     }
 }
 
+.main-nav {
+    display: none;
+    height: 100px;
+    width: 100vw;
+    background-color: $color-primary;
+
+    @include large {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__container {
+        @include layout-div;
+        overflow: visible;
+        padding: 0;
+        border-right: 1px solid rgba(0, 0, 0, 0.25);
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+        display: flex;
+        width: 940px;
+    }
+}
+
 .carousel {
     @include layout-div;
     padding-top: 0;
+
+    @include large {
+        border-top: 1px solid rgba(51, 54, 69, 0.5);
+    }
 
     &__container {
         @include page-container;
@@ -112,6 +159,10 @@
         z-index: 40;
         @include medium {
             left: calc((100vw - 720px) / 2);
+        }
+
+        @include large {
+            height: calc(100% - 110px);
         }
     }
 
