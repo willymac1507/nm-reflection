@@ -45,6 +45,16 @@
     padding: 30px;
 }
 
+// Image hover effects
+@mixin colorize {
+    .img--greyscale {
+        display: none;
+    }
+    .img--coloured {
+        display: initial;
+    }
+}
+
 // Colors
 @mixin service($colors, $icons) {
 

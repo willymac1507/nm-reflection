@@ -482,6 +482,10 @@ select {
   font-family: inherit;
 }
 
+h1 {
+  line-height: 1.1;
+}
+
 /* ====================================================== */
 /* === Header                                         === */
 /* ====================================================== */
@@ -591,7 +595,7 @@ select {
   height: 100%;
   position: absolute;
   top: 0;
-  left: calc((100vw - 720px) / 2);
+  left: 2vw;
   z-index: 40;
 }
 @media screen and (min-width: 768px) {
@@ -991,6 +995,51 @@ select {
   max-width: max-content;
 }
 
+.partners {
+  display: none;
+  justify-content: center;
+  background-color: #fff;
+  width: 100vw;
+  height: 264px;
+  padding: 50px 0;
+}
+@media screen and (min-width: 768px) {
+  .partners {
+    display: flex;
+  }
+}
+.partners__container {
+  display: grid;
+  width: calc(100vw - 48px);
+  max-width: 750px;
+  max-height: 165px;
+  grid-template-rows: 50% 34%;
+  row-gap: 16%;
+  margin: 0 24px;
+  padding: 0 15px;
+}
+.partners__item {
+  width: max-content;
+  justify-content: center;
+  padding: 0 20px;
+}
+.partners__row {
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 30px);
+}
+
+.row--first {
+  grid-row: 1;
+}
+
+.row--second {
+  grid-row: 2;
+}
+.row--second div {
+  width: 180px;
+}
+
 /* ====================================================== */
 /* === Sections                                       === */
 /* ====================================================== */
@@ -1035,7 +1084,12 @@ section {
 footer {
   background-color: #333645;
   color: #fff;
-  padding: 47px 0 43px;
+  padding: 47px 0 0;
+}
+@media screen and (min-width: 768px) {
+  footer br {
+    display: none;
+  }
 }
 
 /* ====================================================== */
@@ -1204,6 +1258,26 @@ footer {
 }
 .clients__client:hover .img--coloured {
   display: initial;
+}
+
+.partners__item img {
+  height: 60%;
+}
+.partners__item:hover .img--greyscale {
+  display: none;
+}
+.partners__item:hover .img--coloured {
+  display: initial;
+}
+
+.row--second img {
+  max-width: 100%;
+  height: auto;
+}
+
+.img--badge {
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+  height: 100% !important;
 }
 
 /* ====================================================== */

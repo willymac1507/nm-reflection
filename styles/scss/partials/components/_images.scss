@@ -18,27 +18,46 @@
     height: auto;
     width: calc(100% + 62px);
     margin: -31px 0 30px;
+
     img {
         width: 100%;
         border-radius: 3px 3px 0 0;
     }
-    
+
 }
 
 .img--coloured {
     display: none;
 }
 
-.clients__client{
+.clients__client {
     img {
         height: 100%;
     }
+
     &:hover {
-        .img--greyscale {
-            display: none;
-        }
-        .img--coloured {
-            display: initial;
-        }
+        @include colorize;
     }
+}
+
+.partners__item {
+    img {
+        height: 60%;
+    }
+
+    &:hover {
+        @include colorize;
+    }
+}
+
+.row--second {
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.img--badge {
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+    height: 100%!important;
 }

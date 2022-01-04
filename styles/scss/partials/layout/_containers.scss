@@ -22,6 +22,7 @@
         flex-basis: 42px;
         margin-left: auto;
         justify-content: right;
+
         @include medium {
             display: none;
         }
@@ -30,6 +31,7 @@
     &--menu {
         flex-basis: 63px;
         margin-left: 20px;
+
         @include medium {
             order: 2;
         }
@@ -37,6 +39,7 @@
 
     &--search {
         order: 1;
+
         @include medium {
             flex-basis: 237px;
             order: 1;
@@ -64,7 +67,8 @@
         height: 100%;
         position: absolute;
         top: 0;
-        left: calc((100vw - 720px) / 2);
+        // left: calc((100vw - 720px) / 2);
+        left: 2vw;
         z-index: 40;
     }
 
@@ -84,6 +88,7 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
+
     @include medium {
         flex-direction: row;
         flex-wrap: wrap;
@@ -122,7 +127,10 @@
     }
 
     @include medium {
-        &--bespoke, &--it, &--marketing {
+
+        &--bespoke,
+        &--it,
+        &--marketing {
             width: 720px;
             height: 290px;
         }
@@ -131,7 +139,10 @@
             width: 345px;
         }
 
-        &--telecoms, &--web, &--security, &--training {
+        &--telecoms,
+        &--web,
+        &--security,
+        &--training {
             width: 345px;
             height: 312px;
             // margin: 0;
@@ -167,6 +178,7 @@
         @extend %card-deck;
         @include page-container;
         padding-top: 20px;
+
         @include medium {
             .card:nth-of-type(3) {
                 display: none;
@@ -191,6 +203,7 @@
 .clients {
     @include layout-div;
     box-shadow: none;
+
     &__container {
         @include page-container;
         @include flexy-center;
@@ -259,5 +272,52 @@
     &__copy {
         flex: 1 1 auto;
         max-width: max-content;
+    }
+}
+
+.partners {
+    display: none;
+    justify-content: center;
+    background-color: #fff;
+    width: 100vw;
+    height: 264px;
+    padding: 50px 0;
+    @include medium {
+        display: flex;
+    }
+
+    &__container {
+        display: grid;
+        width: calc(100vw - 48px);
+        max-width: 750px;
+        max-height: 165px;
+        grid-template-rows: 50% 34%;
+        row-gap: 16%;
+        margin: 0 24px;
+        padding: 0 15px;
+    }
+
+    &__item {
+        width: max-content;
+        justify-content: center;
+        padding: 0 20px;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        width: calc(100% - 30px);
+    }
+}
+
+.row--first {
+    grid-row: 1;
+}
+
+.row--second {
+    grid-row: 2;
+
+    div {
+        width: 180px;
     }
 }
