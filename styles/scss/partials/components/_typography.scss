@@ -130,15 +130,36 @@
             width: auto;
             height: 5px;
             position: absolute;
-            left: calc((100vw - 720px) / 2);
+            left: 4vw;
             bottom: 0;
             color: transparent;
             background-color: $color-primary;
+
+            @include medium {
+                left: calc((100vw - 720px) / 2);
+            }
+
+            @include large {
+                left: calc((100vw - 940px) / 2);
+            }
+
+            @include xlarge {
+                left: calc((100vw - 1170px) / 2);
+            }
+
         }
         @include medium {
             display: block;
             width: 720px;
             margin: 0 auto;
+        }
+
+        @include large {
+            width: 940px;
+        }
+
+        @include xlarge {
+            width: 1170px;
         }
     }
 

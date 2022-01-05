@@ -368,7 +368,7 @@
 
         @include xlarge {
             .card:nth-of-type(3) {
-                display: initial;
+                display: flex;
             }
         }
     }
@@ -451,6 +451,10 @@
 
         @include xlarge {
             flex-direction: row;
+
+            div:nth-of-type(2) {
+                margin-left: auto;
+            }
         }
     }
 
@@ -474,7 +478,8 @@
     }
 
     &__divider {
-        flex: 0 0 8%;
+        flex: 0 0 3%;
+        padding-right: 5px;
     }
 
     &__sitemap {
@@ -497,10 +502,6 @@
         display: flex;
     }
 
-    @include xlarge {
-        padding-bottom: 30px;
-    }
-
     &__container {
         display: grid;
         width: calc(100vw - 48px);
@@ -515,7 +516,7 @@
             grid-template-rows: 40% 45%;
             row-gap: 15%;
             max-width: 940px;
-            height: 208px;
+            height: 178px;
         }
 
         @include xlarge {
@@ -524,7 +525,7 @@
     }
 
     &__item {
-        width: max-content;
+        // width: max-content;
         justify-content: center;
         padding: 0 20px;
     }
@@ -558,5 +559,9 @@
         @include large {
             width: 25%;
         }
+    }
+
+    div:nth-of-type(4) {
+        width: auto;
     }
 }

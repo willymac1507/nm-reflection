@@ -116,4 +116,22 @@
             background-color: darken($back-color, 10%);
         }
     }
+
+    &--news {
+        position: absolute;
+        right: -1px;
+        top: 10px;
+        display: flex;
+        align-items: center;
+        background-color: $color-latest;
+        border-radius: 0;
+        height: 23px;
+        padding: 0 10px;
+        font-size: 0.75rem;
+        font-weight: 600;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
