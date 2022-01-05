@@ -22,6 +22,10 @@
         padding: 20px 15px;
     }
 
+    @include xlarge {
+        width: 1200px;
+    }
+
     &__top-container {
         @include flexy-center;
         height: 65px;
@@ -135,6 +139,10 @@
         border-left: 1px solid rgba(255, 255, 255, 0.1);
         display: flex;
         width: 940px;
+
+        @include xlarge {
+            width: 1170px;
+        }
     }
 }
 
@@ -165,6 +173,10 @@
             height: calc(100% - 110px);
             left: calc((100vw - 940px) / 2);
             align-items: flex-start;
+        }
+
+        @include xlarge {
+            left: calc((100vw - 1170px) / 2);
         }
     }
 
@@ -213,6 +225,10 @@
 
     @include large {
         padding: 50px calc((100vw - 940px) / 2);
+    }
+
+    @include xlarge {
+        padding: 50px calc((100vw - 1170px) / 2);
     }
 }
 
@@ -276,6 +292,33 @@
             }
         }
     }
+
+    @include xlarge {
+        &--bespoke,
+        &--it,
+        &--marketing {
+            width: 370px;
+
+            .services__content {
+                height: initial;
+            }
+        }
+
+        &--latest {
+            width: 370px;
+        }
+
+        &--telecoms,
+        &--web,
+        &--security,
+        &--training {
+            width: 270px;
+            
+            .services__content {
+                height: initial;
+            }
+        }
+    }
 }
 
 .about {
@@ -286,6 +329,8 @@
     &__container {
         @include page-container;
     }
+
+
 }
 
 .latest {
@@ -312,6 +357,12 @@
                 display: none;
             }
         }
+
+        @include xlarge {
+            .card:nth-of-type(3) {
+                display: initial;
+            }
+        }
     }
 }
 
@@ -335,6 +386,7 @@
     &__container {
         @include page-container;
         @include flexy-center;
+        justify-content: space-between;
     }
 
     &__client {
@@ -345,6 +397,10 @@
 
         @include large {
             height: 63px;
+        }
+
+        @include xlarge {
+            height: 70px;
         }
     }
 }
@@ -384,6 +440,10 @@
         // @include flexy-center;
         display: flex;
         flex-direction: column;
+
+        @include xlarge {
+            flex-direction: row;
+        }
     }
 
     &__block {
@@ -429,6 +489,10 @@
         display: flex;
     }
 
+    @include xlarge {
+        padding-bottom: 30px;
+    }
+
     &__container {
         display: grid;
         width: calc(100vw - 48px);
@@ -445,6 +509,10 @@
             max-width: 940px;
             height: 208px;
         }
+
+        @include xlarge {
+            max-width: 1170px;
+        }
     }
 
     &__item {
@@ -456,7 +524,16 @@
     &__row {
         display: flex;
         justify-content: space-between;
+        max-width: 690px;
         width: 100%;
+
+        @include large {
+            max-width: 910px;
+        }
+
+        @include xlarge {
+            max-width: 1140px;
+        }
     }
 }
 

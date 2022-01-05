@@ -109,6 +109,12 @@
     &__content {
         font-weight: 400;
     }
+
+    @include xlarge {
+        p {
+            width: 49%;
+        }
+    }
 }
 
 .latest {

@@ -110,6 +110,10 @@
         @include large {
             width: 425px;
         }
+
+        @include xlarge {
+            width: 540px;
+        }
     }
 
     &__opt-out {
@@ -158,8 +162,12 @@
     }
 
     @include large {
-        max-width: 940px;
+        max-width: 1440px;
         width: 940px;
+    }
+
+    @include xlarge {
+        width: 1170px;
     }
 }
 

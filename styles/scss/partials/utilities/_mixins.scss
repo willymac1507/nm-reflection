@@ -10,6 +10,11 @@
     @include large {
         width: 940px;
     }
+
+    @include xlarge {
+        max-width: 1170px;
+        width: 1170px;
+    }
 }
 
 // Header container flex attributes
