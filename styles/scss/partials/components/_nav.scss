@@ -30,6 +30,12 @@
         @include large {
             border-radius: 3px;
         }
+
+        @include xlarge {
+            width: 63px;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
     }
 }
 

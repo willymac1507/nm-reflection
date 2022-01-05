@@ -52,6 +52,10 @@
             align-self: flex-start;
             margin-right: 20px;
         }
+
+        @include xlarge {
+            flex-basis: 32%;
+        }
     }
 
     &--links {
@@ -100,6 +104,10 @@
         @include large {
             flex-basis: 63px;
             margin-left: 20px;
+        }
+
+        @include xlarge {
+            flex-basis: 303px;
         }
     }
 

@@ -58,6 +58,11 @@
         @include large {
             display: none;
         }
+
+        @include xlarge {
+            display: initial;
+            width: 240px;
+        }
     }
 }
 

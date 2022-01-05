@@ -578,6 +578,11 @@ h1 {
     margin-right: 20px;
   }
 }
+@media screen and (min-width: 1260px) {
+  .header--logo {
+    flex-basis: 32%;
+  }
+}
 .header--links {
   flex-basis: 42px;
   margin-left: auto;
@@ -629,6 +634,11 @@ h1 {
   .header--search {
     flex-basis: 63px;
     margin-left: 20px;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .header--search {
+    flex-basis: 303px;
   }
 }
 .header__button-container {
@@ -1679,6 +1689,13 @@ footer {
     border-radius: 3px;
   }
 }
+@media screen and (min-width: 1260px) {
+  .header__form-link {
+    width: 63px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
 
 .main-nav__link {
   display: flex;
@@ -1949,6 +1966,12 @@ footer {
 @media screen and (min-width: 992px) {
   .input--search {
     display: none;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .input--search {
+    display: initial;
+    width: 240px;
   }
 }
 
