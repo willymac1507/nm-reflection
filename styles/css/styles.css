@@ -735,8 +735,6 @@ h1 {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 30px;
-    width: 720px;
-    margin: 0 auto;
   }
 }
 
@@ -761,8 +759,12 @@ h1 {
 }
 @media screen and (min-width: 768px) {
   .services {
-    padding-left: calc((100vw - 720px) / 2);
-    padding-right: calc((100vw - 720px) / 2);
+    padding: 50px calc((100vw - 720px) / 2);
+  }
+}
+@media screen and (min-width: 992px) {
+  .services {
+    padding: 50px calc((100vw - 940px) / 2);
   }
 }
 
@@ -938,14 +940,29 @@ h1 {
 @media screen and (min-width: 768px) {
   .card--bespoke, .card--it, .card--marketing {
     width: 720px;
-    height: 290px;
   }
   .card--latest {
     width: 345px;
   }
   .card--telecoms, .card--web, .card--security, .card--training {
     width: 344px;
-    height: 312px;
+  }
+  .card--telecoms .services__content, .card--web .services__content, .card--security .services__content, .card--training .services__content {
+    height: 66px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .card--bespoke, .card--it, .card--marketing {
+    width: 293px;
+  }
+  .card--bespoke .services__content, .card--it .services__content, .card--marketing .services__content {
+    height: 110px;
+  }
+  .card--telecoms, .card--web, .card--security, .card--training {
+    width: 455px;
+  }
+  .card--telecoms .services__content, .card--web .services__content, .card--security .services__content, .card--training .services__content {
+    height: auto;
   }
 }
 

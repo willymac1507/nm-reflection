@@ -189,8 +189,6 @@
         flex-direction: row;
         flex-wrap: wrap;
         gap: 30px;
-        width: 720px;
-        margin: 0 auto;
     }
 }
 
@@ -210,8 +208,11 @@
     }
 
     @include medium {
-        padding-left: calc((100vw - 720px) / 2);
-        padding-right: calc((100vw - 720px) / 2);
+        padding: 50px calc((100vw - 720px) / 2);
+    }
+
+    @include large {
+        padding: 50px calc((100vw - 940px) / 2);
     }
 }
 
@@ -232,7 +233,7 @@
         &--it,
         &--marketing {
             width: 720px;
-            height: 290px;
+            // height: 290px;
         }
 
         &--latest {
@@ -244,8 +245,34 @@
         &--security,
         &--training {
             width: 344px;
-            height: 312px;
+            
+            .services__content {
+                height: 66px;
+            }
             // margin: 0;
+        }
+    }
+
+    @include large {
+        &--bespoke,
+        &--it,
+        &--marketing {
+            width: 293px;
+
+            .services__content {
+                height: 110px;
+            }
+        }
+
+        &--telecoms,
+        &--web,
+        &--security,
+        &--training {
+            width: 455px;
+            
+            .services__content {
+                height: auto;
+            }
         }
     }
 }
