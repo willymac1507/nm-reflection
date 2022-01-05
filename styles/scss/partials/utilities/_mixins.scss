@@ -6,6 +6,10 @@
         width: 720px;
         margin: 0 auto;
     }
+
+    @include large {
+        width: 940px;
+    }
 }
 
 // Header container flex attributes

@@ -541,6 +541,11 @@ h1 {
     margin: 0 auto;
   }
 }
+@media screen and (max-width: 767px) and (min-width: 992px) {
+  .header__top-container {
+    width: 940px;
+  }
+}
 @media screen and (max-width: 375px) {
   .header__top-container {
     flex-wrap: nowrap;
@@ -692,6 +697,11 @@ h1 {
     margin: 0 auto;
   }
 }
+@media screen and (min-width: 992px) {
+  .carousel__container {
+    width: 940px;
+  }
+}
 @media screen and (min-width: 768px) {
   .carousel__container {
     left: calc((100vw - 720px) / 2);
@@ -700,6 +710,8 @@ h1 {
 @media screen and (min-width: 992px) {
   .carousel__container {
     height: calc(100% - 110px);
+    left: calc((100vw - 940px) / 2);
+    align-items: flex-start;
   }
 }
 .carousel::after {
@@ -772,6 +784,11 @@ h1 {
   .card {
     width: 720px;
     margin: 0 auto;
+  }
+}
+@media screen and (min-width: 992px) {
+  .card {
+    width: 940px;
   }
 }
 .card--bespoke .services__icon-container {
@@ -953,6 +970,11 @@ h1 {
     margin: 0 auto;
   }
 }
+@media screen and (min-width: 992px) {
+  .about__container {
+    width: 940px;
+  }
+}
 
 .latest {
   position: relative;
@@ -982,6 +1004,11 @@ h1 {
   .latest__content-container {
     width: 720px;
     margin: 0 auto;
+  }
+}
+@media screen and (min-width: 992px) {
+  .latest__content-container {
+    width: 940px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1024,6 +1051,11 @@ h1 {
     margin: 0 auto;
   }
 }
+@media screen and (min-width: 992px) {
+  .clients__container {
+    width: 940px;
+  }
+}
 .clients__client {
   display: inline-block;
   width: auto;
@@ -1064,6 +1096,11 @@ h1 {
     margin: 0 auto;
   }
 }
+@media screen and (min-width: 992px) {
+  .footer__main-container {
+    width: 940px;
+  }
+}
 .footer__block {
   width: 225px;
   margin-bottom: 30px;
@@ -1080,6 +1117,11 @@ h1 {
   .footer__bottom {
     width: 720px;
     margin: 0 auto;
+  }
+}
+@media screen and (min-width: 992px) {
+  .footer__bottom {
+    width: 940px;
   }
 }
 .footer__social-container {
@@ -1613,6 +1655,11 @@ footer {
   width: 185px;
   height: 50px;
 }
+@media screen and (min-width: 992px) {
+  .carousel__nav {
+    align-self: center;
+  }
+}
 .carousel__nav-dot {
   position: relative;
   width: 11px;
@@ -1865,6 +1912,11 @@ footer {
   margin: 0 0 35px;
   color: #fff;
   text-align: center;
+}
+@media screen and (min-width: 992px) {
+  .carousel__text {
+    text-align: left;
+  }
 }
 
 .services__header {

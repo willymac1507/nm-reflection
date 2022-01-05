@@ -55,6 +55,10 @@
     margin: 0 0 35px;
     color: #fff;
     text-align: center;
+
+    @include large {
+        text-align: left;
+    }
 }
 
 .services__header {
