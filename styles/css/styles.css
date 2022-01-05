@@ -958,10 +958,10 @@ h1 {
   .card--bespoke .services__content, .card--it .services__content, .card--marketing .services__content {
     height: 110px;
   }
-  .card--telecoms, .card--web, .card--security, .card--training {
+  .card--latest, .card--telecoms, .card--web, .card--security, .card--training {
     width: 455px;
   }
-  .card--telecoms .services__content, .card--web .services__content, .card--security .services__content, .card--training .services__content {
+  .card--latest .services__content, .card--telecoms .services__content, .card--web .services__content, .card--security .services__content, .card--training .services__content {
     height: auto;
   }
 }
@@ -1075,14 +1075,25 @@ h1 {
 }
 .clients__client {
   display: inline-block;
-  width: auto;
   padding: 0 20px;
   height: 45px;
+}
+@media screen and (min-width: 992px) {
+  .clients__client {
+    height: 63px;
+  }
 }
 
 .news-form__inputs-container {
   display: flex;
   flex-direction: column;
+}
+@media screen and (min-width: 992px) {
+  .news-form__inputs-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .footer {
@@ -1100,6 +1111,11 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+@media screen and (min-width: 992px) {
+  .footer__sub-container {
+    justify-content: space-evenly;
+  }
 }
 .footer__main-container {
   width: calc(100vw - 30px);
@@ -1162,7 +1178,6 @@ h1 {
   justify-content: center;
   background-color: #fff;
   width: 100vw;
-  height: 264px;
   padding: 50px 0;
 }
 @media screen and (min-width: 768px) {
@@ -1174,11 +1189,19 @@ h1 {
   display: grid;
   width: calc(100vw - 48px);
   max-width: 750px;
-  max-height: 165px;
+  height: 165px;
   grid-template-rows: 50% 34%;
   row-gap: 16%;
   margin: 0 24px;
   padding: 0 15px;
+}
+@media screen and (min-width: 992px) {
+  .partners__container {
+    grid-template-rows: 40% 45%;
+    row-gap: 15%;
+    max-width: 940px;
+    height: 208px;
+  }
 }
 .partners__item {
   width: max-content;
@@ -1188,7 +1211,7 @@ h1 {
 .partners__row {
   display: flex;
   justify-content: space-between;
-  width: calc(100% - 30px);
+  width: 100%;
 }
 
 .row--first {
@@ -1200,6 +1223,11 @@ h1 {
 }
 .row--second div {
   width: 180px;
+}
+@media screen and (min-width: 992px) {
+  .row--second div {
+    width: 25%;
+  }
 }
 
 /* ====================================================== */
@@ -1473,6 +1501,11 @@ footer {
 
 .partners__item img {
   height: 60%;
+}
+@media screen and (min-width: 992px) {
+  .partners__item img {
+    height: 100%;
+  }
 }
 .partners__item:hover .img--greyscale {
   display: none;
@@ -1838,6 +1871,11 @@ footer {
   outline: 0;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08), 0 0 8px rgba(91, 192, 222, 0.6);
 }
+@media screen and (min-width: 992px) {
+  .news-form__input {
+    width: 425px;
+  }
+}
 .news-form__opt-out {
   display: flex;
   align-items: flex-start;
@@ -1877,6 +1915,12 @@ footer {
   font-family: "icomoon";
   color: #fff;
   background-color: #333645;
+}
+@media screen and (min-width: 992px) {
+  .news-form {
+    max-width: 940px;
+    width: 940px;
+  }
 }
 
 .required::after {

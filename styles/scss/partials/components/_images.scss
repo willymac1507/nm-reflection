@@ -43,6 +43,10 @@
 .partners__item {
     img {
         height: 60%;
+
+        @include large {
+            height: 100%;
+        }
     }
 
     &:hover {

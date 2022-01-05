@@ -264,6 +264,7 @@
             }
         }
 
+        &--latest,
         &--telecoms,
         &--web,
         &--security,
@@ -338,9 +339,13 @@
 
     &__client {
         display: inline-block;
-        width: auto;
+        // width: auto;
         padding: 0 20px;
         height: 45px;
+
+        @include large {
+            height: 63px;
+        }
     }
 }
 
@@ -348,7 +353,15 @@
     &__inputs-container {
         display: flex;
         flex-direction: column;
+
+        @include large {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
     }
+
+
 }
 
 .footer {
@@ -360,6 +373,10 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+
+        @include large {
+            justify-content: space-evenly;
+        }
     }
 
     &__main-container {
@@ -407,7 +424,6 @@
     justify-content: center;
     background-color: #fff;
     width: 100vw;
-    height: 264px;
     padding: 50px 0;
     @include medium {
         display: flex;
@@ -417,11 +433,18 @@
         display: grid;
         width: calc(100vw - 48px);
         max-width: 750px;
-        max-height: 165px;
+        height: 165px;
         grid-template-rows: 50% 34%;
         row-gap: 16%;
         margin: 0 24px;
         padding: 0 15px;
+
+        @include large {
+            grid-template-rows: 40% 45%;
+            row-gap: 15%;
+            max-width: 940px;
+            height: 208px;
+        }
     }
 
     &__item {
@@ -433,7 +456,7 @@
     &__row {
         display: flex;
         justify-content: space-between;
-        width: calc(100% - 30px);
+        width: 100%;
     }
 }
 
@@ -446,5 +469,9 @@
 
     div {
         width: 180px;
+
+        @include large {
+            width: 25%;
+        }
     }
 }
