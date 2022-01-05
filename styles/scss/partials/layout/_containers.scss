@@ -13,17 +13,17 @@
     @include medium {
         align-items: center;
         height: 110px;
-        width: 750px;
+        width: calc(#{$container-med} + 30px);
         padding: 20px;
     }
 
     @include large {
-        width: 970px;
+        width: calc(#{$container-large} + 30px);
         padding: 20px 15px;
     }
 
     @include xlarge {
-        width: 1200px;
+        width: calc(#{$container-xlarge} + 30px);
     }
 
     &__top-container {
@@ -146,10 +146,10 @@
         border-right: 1px solid rgba(0, 0, 0, 0.25);
         border-left: 1px solid rgba(255, 255, 255, 0.1);
         display: flex;
-        width: 940px;
+        width: $container-large;
 
         @include xlarge {
-            width: 1170px;
+            width: $container-xlarge;
         }
     }
 }
@@ -174,17 +174,17 @@
         left: 2vw;
         z-index: 40;
         @include medium {
-            left: calc((100vw - 720px) / 2);
+            left: calc((100vw - #{$container-med}) / 2);
         }
 
         @include large {
             height: calc(100% - 110px);
-            left: calc((100vw - 940px) / 2);
+            left: calc((100vw - #{$container-large}) / 2);
             align-items: flex-start;
         }
 
         @include xlarge {
-            left: calc((100vw - 1170px) / 2);
+            left: calc((100vw - #{$container-xlarge}) / 2);
         }
     }
 
@@ -228,15 +228,15 @@
     }
 
     @include medium {
-        padding: 50px calc((100vw - 720px) / 2);
+        padding: 50px calc((100vw - #{$container-med}) / 2);
     }
 
     @include large {
-        padding: 50px calc((100vw - 940px) / 2);
+        padding: 50px calc((100vw - #{$container-large}) / 2);
     }
 
     @include xlarge {
-        padding: 50px calc((100vw - 1170px) / 2);
+        padding: 50px calc((100vw - #{$container-xlarge}) / 2);
     }
 }
 
@@ -256,7 +256,7 @@
         &--bespoke,
         &--it,
         &--marketing {
-            width: 720px;
+            width: $container-large;
             // height: 290px;
         }
 
@@ -394,7 +394,7 @@
     &__container {
         @include page-container;
         @include flexy-center;
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
 
     &__client {
@@ -505,7 +505,7 @@
     &__container {
         display: grid;
         width: calc(100vw - 48px);
-        max-width: 750px;
+        max-width: calc(#{$container-med} + 30px);
         height: 165px;
         grid-template-rows: 50% 34%;
         row-gap: 16%;
@@ -515,12 +515,12 @@
         @include large {
             grid-template-rows: 40% 45%;
             row-gap: 15%;
-            max-width: 940px;
+            max-width: $container-large;
             height: 178px;
         }
 
         @include xlarge {
-            max-width: 1170px;
+            max-width: $container-xlarge;
         }
     }
 
@@ -533,15 +533,15 @@
     &__row {
         display: flex;
         justify-content: space-between;
-        max-width: 690px;
+        max-width: calc(#{$container-med} - 30px);
         width: 100%;
 
         @include large {
-            max-width: 910px;
+            max-width: calc(#{$container-large} - 30px);
         }
 
         @include xlarge {
-            max-width: 1140px;
+            max-width: calc(#{$container-xlarge} - 30px);
         }
     }
 }

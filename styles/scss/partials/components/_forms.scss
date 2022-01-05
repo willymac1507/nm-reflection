@@ -69,7 +69,7 @@
 .news-form {
     background-color: transparent;
     padding: 50px 30px;
-    max-width: 720px;
+    max-width: calc(#{$container-med} - 30px);
     margin: 0 auto;
 
     &__title {
@@ -168,11 +168,11 @@
 
     @include large {
         max-width: 1440px;
-        width: 940px;
+        width: $container-large;
     }
 
     @include xlarge {
-        width: 1170px;
+        width: $container-xlarge;
     }
 }
 

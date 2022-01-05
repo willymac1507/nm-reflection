@@ -1,19 +1,18 @@
 // Page container flex attributes
 @mixin page-container {
     width: calc(100vw - 30px);
-    max-width: 1072px;
+
     @include medium {
-        width: 720px;
+        width: $container-med;
         margin: 0 auto;
     }
 
     @include large {
-        width: 940px;
+        width: $container-large;
     }
 
     @include xlarge {
-        max-width: 1170px;
-        width: 1170px;
+        width: $container-xlarge;
     }
 }
 

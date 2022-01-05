@@ -1,11 +1,9 @@
 // // Variables
 
-// Breakpoints
-$breakpoints: ('xs': 575px,
-    'sm': 576px,
-    'med': 768px,
-    'lg': 992px,
-);
+// Containers
+$container-med: 720px;
+$container-large: 940px;
+$container-xlarge: 1170px;
 
 // Colors
 $color-background: rgba(0, 0, 0, .1);
@@ -29,8 +27,7 @@ $color-form-input-border: #e5e5e5;
 $color-footer-border: #888;
 $color-latest: #926fb1;
 
-// Card colors
-
+// Card colors and icons
 $card-colors: (
     'bespoke' : #67809f,
     'it': #4183d7,
