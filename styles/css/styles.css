@@ -761,7 +761,6 @@ h1 {
 .latest__content-container, .services {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
 }
 @media screen and (min-width: 768px) {
   .latest__content-container, .services {
@@ -1258,6 +1257,7 @@ h1 {
 .footer__social-container {
   display: flex;
   flex: 0 0 132px;
+  margin-top: -5px;
   margin-left: auto;
 }
 .footer__divider {
@@ -1893,8 +1893,13 @@ footer {
 }
 .footer__social-link {
   color: #fff;
-  display: block;
-  width: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
   border-radius: 50%;
   padding: 10px;
 }
