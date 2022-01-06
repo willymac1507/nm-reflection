@@ -1722,7 +1722,7 @@ footer {
   padding: 0 calc((100vw - 940px) / 2);
   z-index: 70;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1260px) {
   .main-nav__popunder {
     padding: 0 calc((100vw - 1170px) / 2);
     left: calc((1170px - 100vw) / 2);

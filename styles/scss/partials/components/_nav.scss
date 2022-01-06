@@ -65,7 +65,7 @@
         padding: 0 calc((100vw - #{$container-large}) / 2);
         z-index: 70;
 
-        @include large {
+        @include xlarge {
             padding: 0 calc((100vw - #{$container-xlarge}) / 2);
             left: calc((#{$container-xlarge} - 100vw) / 2);
         }
