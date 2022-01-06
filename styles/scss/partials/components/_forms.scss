@@ -69,7 +69,7 @@
 .news-form {
     background-color: transparent;
     padding: 50px 30px;
-    max-width: calc(#{$container-med} - 30px);
+    max-width: calc(#{$container-med});
     margin: 0 auto;
 
     &__title {
@@ -102,7 +102,7 @@
         display: block;
         height: 47px;
         padding: 5px 15px;
-        border: 1px solid $color-form-input-border;
+        border: 1px solid #ccc;
         border-radius: 2px;
         transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 
@@ -130,10 +130,14 @@
     }
 
     &__check-container {
+        display: flex;
+        align-items: flex-start;
         flex-basis: 32px;
+        min-width: 13px;
     }
 
     &__check {
+        -moz-appearance: initial;
         position: relative;
         cursor: pointer;
     }
