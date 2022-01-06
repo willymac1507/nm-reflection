@@ -144,6 +144,10 @@
         -moz-border-radius: 50%;
         border-radius: 50%;
         padding: 10px;
+
+        &:hover {
+            text-decoration: none!important;
+        }
     }
 }
 

@@ -1381,6 +1381,15 @@ section {
   background-color: #333645;
   color: #fff;
 }
+@media screen and (min-width: 992px) {
+  #about {
+    background-image: url("../../images/branded.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100%;
+    background-position-y: center;
+  }
+}
 
 #latest {
   padding-top: 0;
@@ -1602,6 +1611,25 @@ footer {
   font-size: 1.125rem;
   line-height: 1.125rem;
   margin: auto 0;
+}
+
+.social-icon {
+  font-family: "icomoon";
+  font-size: 0.9rem;
+  line-height: 0.9rem;
+}
+
+.icon--facebook::after {
+  content: "";
+}
+.icon--twitter::after {
+  content: "";
+}
+.icon--insta::after {
+  content: "";
+}
+.icon--linkedin::after {
+  content: "";
 }
 
 /* ====================================================== */
@@ -1915,6 +1943,9 @@ footer {
   -moz-border-radius: 50%;
   border-radius: 50%;
   padding: 10px;
+}
+.footer__social-link:hover {
+  text-decoration: none !important;
 }
 
 .facebook:hover {

@@ -85,3 +85,38 @@
         margin: auto 0;
     }
 }
+
+.social-icon {
+    font-family: 'icomoon';
+    font-size: 0.9rem;
+    line-height: 0.9rem;
+}
+
+.icon {
+    &--facebook {
+        &::after {
+            content: '\ec5c';
+        }
+    }
+
+    &--twitter {
+        &::after {
+            content: '\ec62';
+        }
+    }
+
+    &--insta {
+        &::after {
+            content: '\ea92';
+        }
+    }
+
+    &--linkedin {
+        &::after {
+            content: '\ec96';
+        }
+    }
+}
+
+
+
