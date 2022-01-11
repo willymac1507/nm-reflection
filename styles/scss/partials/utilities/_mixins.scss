@@ -1,3 +1,24 @@
+// New all-encompassing container for sections
+@mixin section-container {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    padding: 50px 15px;
+
+    @include medium {
+        max-width: $container-med;
+        margin: 0 auto;
+    }
+
+    @include large {
+        max-width: $container-large;
+    }
+
+    @include xlarge {
+        max-width: $container-xlarge;
+    }
+}
+
 // Page container flex attributes
 @mixin page-container {
     width: calc(100vw - 30px);
@@ -37,7 +58,6 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    padding: 50px 15px;
     box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
 }
 

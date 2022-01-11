@@ -138,14 +138,14 @@
             width: auto;
             height: 5px;
             position: absolute;
-            left: 4vw;
+            left: 15px;
             bottom: 0;
             color: transparent;
             background-color: $color-primary;
 
-            @include medium {
-                left: calc((100vw - #{$container-med}) / 2);
-            }
+            // @include medium {
+            //     left: calc((100vw - #{$container-med}) / 2);
+            // }
 
             @include large {
                 left: calc((100vw - #{$container-large}) / 2);
@@ -174,6 +174,7 @@
     &__headline {
         font-weight: 600;
         line-height: 24px;
+        min-height: 48px;
         color: $color-latest;
         margin-bottom: 15px;
         &:hover {
