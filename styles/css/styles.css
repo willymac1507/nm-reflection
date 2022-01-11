@@ -1734,8 +1734,8 @@ footer {
 @media screen and (min-width: 1260px) {
   .header__form-link {
     width: 63px;
+    border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
   }
 }
 
