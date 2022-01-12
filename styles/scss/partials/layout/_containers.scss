@@ -166,13 +166,12 @@
         @include section-container;
         // @include page-container;
         // @include flexy-center;
-        width: 96vw;
         justify-content: center;
         flex-direction: column;
         height: 100%;
         position: absolute;
         top: 0;
-        left: 2vw;
+        // left: 2vw;
         z-index: 40;
         @include medium {
             left: calc((100vw - #{$container-med}) / 2);
@@ -243,8 +242,7 @@
 }
 
 .card {
-    @include page-container;
-    @include flexy-center;
+    @include section-container;
     @include card;
     @include service($card-colors, $card-icons);
 
@@ -355,7 +353,7 @@
         position: relative;
         @include section-container;
         flex-direction: column;
-        width: 100%;
+        align-items: left;
         padding: 40px 15px;
         text-align: left;
         position: relative;
@@ -490,11 +488,11 @@
 
     &__divider {
         flex: 0 0 3%;
-        padding-right: 5px;
+        padding: 0 7px;
     }
 
     &__sitemap {
-        flex: 0 0 17%;
+        flex: 0 0 13%;
     }
 
     &__copy {

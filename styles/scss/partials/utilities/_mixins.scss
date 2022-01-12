@@ -2,7 +2,7 @@
 @mixin section-container {
     display: flex;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     padding: 50px 15px;
 
     @include medium {

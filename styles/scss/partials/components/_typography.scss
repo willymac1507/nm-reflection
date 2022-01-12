@@ -127,11 +127,13 @@
 
 .latest {
     &__heading {
+        display: block;
+        width: auto;
         font-size: 1.25rem;
         font-weight: 600;
         line-height: 24px;
         text-transform: uppercase;
-        margin-left: 4vw;
+        margin: 0 auto 0 0;
         &::after {
             content: "latest";
             display: inline-block;
@@ -142,32 +144,6 @@
             bottom: 0;
             color: transparent;
             background-color: $color-primary;
-
-            // @include medium {
-            //     left: calc((100vw - #{$container-med}) / 2);
-            // }
-
-            @include large {
-                left: calc((100vw - #{$container-large}) / 2);
-            }
-
-            @include xlarge {
-                left: calc((100vw - #{$container-xlarge}) / 2);
-            }
-
-        }
-        @include medium {
-            display: block;
-            width: $container-med;
-            margin: 0 auto;
-        }
-
-        @include large {
-            width: $container-large;
-        }
-
-        @include xlarge {
-            width: $container-xlarge;
         }
     }
 

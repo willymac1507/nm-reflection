@@ -138,12 +138,12 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 38px;
+        width: 35px;
         height: 38px;
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
         border-radius: 50%;
-        padding: 10px;
+        padding: 10px 7px;
 
         &:hover {
             text-decoration: none!important;

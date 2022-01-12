@@ -702,15 +702,13 @@ h1 {
 .carousel__container {
   display: flex;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   padding: 50px 15px;
-  width: 96vw;
   justify-content: center;
   flex-direction: column;
   height: 100%;
   position: absolute;
   top: 0;
-  left: 2vw;
   z-index: 40;
 }
 @media screen and (min-width: 768px) {
@@ -773,7 +771,7 @@ h1 {
 .services {
   display: flex;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   padding: 50px 15px;
 }
 @media screen and (min-width: 768px) {
@@ -813,9 +811,10 @@ h1 {
 }
 
 .card {
-  width: calc(100vw - 30px);
   display: flex;
   align-items: center;
+  width: 100%;
+  padding: 50px 15px;
   flex-direction: column;
   position: relative;
   height: auto;
@@ -827,18 +826,18 @@ h1 {
 }
 @media screen and (min-width: 768px) {
   .card {
-    width: 750px;
+    max-width: 750px;
     margin: 0 auto;
   }
 }
 @media screen and (min-width: 992px) {
   .card {
-    width: 970px;
+    max-width: 970px;
   }
 }
 @media screen and (min-width: 1260px) {
   .card {
-    width: 1200px;
+    max-width: 1200px;
   }
 }
 .card--bespoke .services__icon-container {
@@ -1044,7 +1043,7 @@ h1 {
 .about__container {
   display: flex;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   padding: 50px 15px;
   align-items: flex-start;
   flex-direction: column;
@@ -1082,10 +1081,10 @@ h1 {
   position: relative;
   display: flex;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   padding: 50px 15px;
   flex-direction: column;
-  width: 100%;
+  align-items: left;
   padding: 40px 15px;
   text-align: left;
   position: relative;
@@ -1109,7 +1108,7 @@ h1 {
 .latest__content-container {
   display: flex;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   padding: 50px 15px;
   padding-top: 20px;
   gap: 0;
@@ -1169,7 +1168,7 @@ h1 {
 .clients__container {
   display: flex;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   padding: 50px 15px;
   justify-content: space-evenly;
 }
@@ -1225,7 +1224,7 @@ h1 {
   box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   padding: 50px 15px;
   box-shadow: none;
   flex-direction: column;
@@ -1304,10 +1303,10 @@ h1 {
 }
 .footer__divider {
   flex: 0 0 3%;
-  padding-right: 5px;
+  padding: 0 7px;
 }
 .footer__sitemap {
-  flex: 0 0 17%;
+  flex: 0 0 13%;
 }
 .footer__copy {
   flex: 1 1 auto;
@@ -1317,7 +1316,7 @@ h1 {
 .partners {
   display: flex;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   padding: 50px 15px;
   display: none;
   justify-content: center;
@@ -1675,8 +1674,8 @@ section {
 
 .social-icon {
   font-family: "icomoon";
-  font-size: 0.9rem;
-  line-height: 0.9rem;
+  font-size: 0.8rem;
+  line-height: 0.8rem;
 }
 
 .icon--facebook::after {
@@ -1997,12 +1996,12 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 38px;
+  width: 35px;
   height: 38px;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
-  padding: 10px;
+  padding: 10px 7px;
 }
 .footer__social-link:hover {
   text-decoration: none !important;
@@ -2174,7 +2173,7 @@ section {
   background-color: #ddd;
 }
 .news-form__check:checked:after {
-  content: "";
+  content: "";
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2183,6 +2182,7 @@ section {
   width: 30px;
   height: 30px;
   font-family: "icomoon";
+  font-size: 1.3rem;
   color: #fff;
   background-color: #333645;
 }
@@ -2314,11 +2314,13 @@ section {
 }
 
 .latest__heading {
+  display: block;
+  width: auto;
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 24px;
   text-transform: uppercase;
-  margin-left: 4vw;
+  margin: 0 auto 0 0;
 }
 .latest__heading::after {
   content: "latest";
@@ -2330,33 +2332,6 @@ section {
   bottom: 0;
   color: transparent;
   background-color: #333645;
-}
-@media screen and (min-width: 992px) {
-  .latest__heading::after {
-    left: calc((100vw - 970px) / 2);
-  }
-}
-@media screen and (min-width: 1260px) {
-  .latest__heading::after {
-    left: calc((100vw - 1200px) / 2);
-  }
-}
-@media screen and (min-width: 768px) {
-  .latest__heading {
-    display: block;
-    width: 750px;
-    margin: 0 auto;
-  }
-}
-@media screen and (min-width: 992px) {
-  .latest__heading {
-    width: 970px;
-  }
-}
-@media screen and (min-width: 1260px) {
-  .latest__heading {
-    width: 1200px;
-  }
 }
 .latest__headline {
   font-weight: 600;
