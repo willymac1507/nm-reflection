@@ -40,6 +40,7 @@
 }
 
 .main-nav {
+
     &__link {
         display: flex;
         flex-direction: column;
@@ -59,7 +60,7 @@
         position: absolute;
         background-color: #fff;
         top: 100px;
-        left: calc((#{$container-large} - 100vw) / 2);
+        left: 0;
         width: 100vw;
         height: 45px;
         padding: 0 calc((100vw - #{$container-large}) / 2);

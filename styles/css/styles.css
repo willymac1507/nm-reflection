@@ -656,9 +656,15 @@ h1 {
 }
 
 .main-nav {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
   display: none;
+  overflow: visible;
   height: 100px;
-  width: 100vw;
+  width: 100%;
   background-color: #333645;
 }
 @media screen and (min-width: 992px) {
@@ -668,17 +674,38 @@ h1 {
   }
 }
 .main-nav__container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
-  overflow: visible;
-  padding: 0;
-  border-right: 1px solid rgba(0, 0, 0, 0.25);
-  border-left: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
-  width: 970px;
+  align-items: center;
+  width: 100%;
+  padding: 50px 15px;
+  padding: 0 15px;
+  display: flex;
+}
+@media screen and (min-width: 768px) {
+  .main-nav__container {
+    max-width: 750px;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 992px) {
+  .main-nav__container {
+    max-width: 970px;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .main-nav__container {
+    max-width: 1200px;
+  }
+}
+.main-nav__container::before {
+  content: "";
+  height: 100%;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+.main-nav__container::after {
+  content: "";
+  height: 100%;
+  border-right: 1px solid rgba(0, 0, 0, 0.25);
 }
 @media screen and (min-width: 1260px) {
   .main-nav__container {
@@ -798,11 +825,6 @@ h1 {
   background-color: #fff;
   color: #fff;
   text-align: center;
-}
-@media screen and (min-width: 992px) {
-  .services {
-    padding: 50px calc((100vw - 970px) / 2);
-  }
 }
 @media screen and (min-width: 1260px) {
   .services {
@@ -995,7 +1017,7 @@ h1 {
     width: 345px;
   }
   .card--telecoms, .card--web, .card--security, .card--training {
-    width: calc(50% - 15px);
+    width: calc((100% - 30px) / 2);
   }
   .card--telecoms .services__content, .card--web .services__content, .card--security .services__content, .card--training .services__content {
     height: 66px;
@@ -1003,7 +1025,7 @@ h1 {
 }
 @media screen and (min-width: 992px) {
   .card--bespoke, .card--it, .card--marketing {
-    width: 293px;
+    width: calc((100% - 60px) / 3);
   }
   .card--bespoke .services__content, .card--it .services__content, .card--marketing .services__content {
     height: 110px;
@@ -1013,6 +1035,9 @@ h1 {
   }
   .card--latest .services__content, .card--telecoms .services__content, .card--web .services__content, .card--security .services__content, .card--training .services__content {
     height: auto;
+  }
+  .card--latest .latest__content, .card--telecoms .latest__content, .card--web .latest__content, .card--security .latest__content, .card--training .latest__content {
+    min-height: 66px;
   }
 }
 @media screen and (min-width: 1260px) {
@@ -1321,7 +1346,6 @@ h1 {
   display: none;
   justify-content: center;
   background-color: #fff;
-  width: 750px;
   padding: 50px 0;
 }
 @media screen and (min-width: 768px) {
@@ -1624,7 +1648,7 @@ section {
 
 .search-icon {
   font-family: "glyphicons", sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.4rem;
 }
 .search-icon::before {
   content: "";
@@ -1666,10 +1690,10 @@ section {
 }
 
 .main-nav__icon {
+  margin: 0;
   font-family: "icomoon";
-  font-size: 1.125rem;
-  line-height: 1.125rem;
-  margin: auto 0;
+  font-size: 1.3rem;
+  line-height: 1.3rem;
 }
 
 .social-icon {
@@ -1816,7 +1840,7 @@ section {
   position: absolute;
   background-color: #fff;
   top: 100px;
-  left: calc((970px - 100vw) / 2);
+  left: 0;
   width: 100vw;
   height: 45px;
   padding: 0 calc((100vw - 970px) / 2);
@@ -2267,6 +2291,7 @@ section {
 .services__header {
   font-size: 1.125rem;
   font-weight: 400;
+  line-height: 0.9em;
   padding-bottom: 17px;
   margin-bottom: 11px;
   display: block;

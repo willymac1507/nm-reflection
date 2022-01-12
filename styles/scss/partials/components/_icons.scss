@@ -30,7 +30,7 @@
 
 .search-icon {
     font-family: 'glyphicons', sans-serif;
-    font-size: 1.25rem;
+    font-size: 1.4rem;
 
     &::before {
         content: "\e003"
@@ -79,10 +79,10 @@
 
 .main-nav {
     &__icon {
+        margin: 0;
         font-family: 'icomoon';
-        font-size: 1.125rem;
-        line-height: 1.125rem;
-        margin: auto 0;
+        font-size: 1.3rem;
+        line-height: 1.3rem;
     }
 }
 

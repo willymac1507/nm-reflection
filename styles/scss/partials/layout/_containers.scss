@@ -129,9 +129,11 @@
 }
 
 .main-nav {
+    @include layout-div;
     display: none;
+    overflow: visible;
     height: 100px;
-    width: 100vw;
+    width: 100%;
     background-color: $color-primary;
 
     @include large {
@@ -140,13 +142,21 @@
     }
 
     &__container {
-        @include layout-div;
-        overflow: visible;
-        padding: 0;
-        border-right: 1px solid rgba(0, 0, 0, 0.25);
-        border-left: 1px solid rgba(255, 255, 255, 0.1);
+        @include section-container;
+        padding: 0 15px;
         display: flex;
-        width: $container-large;
+
+        &::before {
+            content: "";
+            height: 100%;
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    
+        &::after {
+            content: "";
+            height: 100%;
+            border-right: 1px solid rgba(0, 0, 0, 0.25);
+        }
 
         @include xlarge {
             width: $container-xlarge;
@@ -173,6 +183,7 @@
         top: 0;
         // left: 2vw;
         z-index: 40;
+
         @include medium {
             left: calc((100vw - #{$container-med}) / 2);
         }
@@ -228,14 +239,6 @@
         text-align: center;
     }
 
-    // @include medium {
-    //     padding: 50px calc((100vw - #{$container-med}) / 2);
-    // }
-
-    @include large {
-        padding: 50px calc((100vw - #{$container-large}) / 2);
-    }
-
     @include xlarge {
         padding: 50px calc((100vw - #{$container-xlarge}) / 2);
     }
@@ -268,8 +271,8 @@
         &--web,
         &--security,
         &--training {
-            width: calc(50% - 15px);
-            
+            width: calc((100% - 30px) / 2);
+
             .services__content {
                 height: 66px;
             }
@@ -277,10 +280,11 @@
     }
 
     @include large {
+
         &--bespoke,
         &--it,
         &--marketing {
-            width: 293px;
+            width: calc((100% - 60px) / 3);
 
             .services__content {
                 height: 110px;
@@ -297,10 +301,15 @@
             .services__content {
                 height: auto;
             }
+
+            .latest__content {
+                min-height: 66px;
+            }
         }
     }
 
     @include xlarge {
+
         &--bespoke,
         &--it,
         &--marketing {
@@ -320,7 +329,7 @@
         &--security,
         &--training {
             width: 270px;
-            
+
             .services__content {
                 height: initial;
             }
@@ -368,6 +377,7 @@
         @include medium {
             padding-top: 50px;
             gap: 30px;
+
             .card:nth-of-type(3) {
                 display: none;
             }
@@ -441,7 +451,7 @@
     flex-direction: column;
 
     &__sub-container {
-        
+
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -506,8 +516,8 @@
     display: none;
     justify-content: center;
     background-color: #fff;
-    width: $container-med;
     padding: 50px 0;
+
     @include medium {
         display: flex;
     }
