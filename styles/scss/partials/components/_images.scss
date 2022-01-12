@@ -41,12 +41,17 @@
 }
 
 .clients__client {
+    position: relative;
     img {
         height: 100%;
     }
 
     &:hover {
         @include colorize;
+
+        .tooltip {
+            display: flex;
+        }
     }
 }
 
