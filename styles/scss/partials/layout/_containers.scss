@@ -238,10 +238,6 @@
         color: #fff;
         text-align: center;
     }
-
-    @include xlarge {
-        padding: 50px calc((100vw - #{$container-xlarge}) / 2);
-    }
 }
 
 .card {
@@ -312,23 +308,20 @@
 
         &--bespoke,
         &--it,
-        &--marketing {
-            width: 370px;
+        &--marketing,
+        &--latest {
+            width: calc((100% - 60px) / 3);
 
             .services__content {
                 height: initial;
             }
         }
 
-        &--latest {
-            width: 370px;
-        }
-
         &--telecoms,
         &--web,
         &--security,
         &--training {
-            width: 270px;
+            width: calc((100% - 90px) / 4);
 
             .services__content {
                 height: initial;

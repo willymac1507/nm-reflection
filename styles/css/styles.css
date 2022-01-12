@@ -826,11 +826,6 @@ h1 {
   color: #fff;
   text-align: center;
 }
-@media screen and (min-width: 1260px) {
-  .services {
-    padding: 50px calc((100vw - 1200px) / 2);
-  }
-}
 
 .card {
   display: flex;
@@ -840,6 +835,7 @@ h1 {
   flex-direction: column;
   position: relative;
   height: auto;
+  overflow: hidden;
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 3px;
@@ -1041,17 +1037,14 @@ h1 {
   }
 }
 @media screen and (min-width: 1260px) {
-  .card--bespoke, .card--it, .card--marketing {
-    width: 370px;
+  .card--bespoke, .card--it, .card--marketing, .card--latest {
+    width: calc((100% - 60px) / 3);
   }
-  .card--bespoke .services__content, .card--it .services__content, .card--marketing .services__content {
+  .card--bespoke .services__content, .card--it .services__content, .card--marketing .services__content, .card--latest .services__content {
     height: initial;
   }
-  .card--latest {
-    width: 370px;
-  }
   .card--telecoms, .card--web, .card--security, .card--training {
-    width: 270px;
+    width: calc((100% - 90px) / 4);
   }
   .card--telecoms .services__content, .card--web .services__content, .card--security .services__content, .card--training .services__content {
     height: initial;
@@ -1738,6 +1731,13 @@ section {
   width: 100%;
   border-radius: 3px 3px 0 0;
 }
+@media screen and (min-width: 992px) {
+  .latest__image:hover img {
+    transform: scale(1.1);
+    opacity: 0.75;
+    transition: all 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+}
 
 .img--coloured {
   display: none;
@@ -1849,7 +1849,6 @@ section {
 @media screen and (min-width: 1260px) {
   .main-nav__popunder {
     padding: 0 calc((100vw - 1200px) / 2);
-    left: calc((1200px - 100vw) / 2);
   }
 }
 
