@@ -1,3 +1,7 @@
+@use './media-queries' as *;
+@use './variables' as *;
+
+
 // New all-encompassing container for sections
 @mixin section-container {
     display: flex;
