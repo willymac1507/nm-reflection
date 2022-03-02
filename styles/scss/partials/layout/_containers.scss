@@ -178,6 +178,7 @@
 }
 
 .carousel {
+    @include cta($card-colors);
     @include layout-div;
     padding-top: 0;
 

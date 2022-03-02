@@ -56,14 +56,9 @@
     cursor: pointer;
 
     &--cta {
-        $back-color: map-get($map: $card-colors, $key: 'web');
         font-size: 1.25rem;
-        background-color: $back-color;
         line-height: 50px;
         padding: 5px 20px;
-        &:hover {
-            background-color: darken($back-color, 10%);
-        }
     }
 
     &--services {

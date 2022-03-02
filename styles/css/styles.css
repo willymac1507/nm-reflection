@@ -726,6 +726,48 @@ h1 {
   box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
   padding-top: 0;
 }
+.carousel--bespoke .button--cta {
+  background-color: #67809f;
+}
+.carousel--bespoke .button--cta:hover {
+  background-color: #526781;
+}
+.carousel--it .button--cta {
+  background-color: #4183d7;
+}
+.carousel--it .button--cta:hover {
+  background-color: #286abd;
+}
+.carousel--marketing .button--cta {
+  background-color: #2ecc71;
+}
+.carousel--marketing .button--cta:hover {
+  background-color: #25a25a;
+}
+.carousel--telecoms .button--cta {
+  background-color: #d64541;
+}
+.carousel--telecoms .button--cta:hover {
+  background-color: #bc2c28;
+}
+.carousel--web .button--cta {
+  background-color: #926fb1;
+}
+.carousel--web .button--cta:hover {
+  background-color: #79539a;
+}
+.carousel--security .button--cta {
+  background-color: #f62459;
+}
+.carousel--security .button--cta:hover {
+  background-color: #de093f;
+}
+.carousel--training .button--cta {
+  background-color: #926fb1;
+}
+.carousel--training .button--cta:hover {
+  background-color: #79539a;
+}
 @media screen and (min-width: 992px) {
   .carousel {
     border-top: 1px solid rgba(51, 54, 69, 0.5);
@@ -1586,12 +1628,8 @@ section {
 }
 .button--cta {
   font-size: 1.25rem;
-  background-color: #926fb1;
   line-height: 50px;
   padding: 5px 20px;
-}
-.button--cta:hover {
-  background-color: #79539a;
 }
 .button--services {
   padding: 5px 18px;

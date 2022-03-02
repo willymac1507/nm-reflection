@@ -1,5 +1,5 @@
-@use './media-queries' as *;
-@use './variables' as *;
+@use './media-queries'as *;
+@use './variables'as *;
 
 
 // New all-encompassing container for sections
@@ -83,6 +83,7 @@
     .img--greyscale {
         display: none;
     }
+
     .img--coloured {
         display: initial;
     }
@@ -100,7 +101,7 @@
 
             .button--services {
                 background-color: $color;
-                }
+            }
 
             &:hover {
                 background-color: $color;
@@ -160,6 +161,23 @@
             .main-nav__icon {
                 &::before {
                     content: $icon;
+                }
+            }
+        }
+    }
+}
+
+@mixin cta($colors) {
+
+    @each $theme,
+    $color in $colors {
+        &--#{$theme} {
+            .button--cta {
+                background-color: $color;
+
+
+                &:hover {
+                    background-color: darken($color, 10%);
                 }
             }
         }
