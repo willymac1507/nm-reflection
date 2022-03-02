@@ -8,7 +8,24 @@ section {
     background-color: #fff;
 }
 
-#banner {
+#cookies {
+    padding: 0;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 90;
+}
+
+#cookies.show {
+    display: flex;
+}
+
+#banner  {
     padding: 0;
     height: calc(100vh - 166px);
     min-height: 530px;

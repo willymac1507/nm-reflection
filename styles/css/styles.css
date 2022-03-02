@@ -652,6 +652,33 @@ h1 {
   height: 56px;
 }
 
+.cookies__modal {
+  border-radius: 5px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 83%;
+  margin: auto;
+}
+@media screen and (min-width: 768px) {
+  .cookies__modal {
+    width: 598px;
+  }
+}
+.cookies__footer {
+  gap: 30px;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.cookies__footerinclude medium {
+  gap: 28px;
+}
+
 .main-nav {
   position: relative;
   width: 100%;
@@ -1515,6 +1542,23 @@ section {
   background-color: #fff;
 }
 
+#cookies {
+  padding: 0;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 90;
+}
+
+#cookies.show {
+  display: flex;
+}
+
 #banner {
   padding: 0;
   height: calc(100vh - 166px);
@@ -1581,7 +1625,7 @@ section {
 /* ====================================================== */
 /* Hamburger Nav Button */
 .hamburger {
-  z-index: 100;
+  z-index: 50;
   background-color: #333645;
   border-radius: 3px;
   height: 100%;
@@ -1625,6 +1669,22 @@ section {
   border-radius: 3px;
   background-color: #bbbfbc;
   cursor: pointer;
+}
+.button--cookieSettings, .button--cookieAccept {
+  flex: 100% 0 0;
+  height: 46px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .button--cookieSettings, .button--cookieAccept {
+    flex: 47.2% 0 0;
+  }
+}
+.button--cookieSettings {
+  background-color: #999aa2;
+}
+.button--cookieAccept {
+  background-color: #926fb1;
 }
 .button--cta {
   font-size: 1.25rem;
@@ -2317,6 +2377,25 @@ section {
 /* ====================================================== */
 /* === Typography                                     === */
 /* ====================================================== */
+.cookies__container {
+  color: #333645;
+}
+.cookies__heading {
+  font-size: 26px;
+  font-weight: 400;
+  margin: 0;
+  padding: 15px 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.cookies__text {
+  font-size: 16px;
+  line-height: 30px;
+  color: #666;
+  padding: 20px 20px 45px;
+  margin: 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
 .main-nav {
   text-transform: uppercase;
 }

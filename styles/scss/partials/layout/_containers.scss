@@ -1,7 +1,7 @@
 /* ====================================================== */
 /* === Containers                                     === */
 /* ====================================================== */
-@use '../utilities/utilities' as *;
+@use '../utilities/utilities'as *;
 
 
 .header {
@@ -130,6 +130,37 @@
     }
 }
 
+.cookies {
+
+    &__modal {
+        border-radius: 5px;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        width: 83%;
+        margin: auto;
+
+        @include medium {
+            width: 598px;
+        }
+    }
+
+    &__footer {
+        gap: 30px;
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        &include medium {
+            gap: 28px;
+        }
+    }
+}
+
 .main-nav {
     @include layout-div;
     display: none;
@@ -153,7 +184,7 @@
             height: 100%;
             border-left: 1px solid rgba(255, 255, 255, 0.1);
         }
-    
+
         &::after {
             content: "";
             height: 100%;
@@ -311,7 +342,7 @@
         &--security,
         &--training {
             width: 455px;
-            
+
             .services__content {
                 height: auto;
             }

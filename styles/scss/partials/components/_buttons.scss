@@ -5,7 +5,7 @@
 /* Hamburger Nav Button */
 
 .hamburger {
-    z-index: 100;
+    z-index: 50;
     background-color: $color-primary;
     border-radius: 3px;
     height: 100%;
@@ -54,6 +54,25 @@
     border-radius: 3px;
     background-color: $color-button;
     cursor: pointer;
+
+    &--cookieSettings,
+    &--cookieAccept {
+        flex: 100% 0 0;
+        height: 46px;
+        text-align: center;
+
+        @include medium {
+            flex: 47.2% 0 0;
+        }
+    }
+
+    &--cookieSettings {
+        background-color: $color-nav-input-primary;
+    }
+
+    &--cookieAccept {
+        background-color: $color-latest;
+    }
 
     &--cta {
         font-size: 1.25rem;
