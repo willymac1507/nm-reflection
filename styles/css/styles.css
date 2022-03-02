@@ -710,6 +710,14 @@ h1 {
   }
 }
 
+.slick-list {
+  height: 100%;
+  overflow: hidden;
+}
+.slick-track {
+  height: 100%;
+}
+
 .carousel {
   position: relative;
   width: 100%;
@@ -722,6 +730,9 @@ h1 {
   .carousel {
     border-top: 1px solid rgba(51, 54, 69, 0.5);
   }
+}
+.carousel__main {
+  height: 100%;
 }
 .carousel__container {
   display: flex;
@@ -758,7 +769,6 @@ h1 {
 }
 @media screen and (min-width: 992px) {
   .carousel__container {
-    height: calc(100% - 110px);
     left: calc((100vw - 970px) / 2);
     align-items: flex-start;
   }
@@ -776,7 +786,7 @@ h1 {
   width: 100%;
   height: 100%;
   display: inline-block;
-  background: linear-gradient(to left, rgba(0, 0, 0, 0.4) 0%, black 100%);
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.2) 40%, black 100%);
 }
 
 .latest__content-container, .services {
@@ -1472,6 +1482,12 @@ section {
   #banner {
     height: calc(100vh - 110px);
     min-height: 589px;
+  }
+}
+@media screen and (min-width: 992px) {
+  #banner {
+    height: calc(100vh - 210px);
+    min-height: 489px;
   }
 }
 

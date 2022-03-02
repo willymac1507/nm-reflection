@@ -17,6 +17,11 @@ section {
         height: calc(100vh - 110px);
         min-height: 589px;
     }
+
+    @include large {
+        height: calc(100vh - 210px);
+        min-height: 489px;
+    }
 }
 
 #about {
