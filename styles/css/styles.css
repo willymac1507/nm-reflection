@@ -498,6 +498,20 @@ h1 {
 /* ====================================================== */
 /* === Containers                                     === */
 /* ====================================================== */
+.page__container {
+  position: relative;
+  top: 0;
+  left: 0;
+  transition: left 0.4s;
+}
+
+.sidebar__shown {
+  left: -276px;
+}
+.sidebar__container {
+  height: 3000px;
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -1552,7 +1566,7 @@ section {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 90;
+  z-index: 130;
 }
 
 #cookies.show {
@@ -1607,6 +1621,23 @@ section {
   background-color: #ddd;
 }
 
+#sidebar {
+  position: fixed;
+  width: 275px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: #333645;
+}
+
+.sidebar--hidden {
+  z-index: -1;
+}
+
+.sidebar--expanded {
+  z-index: 49;
+}
+
 #footer__content {
   background-color: #333645;
   color: #fff;
@@ -1625,7 +1656,7 @@ section {
 /* ====================================================== */
 /* Hamburger Nav Button */
 .hamburger {
-  z-index: 50;
+  z-index: 200;
   background-color: #333645;
   border-radius: 3px;
   height: 100%;
@@ -1638,6 +1669,7 @@ section {
 }
 .hamburger:hover {
   background-color: #222;
+  cursor: pointer;
 }
 .hamburger__slice {
   width: 33px;
@@ -1854,6 +1886,23 @@ section {
   width: 100%;
 }
 
+.sidebar__overlay {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.sidebar__shown {
+  height: 100vh;
+  overflow: hidden;
+}
+.sidebar__shown .sidebar__overlay {
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 110;
+}
+
 .carousel__image {
   display: block;
   height: 100%;
@@ -1941,7 +1990,7 @@ header {
   top: -210px;
   left: 0;
   right: 0;
-  z-index: 999;
+  z-index: 200;
 }
 .header--animated {
   transition: 0.4s top;

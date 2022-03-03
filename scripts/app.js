@@ -18,7 +18,6 @@ $(function () {
 
   // Check if cookie consent has been given in this session
   const cookieConsent = sessionStorage.getItem('cookies');
-  console.log(cookieConsent);
   if (!cookieConsent) {
     $('#cookies').addClass('show');
     $('body').css({
@@ -27,6 +26,12 @@ $(function () {
     });
   };
 });
+
+function addClick(button) {
+  button.on('click', () => {
+    console.log('clicked');
+  });
+};
 
 let pagePosition = 0;
 
@@ -40,13 +45,10 @@ $(document).on('scroll', () => {
   // User is scrolling up
   {
     if (scrollValue > headHeight) {
-      console.log('hidden');
       $('.header--hidden').addClass('header--animated').addClass('header--sticky');
     } else if (scrollValue === 0) {
-      console.log('top');
       $('.header--hidden').removeClass('header--sticky');
     } else {
-      console.log('visible');
       $('.header--hidden').removeClass('header--animated');
     }
   } else if (scrollValue > pagePosition)
@@ -57,4 +59,18 @@ $(document).on('scroll', () => {
     console.log('top');
   };
   pagePosition = scrollValue;
+});
+
+
+$('.page__container').on('click', (elem) => {
+  console.log(elem.target);
+  let clicked = elem.target;
+  if (clicked.classList.contains('button--ham')) {
+    console.log('true');
+    $('.page__container').addClass('sidebar__shown');
+  } else if (clicked.classList.contains('sidebar__overlay')) { 
+    $('.page__container').removeClass('sidebar__shown');
+  } else {
+    console.log('false');
+  };
 });

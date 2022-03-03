@@ -18,664 +18,673 @@
 </head>
 
 <body>
-    <header>
-        <div class="header">
-
-            <div class="header__top-container header--logo">
-                <div class="header__logo-container">
-                    <a href="#" class="header__logo-link">
-                        <img class="header__logo-img" src="images/f-logo.png" alt="Netmatters logo">
+    <div class="page__container">
+        <div class="sidebar__overlay"></div>
+        <header>
+            <div class="header">
+    
+                <div class="header__top-container header--logo">
+                    <div class="header__logo-container">
+                        <a href="#" class="header__logo-link">
+                            <img class="header__logo-img" src="images/f-logo.png" alt="Netmatters logo">
+                        </a>
+                    </div>
+                </div>
+    
+                <div class="header__top-container header--links">
+                    <div class="header__button-container">
+                        <div id='supportButton' class="button button--support"><span class="support-icon"></span>support
+                        </div>
+                        <div id='contactButton' class="button button--contact"><span class="contact-icon"></span>contact
+                        </div>
+                    </div>
+    
+                    <div class="header__call-container">
+                        <a class="call-icon" title="tel" href="tel:#"></a>
+                    </div>
+                </div>
+    
+                <div class="header__top-container header--menu">
+                    <div class="header__menu-container">
+                        <div class="header__hamburger-container">
+                            <div class="button--ham hamburger">
+                                <div class="button--ham hamburger__slice"></div>
+                                <div class="button--ham hamburger__slice"></div>
+                                <div class="button--ham hamburger__slice"></div>
+                                <div class="button--ham hamburger__text">menu</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="header__top-container header--search">
+                    <form action="get" class="header__form">
+                        <input class="input input--search" type="text" name="search" placeholder="Search...">
+                        <a class="header__form-link" title="search" href="#">
+                            <span class="search-icon"></span>
+                        </a>
+                    </form>
+                </div>
+    
+            </div>
+    
+            <div class="main-nav">
+                <div class="main-nav__container">
+                    <a href="#" class="main-nav__link nav-link--bespoke">
+                        <p class="main-nav__icon"></p>
+                        <p class="main-nav__small-text">bespoke</p>
+                        <p class="main-nav__large-text">software</p>
+                        <div class="main-nav__popunder">
+                            <div class="main-nav__popunder-link">workflow</div>
+                            <div class="main-nav__popunder-link">automation</div>
+                            <div class="main-nav__popunder-link">integration</div>
+                            <div class="main-nav__popunder-link">database</div>
+                            <div class="main-nav__popunder-link">sharepoint</div>
+                            <div class="main-nav__popunder-link">management</div>
+                            <div class="main-nav__popunder-link">navision</div>
+                        </div>
+                    </a>
+                    <a href="#" class="main-nav__link nav-link--it">
+                        <p class="main-nav__icon"></p>
+                        <p class="main-nav__small-text">it</p>
+                        <p class="main-nav__large-text">support</p>
+                        <div class="main-nav__popunder">
+                            <div class="main-nav__popunder-link">managed it</div>
+                            <div class="main-nav__popunder-link">business it</div>
+                            <div class="main-nav__popunder-link">office 365</div>
+                            <div class="main-nav__popunder-link">consultancy</div>
+                            <div class="main-nav__popunder-link">cloud provider</div>
+                            <div class="main-nav__popunder-link">data backup</div>
+                        </div>
+                    </a>
+                    <a href="#" class="main-nav__link nav-link--marketing">
+                        <p class="main-nav__icon"></p>
+                        <p class="main-nav__small-text">digital</p>
+                        <p class="main-nav__large-text">marketing</p>
+                        <div class="main-nav__popunder">
+                            <div class="main-nav__popunder-link">search (seo)</div>
+                            <div class="main-nav__popunder-link">paid (ppc)</div>
+                            <div class="main-nav__popunder-link">conversion (cro)</div>
+                            <div class="main-nav__popunder-link">email</div>
+                            <div class="main-nav__popunder-link">social media</div>
+                            <div class="main-nav__popunder-link">content</div>
+                        </div>
+                    </a>
+                    <a href="#" class="main-nav__link nav-link--telecoms">
+                        <p class="main-nav__icon"></p>
+                        <p class="main-nav__small-text">telecoms</p>
+                        <p class="main-nav__large-text">services</p>
+                        <div class="main-nav__popunder">
+                            <div class="main-nav__popunder-link">business mobile</div>
+                            <div class="main-nav__popunder-link">hosted voip</div>
+                            <div class="main-nav__popunder-link">business voip</div>
+                            <div class="main-nav__popunder-link">business broadband</div>
+                            <div class="main-nav__popunder-link">leased line</div>
+                            <div class="main-nav__popunder-link">3cx systems</div>
+                        </div>
+                    </a>
+                    <a href="#" class="main-nav__link nav-link--web">
+                        <p class="main-nav__icon"></p>
+                        <p class="main-nav__small-text">web</p>
+                        <p class="main-nav__large-text">design</p>
+                        <div class="main-nav__popunder">
+                            <div class="main-nav__popunder-link">stylish websites</div>
+                            <div class="main-nav__popunder-link">ecommerce stores</div>
+                            <div class="main-nav__popunder-link">branding</div>
+                            <div class="main-nav__popunder-link">apps</div>
+                            <div class="main-nav__popunder-link">web hosting</div>
+                            <div class="main-nav__popunder-link">pay monthly websites</div>
+                        </div>
+                    </a>
+                    <a href="#" class="main-nav__link nav-link--security">
+                        <p class="main-nav__icon"></p>
+                        <p class="main-nav__small-text">cyber</p>
+                        <p class="main-nav__large-text">security</p>
+                        <div class="main-nav__popunder">
+                            <div class="main-nav__popunder-link">assessment</div>
+                            <div class="main-nav__popunder-link">managament</div>
+                            <div class="main-nav__popunder-link">penetration testing</div>
+                            <div class="main-nav__popunder-link">cyber essentials</div>
+                            <div class="main-nav__popunder-link">pci/dss</div>
+                            <div class="main-nav__popunder-link">hacker prevention</div>
+                        </div>
+                    </a>
+                    <a href="#" class="main-nav__link nav-link--training">
+                        <p class="main-nav__icon"></p>
+                        <p class="main-nav__small-text">developer</p>
+                        <p class="main-nav__large-text">training</p>
+                        <div class="main-nav__popunder">
+                            <div class="main-nav__popunder-link">train for a career in tech</div>
+                            <div class="main-nav__popunder-link">scion scheme frequently asked questions</div>
+                            <div class="main-nav__popunder-link">scion collaborators</div>
+                        </div>
                     </a>
                 </div>
             </div>
-
-            <div class="header__top-container header--links">
-                <div class="header__button-container">
-                    <div id='supportButton' class="button button--support"><span class="support-icon"></span>support
-                    </div>
-                    <div id='contactButton' class="button button--contact"><span class="contact-icon"></span>contact
-                    </div>
-                </div>
-
-                <div class="header__call-container">
-                    <a class="call-icon" title="tel" href="tel:#"></a>
-                </div>
-            </div>
-
-            <div class="header__top-container header--menu">
-                <div class="header__menu-container">
-                    <div class="header__hamburger-container">
-                        <a class="hamburger" href="#">
-                            <div class="hamburger__slice"></div>
-                            <div class="hamburger__slice"></div>
-                            <div class="hamburger__slice"></div>
-                            <div class="hamburger__text">menu</div>
-                        </a>
+        </header>
+    
+        <main>
+    
+    
+            <section id="cookies">
+                <div class="cookies__container">
+                    <div class="cookies__modal">
+                        <h3 class="cookies__heading">Cookies Policy</h3>
+                        <p class="cookies__text">Our website uses cookies. This helps us provide you with a good
+                            experience on our website.
+                            To see what cookies we use and what they do, and to opt-in on non-essential cookies click
+                            "change settings". For a detailed explanation, click on <a href="">"Privacy Policy"</a>
+                            otherwise click
+                            "Accept Cookies" to enter.
+                        </p>
+                        <div class="cookies__footer">
+                            <div class="button button--cookieSettings">change settings</div>
+                            <div class="button button--cookieAccept">accept cookies</div>    
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="header__top-container header--search">
-                <form action="get" class="header__form">
-                    <input class="input input--search" type="text" name="search" placeholder="Search...">
-                    <a class="header__form-link" title="search" href="#">
-                        <span class="search-icon"></span>
+    
+            </section>
+    
+            <section id="banner">
+                <div class="carousel__main">
+                    <div class="carousel">
+                        <img class="carousel__image" src="images/home-sqvx.webp" alt="Software.">
+                        <div class="carousel__container carousel--bespoke">
+                            <div class="carousel__title">bespoke software</div>
+                            <p class="carousel__text">
+                                Bringing your business together
+                                <br>
+                                with solutions that grow with you.
+                            </p>
+                            <div class="button button--cta">find out more
+                                <span class="right-arrow"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel">
+                        <img class="carousel__image" src="images/home-57sJ.webp" alt="Meeting.">
+                        <div class="carousel__container carousel--it">
+                            <div class="carousel__title">IT Support</div>
+                            <p class="carousel__text">
+                                Fast and cost-effective IT support
+                                <br>
+                                services for your business.
+                            </p>
+                            <div class="button button--cta cta--it">find out more
+                                <span class="right-arrow"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel">
+                        <img class="carousel__image" src="images/home-JQsO.webp" alt="Business results.">
+                        <div class="carousel__container carousel--marketing">
+                            <div class="carousel__title">Digital Marketing</div>
+                            <p class="carousel__text">
+                                Generating you new business through
+                                <br>
+                                results-driven marketing activities.
+                            </p>
+                            <div class="button button--cta cta--marketing">find out more
+                                <span class="right-arrow"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel">
+                        <img class="carousel__image" src="images/home-5yqm.webp" alt="Telephone keypad.">
+                        <div class="carousel__container carousel--telecoms">
+                            <div class="carousel__title">Telecoms Services</div>
+                            <p class="carousel__text">
+                                A new approach to connectivity, see how
+                                <br>
+                                we can help your business.
+                            </p>
+                            <div class="button button--cta cta--telecoms">find out more
+                                <span class="right-arrow"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel">
+                        <img class="carousel__image" src="images/home-3wAI.webp" alt="Designing on a tablet.">
+                        <div class="carousel__container carousel--web">
+                            <div class="carousel__title">Web Design</div>
+                            <p class="carousel__text">
+                                For businesses looking to make a strong
+                                <br>
+                                and effective first impression.
+                            </p>
+                            <div class="button button--cta cta--web">find out more
+                                <span class="right-arrow"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel">
+                        <img class="carousel__image" src="images/home-lQs1.webp" alt="Padlock.">
+                        <div class="carousel__container carousel--security">
+                            <div class="carousel__title">Cyber Security</div>
+                            <p class="carousel__text">
+                                Keeping businesses and their customers'
+                                <br>
+                                sensitive information protected.
+                            </p>
+                            <div class="button button--cta cta--security">find out more
+                                <span class="right-arrow"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+            </section>
+    
+            <section id="services">
+                <div class="services">
+                    <a class="card card--bespoke" href="#">
+                        <div class="services__icon-container">
+                            <span class="services__icon"></span>
+                        </div>
+                        <span class="services__header">Bespoke Software</span>
+                        <span class="services__content">
+                            Tailored software solutions to improve business productivity and online profits. Our expert team
+                            will ensure a software solution.
+                        </span>
+                        <div class="button button--services">read more</div>
                     </a>
-                </form>
-            </div>
-
-        </div>
-
-        <div class="main-nav">
-            <div class="main-nav__container">
-                <a href="#" class="main-nav__link nav-link--bespoke">
-                    <p class="main-nav__icon"></p>
-                    <p class="main-nav__small-text">bespoke</p>
-                    <p class="main-nav__large-text">software</p>
-                    <div class="main-nav__popunder">
-                        <div class="main-nav__popunder-link">workflow</div>
-                        <div class="main-nav__popunder-link">automation</div>
-                        <div class="main-nav__popunder-link">integration</div>
-                        <div class="main-nav__popunder-link">database</div>
-                        <div class="main-nav__popunder-link">sharepoint</div>
-                        <div class="main-nav__popunder-link">management</div>
-                        <div class="main-nav__popunder-link">navision</div>
-                    </div>
-                </a>
-                <a href="#" class="main-nav__link nav-link--it">
-                    <p class="main-nav__icon"></p>
-                    <p class="main-nav__small-text">it</p>
-                    <p class="main-nav__large-text">support</p>
-                    <div class="main-nav__popunder">
-                        <div class="main-nav__popunder-link">managed it</div>
-                        <div class="main-nav__popunder-link">business it</div>
-                        <div class="main-nav__popunder-link">office 365</div>
-                        <div class="main-nav__popunder-link">consultancy</div>
-                        <div class="main-nav__popunder-link">cloud provider</div>
-                        <div class="main-nav__popunder-link">data backup</div>
-                    </div>
-                </a>
-                <a href="#" class="main-nav__link nav-link--marketing">
-                    <p class="main-nav__icon"></p>
-                    <p class="main-nav__small-text">digital</p>
-                    <p class="main-nav__large-text">marketing</p>
-                    <div class="main-nav__popunder">
-                        <div class="main-nav__popunder-link">search (seo)</div>
-                        <div class="main-nav__popunder-link">paid (ppc)</div>
-                        <div class="main-nav__popunder-link">conversion (cro)</div>
-                        <div class="main-nav__popunder-link">email</div>
-                        <div class="main-nav__popunder-link">social media</div>
-                        <div class="main-nav__popunder-link">content</div>
-                    </div>
-                </a>
-                <a href="#" class="main-nav__link nav-link--telecoms">
-                    <p class="main-nav__icon"></p>
-                    <p class="main-nav__small-text">telecoms</p>
-                    <p class="main-nav__large-text">services</p>
-                    <div class="main-nav__popunder">
-                        <div class="main-nav__popunder-link">business mobile</div>
-                        <div class="main-nav__popunder-link">hosted voip</div>
-                        <div class="main-nav__popunder-link">business voip</div>
-                        <div class="main-nav__popunder-link">business broadband</div>
-                        <div class="main-nav__popunder-link">leased line</div>
-                        <div class="main-nav__popunder-link">3cx systems</div>
-                    </div>
-                </a>
-                <a href="#" class="main-nav__link nav-link--web">
-                    <p class="main-nav__icon"></p>
-                    <p class="main-nav__small-text">web</p>
-                    <p class="main-nav__large-text">design</p>
-                    <div class="main-nav__popunder">
-                        <div class="main-nav__popunder-link">stylish websites</div>
-                        <div class="main-nav__popunder-link">ecommerce stores</div>
-                        <div class="main-nav__popunder-link">branding</div>
-                        <div class="main-nav__popunder-link">apps</div>
-                        <div class="main-nav__popunder-link">web hosting</div>
-                        <div class="main-nav__popunder-link">pay monthly websites</div>
-                    </div>
-                </a>
-                <a href="#" class="main-nav__link nav-link--security">
-                    <p class="main-nav__icon"></p>
-                    <p class="main-nav__small-text">cyber</p>
-                    <p class="main-nav__large-text">security</p>
-                    <div class="main-nav__popunder">
-                        <div class="main-nav__popunder-link">assessment</div>
-                        <div class="main-nav__popunder-link">managament</div>
-                        <div class="main-nav__popunder-link">penetration testing</div>
-                        <div class="main-nav__popunder-link">cyber essentials</div>
-                        <div class="main-nav__popunder-link">pci/dss</div>
-                        <div class="main-nav__popunder-link">hacker prevention</div>
-                    </div>
-                </a>
-                <a href="#" class="main-nav__link nav-link--training">
-                    <p class="main-nav__icon"></p>
-                    <p class="main-nav__small-text">developer</p>
-                    <p class="main-nav__large-text">training</p>
-                    <div class="main-nav__popunder">
-                        <div class="main-nav__popunder-link">train for a career in tech</div>
-                        <div class="main-nav__popunder-link">scion scheme frequently asked questions</div>
-                        <div class="main-nav__popunder-link">scion collaborators</div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </header>
-
-    <main>
-
-
-        <section id="cookies">
-            <div class="cookies__container">
-                <div class="cookies__modal">
-                    <h3 class="cookies__heading">Cookies Policy</h3>
-                    <p class="cookies__text">Our website uses cookies. This helps us provide you with a good
-                        experience on our website.
-                        To see what cookies we use and what they do, and to opt-in on non-essential cookies click
-                        "change settings". For a detailed explanation, click on <a href="">"Privacy Policy"</a>
-                        otherwise click
-                        "Accept Cookies" to enter.
-                    </p>
-                    <div class="cookies__footer">
-                        <div class="button button--cookieSettings">change settings</div>
-                        <div class="button button--cookieAccept">accept cookies</div>    
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
-        <section id="banner">
-            <div class="carousel__main">
-                <div class="carousel">
-                    <img class="carousel__image" src="images/home-sqvx.webp" alt="Software.">
-                    <div class="carousel__container carousel--bespoke">
-                        <div class="carousel__title">bespoke software</div>
-                        <p class="carousel__text">
-                            Bringing your business together
-                            <br>
-                            with solutions that grow with you.
-                        </p>
-                        <div class="button button--cta">find out more
-                            <span class="right-arrow"></span>
+                    <a class="card card--it" href="#">
+                        <div class="services__icon-container">
+                            <span class="services__icon"></span>
                         </div>
-                    </div>
-                </div>
-                <div class="carousel">
-                    <img class="carousel__image" src="images/home-57sJ.webp" alt="Meeting.">
-                    <div class="carousel__container carousel--it">
-                        <div class="carousel__title">IT Support</div>
-                        <p class="carousel__text">
-                            Fast and cost-effective IT support
-                            <br>
-                            services for your business.
-                        </p>
-                        <div class="button button--cta cta--it">find out more
-                            <span class="right-arrow"></span>
+                        <span class="services__header">IT Support</span>
+                        <span class="services__content">
+                            Remotely managed IT services that is catered to your businesses needs, adds value and reduces
+                            costs.
+                        </span>
+                        <div class="button button--services">read more</div>
+                    </a>
+                    <a class="card card--marketing" href="#">
+                        <div class="services__icon-container">
+                            <span class="services__icon"></span>
                         </div>
-                    </div>
-                </div>
-                <div class="carousel">
-                    <img class="carousel__image" src="images/home-JQsO.webp" alt="Business results.">
-                    <div class="carousel__container carousel--marketing">
-                        <div class="carousel__title">Digital Marketing</div>
-                        <p class="carousel__text">
-                            Generating you new business through
-                            <br>
-                            results-driven marketing activities.
-                        </p>
-                        <div class="button button--cta cta--marketing">find out more
-                            <span class="right-arrow"></span>
+                        <span class="services__header">Digital Marketing</span>
+                        <span class="services__content">
+                            Driving brand awareness and ROI through creative digital marketing campaigns. We review and
+                            monitor
+                            online performances.
+                        </span>
+                        <div class="button button--services">read more</div>
+                    </a>
+                    <a class="card card--telecoms" href="#">
+                        <div class="services__icon-container">
+                            <span class="services__icon"></span>
                         </div>
-                    </div>
-                </div>
-                <div class="carousel">
-                    <img class="carousel__image" src="images/home-5yqm.webp" alt="Telephone keypad.">
-                    <div class="carousel__container carousel--telecoms">
-                        <div class="carousel__title">Telecoms Services</div>
-                        <p class="carousel__text">
-                            A new approach to connectivity, see how
-                            <br>
-                            we can help your business.
-                        </p>
-                        <div class="button button--cta cta--telecoms">find out more
-                            <span class="right-arrow"></span>
+                        <span class="services__header">Telecoms Services</span>
+                        <span class="services__content">
+                            Stay connected with bespoke telecoms solutions when you need it most.
+                        </span>
+                        <div class="button button--services">read more</div>
+                    </a>
+                    <a class="card card--web" href="#">
+                        <div class="services__icon-container">
+                            <span class="services__icon"></span>
                         </div>
-                    </div>
-                </div>
-                <div class="carousel">
-                    <img class="carousel__image" src="images/home-3wAI.webp" alt="Designing on a tablet.">
-                    <div class="carousel__container carousel--web">
-                        <div class="carousel__title">Web Design</div>
-                        <p class="carousel__text">
-                            For businesses looking to make a strong
-                            <br>
-                            and effective first impression.
-                        </p>
-                        <div class="button button--cta cta--web">find out more
-                            <span class="right-arrow"></span>
+                        <span class="services__header">Web Design</span>
+                        <span class="services__content">
+                            User-centric design for businesses looking to make a lasting first impression.
+                        </span>
+                        <div class="button button--services">read more</div>
+                    </a>
+                    <a class="card card--security" href="#">
+                        <div class="services__icon-container">
+                            <span class="services__icon"></span>
                         </div>
-                    </div>
-                </div>
-                <div class="carousel">
-                    <img class="carousel__image" src="images/home-lQs1.webp" alt="Padlock.">
-                    <div class="carousel__container carousel--security">
-                        <div class="carousel__title">Cyber Security</div>
-                        <p class="carousel__text">
-                            Keeping businesses and their customers'
-                            <br>
-                            sensitive information protected.
-                        </p>
-                        <div class="button button--cta cta--security">find out more
-                            <span class="right-arrow"></span>
+                        <span class="services__header">Cyber Security</span>
+                        <span class="services__content">
+                            Ensuring your online business stays secure 24/7, 365 days of the year.
+                        </span>
+                        <div class="button button--services">read more</div>
+                    </a>
+                    <a class="card card--training" href="#">
+                        <div class="services__icon-container">
+                            <span class="services__icon"></span>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
-        <section id="services">
-            <div class="services">
-                <a class="card card--bespoke" href="#">
-                    <div class="services__icon-container">
-                        <span class="services__icon"></span>
-                    </div>
-                    <span class="services__header">Bespoke Software</span>
-                    <span class="services__content">
-                        Tailored software solutions to improve business productivity and online profits. Our expert team
-                        will ensure a software solution.
-                    </span>
-                    <div class="button button--services">read more</div>
-                </a>
-                <a class="card card--it" href="#">
-                    <div class="services__icon-container">
-                        <span class="services__icon"></span>
-                    </div>
-                    <span class="services__header">IT Support</span>
-                    <span class="services__content">
-                        Remotely managed IT services that is catered to your businesses needs, adds value and reduces
-                        costs.
-                    </span>
-                    <div class="button button--services">read more</div>
-                </a>
-                <a class="card card--marketing" href="#">
-                    <div class="services__icon-container">
-                        <span class="services__icon"></span>
-                    </div>
-                    <span class="services__header">Digital Marketing</span>
-                    <span class="services__content">
-                        Driving brand awareness and ROI through creative digital marketing campaigns. We review and
-                        monitor
-                        online performances.
-                    </span>
-                    <div class="button button--services">read more</div>
-                </a>
-                <a class="card card--telecoms" href="#">
-                    <div class="services__icon-container">
-                        <span class="services__icon"></span>
-                    </div>
-                    <span class="services__header">Telecoms Services</span>
-                    <span class="services__content">
-                        Stay connected with bespoke telecoms solutions when you need it most.
-                    </span>
-                    <div class="button button--services">read more</div>
-                </a>
-                <a class="card card--web" href="#">
-                    <div class="services__icon-container">
-                        <span class="services__icon"></span>
-                    </div>
-                    <span class="services__header">Web Design</span>
-                    <span class="services__content">
-                        User-centric design for businesses looking to make a lasting first impression.
-                    </span>
-                    <div class="button button--services">read more</div>
-                </a>
-                <a class="card card--security" href="#">
-                    <div class="services__icon-container">
-                        <span class="services__icon"></span>
-                    </div>
-                    <span class="services__header">Cyber Security</span>
-                    <span class="services__content">
-                        Ensuring your online business stays secure 24/7, 365 days of the year.
-                    </span>
-                    <div class="button button--services">read more</div>
-                </a>
-                <a class="card card--training" href="#">
-                    <div class="services__icon-container">
-                        <span class="services__icon"></span>
-                    </div>
-                    <span class="services__header">Developer Training</span>
-                    <span class="services__content">
-                        Have you considered a career in web development but you aren’t sure where to start?
-                    </span>
-                    <div class="button button--services">read more</div>
-                </a>
-            </div>
-        </section>
-
-        <section id="about">
-            <div class="about">
-                <div class="about__container">
-                    <h1 class="about__header">netmatters</h1>
-                    <p class="about__intro">Netmatters Ltd is a leading web design, IT support and digital marketing
-                        agency based in the East of England with offices in Cambridge, Wymondham and Great Yarmouth.</p>
-                    <p class="about__content">Founded in 2008, we work with businesses from a variety of industries to
-                        gain
-                        new prospects, nurture existing leads and further grow their sales.</p>
-                    <p class="about__content">We provide cost effective, reliable solutions to a range of services; from
-                        bespoke cloud-based management systems, workflow and IT solutions through to creative website
-                        development and integrated digital campaigning.</p>
-                    <a href="#" class="button button--about">Our Culture
-                        <span class="right-arrow"></span>
+                        <span class="services__header">Developer Training</span>
+                        <span class="services__content">
+                            Have you considered a career in web development but you aren’t sure where to start?
+                        </span>
+                        <div class="button button--services">read more</div>
                     </a>
                 </div>
-            </div>
-        </section>
-
-        <section id="latest">
-            <div class="latest">
-                <div class="latest__heading-background">
-                    <div class="latest__heading-container">
-                        <span class="latest__heading">latest</span>
+            </section>
+    
+            <section id="about">
+                <div class="about">
+                    <div class="about__container">
+                        <h1 class="about__header">netmatters</h1>
+                        <p class="about__intro">Netmatters Ltd is a leading web design, IT support and digital marketing
+                            agency based in the East of England with offices in Cambridge, Wymondham and Great Yarmouth.</p>
+                        <p class="about__content">Founded in 2008, we work with businesses from a variety of industries to
+                            gain
+                            new prospects, nurture existing leads and further grow their sales.</p>
+                        <p class="about__content">We provide cost effective, reliable solutions to a range of services; from
+                            bespoke cloud-based management systems, workflow and IT solutions through to creative website
+                            development and integrated digital campaigning.</p>
+                        <a href="#" class="button button--about">Our Culture
+                            <span class="right-arrow"></span>
+                        </a>
                     </div>
                 </div>
-
-                <div class="latest__content-container">
-                    <div class="card card--latest">
-                        <a href="#" class="latest__image">
-                            <img src="images/bethany-shakespeare-promoted-8rpR.jpg"
-                                alt="Bethany Shakespeare HR manager">
-                        </a>
-                        <a href="#" class="button button--news">news</a>
-                        <a href="#" class="latest__headline">Bethany Shakespeare Promoted to HR Manager</a>
-                        <p class="latest__content">Netmatters are pleased to announce Bethany's promotion to HR Manager!
-                            Bethany has been fulfilling th...
-                        </p>
-                        <button class="button button--latest">read more</button>
-                        <div class="poster">
-                            <img class="poster__avatar" src="images/netmatters-ltd-VXAv.webp" alt="logo">
-                            <div class="poster__details">
-                                <div class="poster__name">Posted by Netmatters Ltd</div>
-                                <div class="poster__date">17th December 2021</div>
-                            </div>
+            </section>
+    
+            <section id="latest">
+                <div class="latest">
+                    <div class="latest__heading-background">
+                        <div class="latest__heading-container">
+                            <span class="latest__heading">latest</span>
                         </div>
                     </div>
-                    <div class="card card--latest">
-                        <a href="#" class="latest__image">
-                            <img src="images/scs-graduates-december-UFyg.jpg" alt="SCS Graduates December">
-                        </a>
-                        <a href="#" class="button button--news">news</a>
-                        <a href="#" class="latest__headline">SCS Graduates December 2021</a>
-                        <p class="latest__content">As we close off the final month for what has been an exceptional year
-                            for our Scion Coalition Scheme...
-                        </p>
-                        <button class="button button--latest">read more</button>
-                        <div class="poster">
-                            <img class="poster__avatar" src="images/netmatters-ltd-VXAv.webp" alt="logo">
-                            <div class="poster__details">
-                                <div class="poster__name">Posted by Netmatters Ltd</div>
-                                <div class="poster__date">17th December 2021</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card card--latest">
-                        <a href="#" class="latest__image">
-                            <img src="images/is-the-uk-Iq2f.jpg" alt="Digital skills shortfall">
-                        </a>
-                        <a href="#" class="button button--news">news</a>
-                        <a href="#" class="latest__headline">Is the UK Experiencing a Digital Skills Short...</a>
-                        <p class="latest__content">One of the positives that has emerged from the difficult year the
-                            world has faced is the strides tha...
-                        </p>
-                        <button class="button button--latest">read more</button>
-                        <div class="poster">
-                            <img class="poster__avatar" src="images/netmatters-ltd-VXAv.webp" alt="logo">
-                            <div class="poster__details">
-                                <div class="poster__name">Posted by Netmatters Ltd</div>
-                                <div class="poster__date">15th December 2021</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </section>
-
-        <section id="clients">
-            <div class="clients">
-                <div class="clients__container">
-                    <div class="clients__client">
-                        <img src="images/home-gZQR.png" alt="Busseys" class="clients__img img--coloured">
-                        <img src="images/home-T5gi.jpg" alt="Busseys" class="clients__img img--greyscale">
-                        <div class="tooltip">
-                            <div class="tooltip__header">Busseys</div>
-                            <div class="tooltip__content">One of the UK's leading Ford dealerships.</div>
-                            <div class="tooltip__arrow"></div>
-                        </div>
-                    </div>
-                    <div class="clients__client">
-                        <img src="images/home-MjHw.png" alt="Cranes" class="clients__img img--coloured">
-                        <img src="images/home-BsyK.jpg" alt="Cranes" class="clients__img img--greyscale">
-                        <div class="tooltip">
-                            <div class="tooltip__header">Crane Garden Buildings</div>
-                            <div class="tooltip__content">Leading manufacturer and supplier of high-end garden rooms,
-                                summerhouses, workshops and sheds in the UK.</div>
-                            <div class="tooltip__arrow"></div>
-                        </div>
-                    </div>
-                    <div class="clients__client">
-                        <img src="images/home-ukEL.png" alt="Beat" class="clients__img img--coloured">
-                        <img src="images/home-RfLc.jpg" alt="Beat" class="clients__img img--greyscale">
-                        <div class="tooltip">
-                            <div class="tooltip__header">Beat</div>
-                            <div class="tooltip__content">The UK's eating disorder charity founded in 1989.</div>
-                            <div class="tooltip__arrow"></div>
-                        </div>
-                    </div>
-                    <div class="clients__client">
-                        <img src="images/home-kGn4.png" alt="Northern Diver" class="clients__img img--coloured">
-                        <img src="images/home-jHUl.jpg" alt="Northern Diver" class="clients__img img--greyscale">
-                        <div class="tooltip">
-                            <div class="tooltip__header">Northern Diver</div>
-                            <div class="tooltip__content">Global water based equipment manufacturers for sport,
-                                military, commercial and rescue businesses.</div>
-                            <div class="tooltip__arrow"></div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section id="newsletter">
-            <div class="newsletter">
-                <form action="post" class="news-form">
-                    <div class="news-form__title">Email Newsletter Sign-Up</div>
-                    <div class="news-form__inputs-container">
-                        <div class="news-form__input-group form-group">
-                            <label for="news-name" class="news-form__label required">Your Name</label>
-                            <input type="text" class="news-form__input" id="news-name" name="name">
-                        </div>
-                        <div class="news-form__input-group form-group">
-                            <label for="news-email" class="news-form__label required">Your Email</label>
-                            <input type="email" class="news-form__input" id="news-email" name="email">
-                        </div>
-                        <div class="news-form__opt-out form-group">
-                            <div class="news-form__check-container">
-                                <input class="news-form__check" type="checkbox" id="news-check" name="opt-in" value="1">
-                            </div>
-                            <label for="news-check" class="news-form__check-label">
-                                Please tick this box if you wish to receive marketing information from us.
-                                Please see our <a href="#" class="privacy-link">Privacy Policy</a> for more
-                                information on how we use your data.
-                            </label>
-                        </div>
-
-                    </div>
-                    <a href="#" class="button button--subscribe">subscribe</a>
-                </form>
-            </div>
-        </section>
-
-    </main>
-
-    <footer>
-        <section id="footer__content">
-            <div class="footer">
-                <div class="footer__main-container">
-                    <div class="footer__sub-container">
-                        <div class="footer__block">
-                            <div class="footer__title">about netmatters</div>
-                            <div class="footer__item-group">
-                                <a href="#" class="footer__item">News</a>
-                                <a href="#" class="footer__item">Our Careers</a>
-                                <a href="#" class="footer__item">Our Team</a>
-                                <a href="#" class="footer__item">Our Office Tour</a>
-                                <a href="#" class="footer__item">Privacy Policy</a>
-                                <a href="#" class="footer__item">Cookie Policy</a>
-                                <a href="#" class="footer__item">Terms & Conditions</a>
-                                <a href="#" class="footer__item">Environmental Policy</a>
-                            </div>
-                        </div>
-                        <div class="footer__block">
-                            <div class="footer__title">our services</div>
-                            <div class="footer__item-group">
-                                <a href="#" class="footer__item">Bespoke Software</a>
-                                <a href="#" class="footer__item">IT Support</a>
-                                <a href="#" class="footer__item">Digital Marketing</a>
-                                <a href="#" class="footer__item">Telecoms Services</a>
-                                <a href="#" class="footer__item">Web Design</a>
-                                <a href="#" class="footer__item">Cyber Security</a>
-                                <a href="#" class="footer__item">Developer Training</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footer__sub-container">
-                        <div class="footer__block">
-                            <div class="footer__title">cambridge office</div>
-                            <div class="footer__item-group">
-                                <div class="footer__item">Unit 1.28,</div>
-                                <div class="footer__item">St John's Innovation Centre,</div>
-                                <div class="footer__item">Cowley Road, Milton,</div>
-                                <div class="footer__item">Cambridge,</div>
-                                <div class="footer__item">CB4 0WS</div>
-                                <div class="footer__item item--tel">
-                                    Tel: <a href="tel:876">01223 37 57 72</a>
+    
+                    <div class="latest__content-container">
+                        <div class="card card--latest">
+                            <a href="#" class="latest__image">
+                                <img src="images/bethany-shakespeare-promoted-8rpR.jpg"
+                                    alt="Bethany Shakespeare HR manager">
+                            </a>
+                            <a href="#" class="button button--news">news</a>
+                            <a href="#" class="latest__headline">Bethany Shakespeare Promoted to HR Manager</a>
+                            <p class="latest__content">Netmatters are pleased to announce Bethany's promotion to HR Manager!
+                                Bethany has been fulfilling th...
+                            </p>
+                            <button class="button button--latest">read more</button>
+                            <div class="poster">
+                                <img class="poster__avatar" src="images/netmatters-ltd-VXAv.webp" alt="logo">
+                                <div class="poster__details">
+                                    <div class="poster__name">Posted by Netmatters Ltd</div>
+                                    <div class="poster__date">17th December 2021</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="footer__block">
-                            <div class="footer__title">wymondham office</div>
-                            <div class="footer__item-group">
-                                <div class="footer__item">Unit 15,</div>
-                                <div class="footer__item">Penfold Drive,</div>
-                                <div class="footer__item">Gateway 11 Business Park,</div>
-                                <div class="footer__item">Wymondham, Norfolk,</div>
-                                <div class="footer__item">NR18 0WZ</div>
-                                <div class="footer__item item--tel">
-                                    Tel: <a href="tel:876">01603 70 40 20</a>
+                        <div class="card card--latest">
+                            <a href="#" class="latest__image">
+                                <img src="images/scs-graduates-december-UFyg.jpg" alt="SCS Graduates December">
+                            </a>
+                            <a href="#" class="button button--news">news</a>
+                            <a href="#" class="latest__headline">SCS Graduates December 2021</a>
+                            <p class="latest__content">As we close off the final month for what has been an exceptional year
+                                for our Scion Coalition Scheme...
+                            </p>
+                            <button class="button button--latest">read more</button>
+                            <div class="poster">
+                                <img class="poster__avatar" src="images/netmatters-ltd-VXAv.webp" alt="logo">
+                                <div class="poster__details">
+                                    <div class="poster__name">Posted by Netmatters Ltd</div>
+                                    <div class="poster__date">17th December 2021</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="footer__block">
-                            <div class="footer__title">great yarmouth office</div>
-                            <div class="footer__item-group">
-                                <div class="footer__item">Suite F23,</div>
-                                <div class="footer__item">Beacon Innovation Centre,</div>
-                                <div class="footer__item">Beacon Park, Gorleston,</div>
-                                <div class="footer__item">Great Yarmouth, Norfolk,</div>
-                                <div class="footer__item">NR31 7RA</div>
-                                <div class="footer__item item--tel">
-                                    Tel: <a href="tel:876">01493 60 32 04</a>
+                        <div class="card card--latest">
+                            <a href="#" class="latest__image">
+                                <img src="images/is-the-uk-Iq2f.jpg" alt="Digital skills shortfall">
+                            </a>
+                            <a href="#" class="button button--news">news</a>
+                            <a href="#" class="latest__headline">Is the UK Experiencing a Digital Skills Short...</a>
+                            <p class="latest__content">One of the positives that has emerged from the difficult year the
+                                world has faced is the strides tha...
+                            </p>
+                            <button class="button button--latest">read more</button>
+                            <div class="poster">
+                                <img class="poster__avatar" src="images/netmatters-ltd-VXAv.webp" alt="logo">
+                                <div class="poster__details">
+                                    <div class="poster__name">Posted by Netmatters Ltd</div>
+                                    <div class="poster__date">15th December 2021</div>
                                 </div>
                             </div>
                         </div>
                     </div>
+    
+                </div>
+    
+            </section>
+    
+            <section id="clients">
+                <div class="clients">
+                    <div class="clients__container">
+                        <div class="clients__client">
+                            <img src="images/home-gZQR.png" alt="Busseys" class="clients__img img--coloured">
+                            <img src="images/home-T5gi.jpg" alt="Busseys" class="clients__img img--greyscale">
+                            <div class="tooltip">
+                                <div class="tooltip__header">Busseys</div>
+                                <div class="tooltip__content">One of the UK's leading Ford dealerships.</div>
+                                <div class="tooltip__arrow"></div>
+                            </div>
+                        </div>
+                        <div class="clients__client">
+                            <img src="images/home-MjHw.png" alt="Cranes" class="clients__img img--coloured">
+                            <img src="images/home-BsyK.jpg" alt="Cranes" class="clients__img img--greyscale">
+                            <div class="tooltip">
+                                <div class="tooltip__header">Crane Garden Buildings</div>
+                                <div class="tooltip__content">Leading manufacturer and supplier of high-end garden rooms,
+                                    summerhouses, workshops and sheds in the UK.</div>
+                                <div class="tooltip__arrow"></div>
+                            </div>
+                        </div>
+                        <div class="clients__client">
+                            <img src="images/home-ukEL.png" alt="Beat" class="clients__img img--coloured">
+                            <img src="images/home-RfLc.jpg" alt="Beat" class="clients__img img--greyscale">
+                            <div class="tooltip">
+                                <div class="tooltip__header">Beat</div>
+                                <div class="tooltip__content">The UK's eating disorder charity founded in 1989.</div>
+                                <div class="tooltip__arrow"></div>
+                            </div>
+                        </div>
+                        <div class="clients__client">
+                            <img src="images/home-kGn4.png" alt="Northern Diver" class="clients__img img--coloured">
+                            <img src="images/home-jHUl.jpg" alt="Northern Diver" class="clients__img img--greyscale">
+                            <div class="tooltip">
+                                <div class="tooltip__header">Northern Diver</div>
+                                <div class="tooltip__content">Global water based equipment manufacturers for sport,
+                                    military, commercial and rescue businesses.</div>
+                                <div class="tooltip__arrow"></div>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+            </section>
+    
+            <section id="newsletter">
+                <div class="newsletter">
+                    <form action="post" class="news-form">
+                        <div class="news-form__title">Email Newsletter Sign-Up</div>
+                        <div class="news-form__inputs-container">
+                            <div class="news-form__input-group form-group">
+                                <label for="news-name" class="news-form__label required">Your Name</label>
+                                <input type="text" class="news-form__input" id="news-name" name="name">
+                            </div>
+                            <div class="news-form__input-group form-group">
+                                <label for="news-email" class="news-form__label required">Your Email</label>
+                                <input type="email" class="news-form__input" id="news-email" name="email">
+                            </div>
+                            <div class="news-form__opt-out form-group">
+                                <div class="news-form__check-container">
+                                    <input class="news-form__check" type="checkbox" id="news-check" name="opt-in" value="1">
+                                </div>
+                                <label for="news-check" class="news-form__check-label">
+                                    Please tick this box if you wish to receive marketing information from us.
+                                    Please see our <a href="#" class="privacy-link">Privacy Policy</a> for more
+                                    information on how we use your data.
+                                </label>
+                            </div>
+    
+                        </div>
+                        <a href="#" class="button button--subscribe">subscribe</a>
+                    </form>
+                </div>
+            </section>
+    
+        </main>
+    
+        <footer>
+            <section id="footer__content">
+                <div class="footer">
+                    <div class="footer__main-container">
+                        <div class="footer__sub-container">
+                            <div class="footer__block">
+                                <div class="footer__title">about netmatters</div>
+                                <div class="footer__item-group">
+                                    <a href="#" class="footer__item">News</a>
+                                    <a href="#" class="footer__item">Our Careers</a>
+                                    <a href="#" class="footer__item">Our Team</a>
+                                    <a href="#" class="footer__item">Our Office Tour</a>
+                                    <a href="#" class="footer__item">Privacy Policy</a>
+                                    <a href="#" class="footer__item">Cookie Policy</a>
+                                    <a href="#" class="footer__item">Terms & Conditions</a>
+                                    <a href="#" class="footer__item">Environmental Policy</a>
+                                </div>
+                            </div>
+                            <div class="footer__block">
+                                <div class="footer__title">our services</div>
+                                <div class="footer__item-group">
+                                    <a href="#" class="footer__item">Bespoke Software</a>
+                                    <a href="#" class="footer__item">IT Support</a>
+                                    <a href="#" class="footer__item">Digital Marketing</a>
+                                    <a href="#" class="footer__item">Telecoms Services</a>
+                                    <a href="#" class="footer__item">Web Design</a>
+                                    <a href="#" class="footer__item">Cyber Security</a>
+                                    <a href="#" class="footer__item">Developer Training</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer__sub-container">
+                            <div class="footer__block">
+                                <div class="footer__title">cambridge office</div>
+                                <div class="footer__item-group">
+                                    <div class="footer__item">Unit 1.28,</div>
+                                    <div class="footer__item">St John's Innovation Centre,</div>
+                                    <div class="footer__item">Cowley Road, Milton,</div>
+                                    <div class="footer__item">Cambridge,</div>
+                                    <div class="footer__item">CB4 0WS</div>
+                                    <div class="footer__item item--tel">
+                                        Tel: <a href="tel:876">01223 37 57 72</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="footer__block">
+                                <div class="footer__title">wymondham office</div>
+                                <div class="footer__item-group">
+                                    <div class="footer__item">Unit 15,</div>
+                                    <div class="footer__item">Penfold Drive,</div>
+                                    <div class="footer__item">Gateway 11 Business Park,</div>
+                                    <div class="footer__item">Wymondham, Norfolk,</div>
+                                    <div class="footer__item">NR18 0WZ</div>
+                                    <div class="footer__item item--tel">
+                                        Tel: <a href="tel:876">01603 70 40 20</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="footer__block">
+                                <div class="footer__title">great yarmouth office</div>
+                                <div class="footer__item-group">
+                                    <div class="footer__item">Suite F23,</div>
+                                    <div class="footer__item">Beacon Innovation Centre,</div>
+                                    <div class="footer__item">Beacon Park, Gorleston,</div>
+                                    <div class="footer__item">Great Yarmouth, Norfolk,</div>
+                                    <div class="footer__item">NR31 7RA</div>
+                                    <div class="footer__item item--tel">
+                                        Tel: <a href="tel:876">01493 60 32 04</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+                    <div class="footer__bottom">
+                        <div class="footer__copy">
+                            &copy; Copyright Netmatters Ltd. 2022.
+                            <br class="footer__break">
+                            All rights reserved.
+                        </div>
+                        <div class="footer__divider">-</div>
+                        <div class="footer__sitemap"><a href="#">Sitemap</a></div>
+                        <div class="footer__social-container">
+                            <a href="#" title="facebook" class="footer__social-link facebook">
+                                <span class="social-icon icon--facebook"></span>
+                            </a>
+                            <a href="#" title="twitter" class="footer__social-link twitter">
+                                <span class="social-icon icon--twitter"></span>
+                            </a>
+                            <a href="#" title="insta" class="footer__social-link insta">
+                                <span class="social-icon icon--insta"></span>
+                            </a>
+                            <a href="#" title="linkedin" class="footer__social-link linkedin">
+                                <span class="social-icon icon--linkedin"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <section id="footer__partners">
+                <div class="partners">
+                    <div class="partners__container">
+                        <div class="partners__row row--first">
+                            <div class="partners__item">
+                                <img src="images/google-partner-on0dv1lom3hxmt4csasal1mejv8k5ae7u9jkbk5ohs.png"
+                                    alt="Google Partner" class="partners__img img--badge">
+                            </div>
+                            <div class="partners__item">
+                                <img src="images/silver-microsoft-partner.jpg" alt="Microsoft Partner">
+                            </div>
+                            <div class="partners__item">
+                                <img src="images/future-50.jpg" alt="Future 50" class="partners__img img--coloured">
+                                <img src="images/future-50-bw.jpg" alt="Future 50" class="partners__img img--greyscale">
+                            </div>
+                            <div class="partners__item">
+                                <img src="images/qms.jpg" alt="QMS" class="partners__img img--coloured">
+                                <img src="images/qms-bw.jpg" alt="QMS" class="partners__img img--greyscale">
+                            </div>
+                            <div class="partners__item">
+                                <img src="images/norfolk-carbon-charter.jpg" alt="NCC" class="partners__img img--coloured">
+                                <img src="images/norfolk-carbon-charter-bw.jpg" alt="NCC"
+                                    class="partners__img img--greyscale">
+                            </div>
+                        </div>
+                        <div class="partners__row row--second">
+                            <div class="partners__item">
+                                <img src="images/investing-in-future-growth.jpg" alt="Investing in future growth"
+                                    class="partners__img img--coloured">
+                                <img src="images/investing-in-future-growth-bw.jpg" alt="Investing in future growth"
+                                    class="partners__img img--greyscale">
+                            </div>
+                            <div class="partners__item">
+                                <img src="images/princess-royal-training.jpg" alt="Princess Royal"
+                                    class="partners__img img--coloured">
+                                <img src="images/princess-royal-training-bw.jpg" alt="Princess Royal"
+                                    class="partners__img img--greyscale">
+                            </div>
+                            <div class="partners__item">
+                                <img src="images/skills-of-tomorrow.jpg" alt="Skills of tomorrow"
+                                    class="partners__img img--coloured">
+                                <img src="images/skills-of-tomorrow-bw.jpg" alt="Skills of tomorrow"
+                                    class="partners__img img--greyscale">
+                            </div>
+                            <div class="partners__item">
+                                <img src="images/PPC_logo.jpg" alt="PCC" class="partners__img img--coloured">
+                                <img src="images/PPC_logo-bw.jpg" alt="PCC" class="partners__img img--greyscale">
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+            </section> 
+    
+        </footer>
+    </div>
 
-                </div>
-                <div class="footer__bottom">
-                    <div class="footer__copy">
-                        &copy; Copyright Netmatters Ltd. 2022.
-                        <br class="footer__break">
-                        All rights reserved.
-                    </div>
-                    <div class="footer__divider">-</div>
-                    <div class="footer__sitemap"><a href="#">Sitemap</a></div>
-                    <div class="footer__social-container">
-                        <a href="#" title="facebook" class="footer__social-link facebook">
-                            <span class="social-icon icon--facebook"></span>
-                        </a>
-                        <a href="#" title="twitter" class="footer__social-link twitter">
-                            <span class="social-icon icon--twitter"></span>
-                        </a>
-                        <a href="#" title="insta" class="footer__social-link insta">
-                            <span class="social-icon icon--insta"></span>
-                        </a>
-                        <a href="#" title="linkedin" class="footer__social-link linkedin">
-                            <span class="social-icon icon--linkedin"></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
+    <div class="sidebar__container">
+        <section id="sidebar" class="sidebar--hidden">
+            <div>Hello</div>
         </section>
-
-        <section id="footer__partners">
-            <div class="partners">
-                <div class="partners__container">
-                    <div class="partners__row row--first">
-                        <div class="partners__item">
-                            <img src="images/google-partner-on0dv1lom3hxmt4csasal1mejv8k5ae7u9jkbk5ohs.png"
-                                alt="Google Partner" class="partners__img img--badge">
-                        </div>
-                        <div class="partners__item">
-                            <img src="images/silver-microsoft-partner.jpg" alt="Microsoft Partner">
-                        </div>
-                        <div class="partners__item">
-                            <img src="images/future-50.jpg" alt="Future 50" class="partners__img img--coloured">
-                            <img src="images/future-50-bw.jpg" alt="Future 50" class="partners__img img--greyscale">
-                        </div>
-                        <div class="partners__item">
-                            <img src="images/qms.jpg" alt="QMS" class="partners__img img--coloured">
-                            <img src="images/qms-bw.jpg" alt="QMS" class="partners__img img--greyscale">
-                        </div>
-                        <div class="partners__item">
-                            <img src="images/norfolk-carbon-charter.jpg" alt="NCC" class="partners__img img--coloured">
-                            <img src="images/norfolk-carbon-charter-bw.jpg" alt="NCC"
-                                class="partners__img img--greyscale">
-                        </div>
-                    </div>
-                    <div class="partners__row row--second">
-                        <div class="partners__item">
-                            <img src="images/investing-in-future-growth.jpg" alt="Investing in future growth"
-                                class="partners__img img--coloured">
-                            <img src="images/investing-in-future-growth-bw.jpg" alt="Investing in future growth"
-                                class="partners__img img--greyscale">
-                        </div>
-                        <div class="partners__item">
-                            <img src="images/princess-royal-training.jpg" alt="Princess Royal"
-                                class="partners__img img--coloured">
-                            <img src="images/princess-royal-training-bw.jpg" alt="Princess Royal"
-                                class="partners__img img--greyscale">
-                        </div>
-                        <div class="partners__item">
-                            <img src="images/skills-of-tomorrow.jpg" alt="Skills of tomorrow"
-                                class="partners__img img--coloured">
-                            <img src="images/skills-of-tomorrow-bw.jpg" alt="Skills of tomorrow"
-                                class="partners__img img--greyscale">
-                        </div>
-                        <div class="partners__item">
-                            <img src="images/PPC_logo.jpg" alt="PCC" class="partners__img img--coloured">
-                            <img src="images/PPC_logo-bw.jpg" alt="PCC" class="partners__img img--greyscale">
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-
-    </footer>
+    </div>
+    
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"

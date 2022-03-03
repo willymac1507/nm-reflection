@@ -3,6 +3,22 @@
 /* ====================================================== */
 @use '../utilities/utilities'as *;
 
+.page__container {
+    position: relative;
+    top: 0;
+    left: 0;
+    transition: left 0.4s;
+}
+
+.sidebar {
+    &__shown {
+    left: -276px;
+    }
+
+    &__container {
+        height: 3000px;
+    }
+}
 
 .header {
     @include flexy-center;

@@ -1,7 +1,7 @@
 /* ====================================================== */
 /* === Sections                                       === */
 /* ====================================================== */
-@use '../utilities/utilities' as *;
+@use '../utilities/utilities'as *;
 
 section {
     width: 100%;
@@ -18,14 +18,14 @@ section {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 90;
+    z-index: 130;
 }
 
 #cookies.show {
     display: flex;
 }
 
-#banner  {
+#banner {
     padding: 0;
     height: calc(100vh - 166px);
     min-height: 530px;
@@ -68,4 +68,21 @@ section {
     padding: 0 15px;
     color: $color-primary;
     background-color: $color-tertiary;
+}
+
+#sidebar {
+    position: fixed;
+    width: 275px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: $color-primary;
+}
+
+.sidebar--hidden {
+    z-index: -1;
+}
+
+.sidebar--expanded {
+    z-index: 49;
 }
