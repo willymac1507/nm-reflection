@@ -1,9 +1,41 @@
 /* ====================================================== */
 /* === Nav                                            === */
 /* ====================================================== */
-@use '../utilities/utilities' as *;
+@use '../utilities/utilities'as *;
+
+header {
+    background-color: #fff;
+    position: relative;
+    top: 0;
+    z-index: 100;
+}
+
+#scrollOut {
+    position: absolute;
+    top: 5px;
+    width: 1px;
+    height: 0px;
+    background-color: #d93175;
+}
 
 .header {
+
+    &--hidden {
+        position: fixed;
+        top: -250px;
+        left: 0;
+        right: 0;
+        z-index: 999;
+    }
+
+    &--animated {
+        transition: 0.4s top cubic-bezier(.3, .73, .3, .74);
+    }
+
+    &--sticky {
+        top: 0;
+    }
+
     &__logo-link {
         @include flexy-center;
     }
@@ -147,7 +179,7 @@
         padding: 10px 7px;
 
         &:hover {
-            text-decoration: none!important;
+            text-decoration: none !important;
         }
     }
 }
