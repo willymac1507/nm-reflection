@@ -1,5 +1,9 @@
 $(function () {
+  // Create clone of header and hide above body
+  const headHeight = $('header').height();
   $("header").clone().insertBefore('header').addClass("header--hidden");
+
+  // Instantiate slick carousel plugin
   $('.carousel__main').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -11,6 +15,8 @@ $(function () {
     pauseOnFocus: false,
     pauseOnDotsHover: true,
   });
+
+  // Check if cookie consent has been given in this session
   const cookieConsent = sessionStorage.getItem('cookies');
   console.log(cookieConsent);
   if (!cookieConsent) {
@@ -24,20 +30,11 @@ $(function () {
 
 let pagePosition = 0;
 
-$('#supportButton').click(() => {
-  sessionStorage.removeItem('cookies');
-});
-
-$('.button--cookieAccept').click(() => {
-  sessionStorage.setItem('cookies', true);
-  $('#cookies').removeClass('show');
-  $('body').removeAttr("style");
-});
-
+// Handle scroll event to determine whether to show sticky navbar
 $(document).on('scroll', () => {
 
-  const headHeight = $('header').height();
   let scrollValue = $(document).scrollTop();
+  const headHeight = $('header').height();
 
   if (scrollValue < pagePosition)
   // User is scrolling up
