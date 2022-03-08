@@ -61,7 +61,7 @@ $(document).on('scroll', () => {
   pagePosition = scrollValue;
 });
 
-
+// Open or close sidebar
 $('.page__container').on('click', (elem) => {
   console.log(elem.target);
   let clicked = elem.target;
@@ -74,3 +74,10 @@ $('.page__container').on('click', (elem) => {
     console.log('false');
   };
 });
+
+// Accept cookies
+$('.button--cookieAccept').on('click', () => {
+  sessionStorage.setItem('cookies', 'true');
+  $('#cookies').removeClass('show');
+  $('body').removeAttr('style');
+})
