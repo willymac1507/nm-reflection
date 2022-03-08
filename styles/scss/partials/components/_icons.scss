@@ -94,11 +94,6 @@
 }
 
 .icon {
-    &--facebook {
-        &::after {
-            content: '\ec5c';
-        }
-    }
 
     &--twitter {
         &::after {
@@ -117,6 +112,13 @@
             content: '\ec96';
         }
     }
+}
+
+.sideService-icon {
+    display: block;
+    font-family: 'icomoon';
+    font-size: 1rem;
+    padding-bottom: 9px;
 }
 
 

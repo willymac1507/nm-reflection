@@ -506,10 +506,28 @@ h1 {
 }
 
 .sidebar__shown {
-  left: -276px;
+  left: -275px;
 }
 .sidebar__container {
-  height: 3000px;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: scroll;
+}
+.sidebar__contents {
+  flex: 275px 0 0;
+  padding: 21px;
+  background-color: #333645;
+  color: #fff;
+}
+.sidebar__shading {
+  flex-basis: calc(100vw - 275px);
+  flex-grow: 0;
+  flex-shrink: 0;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .header {
@@ -954,6 +972,9 @@ h1 {
 .card--bespoke .button--services {
   background-color: #67809f;
 }
+.card--bespoke .sideService-icon {
+  color: #67809f;
+}
 .card--bespoke:hover {
   background-color: #67809f;
   color: #fff;
@@ -970,6 +991,9 @@ h1 {
 }
 .card--it .button--services {
   background-color: #4183d7;
+}
+.card--it .sideService-icon {
+  color: #4183d7;
 }
 .card--it:hover {
   background-color: #4183d7;
@@ -988,6 +1012,9 @@ h1 {
 .card--marketing .button--services {
   background-color: #2ecc71;
 }
+.card--marketing .sideService-icon {
+  color: #2ecc71;
+}
 .card--marketing:hover {
   background-color: #2ecc71;
   color: #fff;
@@ -1004,6 +1031,9 @@ h1 {
 }
 .card--telecoms .button--services {
   background-color: #d64541;
+}
+.card--telecoms .sideService-icon {
+  color: #d64541;
 }
 .card--telecoms:hover {
   background-color: #d64541;
@@ -1022,6 +1052,9 @@ h1 {
 .card--web .button--services {
   background-color: #926fb1;
 }
+.card--web .sideService-icon {
+  color: #926fb1;
+}
 .card--web:hover {
   background-color: #926fb1;
   color: #fff;
@@ -1038,6 +1071,9 @@ h1 {
 }
 .card--security .button--services {
   background-color: #f62459;
+}
+.card--security .sideService-icon {
+  color: #f62459;
 }
 .card--security:hover {
   background-color: #f62459;
@@ -1056,6 +1092,9 @@ h1 {
 .card--training .button--services {
   background-color: #926fb1;
 }
+.card--training .sideService-icon {
+  color: #926fb1;
+}
 .card--training:hover {
   background-color: #926fb1;
   color: #fff;
@@ -1070,22 +1109,43 @@ h1 {
 .card--bespoke .services__icon::before {
   content: "";
 }
+.card--bespoke .sideService-icon::before {
+  content: "";
+}
 .card--it .services__icon::before {
+  content: "";
+}
+.card--it .sideService-icon::before {
   content: "";
 }
 .card--marketing .services__icon::before {
   content: "";
 }
+.card--marketing .sideService-icon::before {
+  content: "";
+}
 .card--telecoms .services__icon::before {
+  content: "";
+}
+.card--telecoms .sideService-icon::before {
   content: "";
 }
 .card--web .services__icon::before {
   content: "";
 }
+.card--web .sideService-icon::before {
+  content: "";
+}
 .card--security .services__icon::before {
   content: "";
 }
+.card--security .sideService-icon::before {
+  content: "";
+}
 .card--training .services__icon::before {
+  content: "";
+}
+.card--training .sideService-icon::before {
   content: "";
 }
 .card--latest {
@@ -1548,6 +1608,34 @@ h1 {
   width: auto;
 }
 
+.sideService__links {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.sideService__list {
+  list-style: none;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+.sideService__list > li:not(:first-child) {
+  border-top: 1px solid rgba(0, 0, 0, 0.45);
+}
+.sideService__list > li:not(:first-child) > a {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.sideService__listItem {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+a.sideService__link {
+  display: block;
+  padding: 10px;
+  font-size: 1rem;
+  color: #fff;
+}
+
 /* ====================================================== */
 /* === Sections                                       === */
 /* ====================================================== */
@@ -1622,12 +1710,8 @@ section {
 }
 
 #sidebar {
-  position: fixed;
-  width: 275px;
-  height: 100%;
-  top: 0;
-  right: 0;
-  background-color: #333645;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .sidebar--hidden {
@@ -1635,7 +1719,7 @@ section {
 }
 
 .sidebar--expanded {
-  z-index: 49;
+  z-index: 200;
 }
 
 #footer__content {
@@ -1781,6 +1865,21 @@ section {
 .button--news:hover {
   text-decoration: underline;
 }
+.button--sideContact, .button--sideService {
+  width: 100%;
+  background-color: #333645;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  outline: 1px solid rgba(0, 0, 0, 0.25);
+  font-size: 1.125rem;
+  line-height: 25px;
+  margin-bottom: 20px;
+  padding-top: 19px;
+  padding-bottom: 18px;
+  text-align: center;
+}
+.button--sideContact:hover, .button--sideService:hover {
+  background-color: #3D404E !important;
+}
 
 /* ====================================================== */
 /* === Icons                                          === */
@@ -1866,9 +1965,6 @@ section {
   line-height: 0.8rem;
 }
 
-.icon--facebook::after {
-  content: "";
-}
 .icon--twitter::after {
   content: "";
 }
@@ -1877,6 +1973,13 @@ section {
 }
 .icon--linkedin::after {
   content: "";
+}
+
+.sideService-icon {
+  display: block;
+  font-family: "icomoon";
+  font-size: 1rem;
+  padding-bottom: 9px;
 }
 
 /* ====================================================== */
@@ -2258,6 +2361,189 @@ header {
 
 .linkedin:hover {
   background-color: #0077b5;
+}
+
+.side--bespoke .services__icon-container {
+  background-color: #67809f;
+}
+.side--bespoke .button--services {
+  background-color: #67809f;
+}
+.side--bespoke .sideService-icon {
+  color: #67809f;
+}
+.side--bespoke:hover {
+  background-color: #67809f;
+  color: #fff;
+}
+.side--bespoke:hover div {
+  background-color: #fff;
+  color: #67809f;
+}
+.side--bespoke:hover .services__header::after {
+  background-color: #fff;
+}
+.side--it .services__icon-container {
+  background-color: #4183d7;
+}
+.side--it .button--services {
+  background-color: #4183d7;
+}
+.side--it .sideService-icon {
+  color: #4183d7;
+}
+.side--it:hover {
+  background-color: #4183d7;
+  color: #fff;
+}
+.side--it:hover div {
+  background-color: #fff;
+  color: #4183d7;
+}
+.side--it:hover .services__header::after {
+  background-color: #fff;
+}
+.side--marketing .services__icon-container {
+  background-color: #2ecc71;
+}
+.side--marketing .button--services {
+  background-color: #2ecc71;
+}
+.side--marketing .sideService-icon {
+  color: #2ecc71;
+}
+.side--marketing:hover {
+  background-color: #2ecc71;
+  color: #fff;
+}
+.side--marketing:hover div {
+  background-color: #fff;
+  color: #2ecc71;
+}
+.side--marketing:hover .services__header::after {
+  background-color: #fff;
+}
+.side--telecoms .services__icon-container {
+  background-color: #d64541;
+}
+.side--telecoms .button--services {
+  background-color: #d64541;
+}
+.side--telecoms .sideService-icon {
+  color: #d64541;
+}
+.side--telecoms:hover {
+  background-color: #d64541;
+  color: #fff;
+}
+.side--telecoms:hover div {
+  background-color: #fff;
+  color: #d64541;
+}
+.side--telecoms:hover .services__header::after {
+  background-color: #fff;
+}
+.side--web .services__icon-container {
+  background-color: #926fb1;
+}
+.side--web .button--services {
+  background-color: #926fb1;
+}
+.side--web .sideService-icon {
+  color: #926fb1;
+}
+.side--web:hover {
+  background-color: #926fb1;
+  color: #fff;
+}
+.side--web:hover div {
+  background-color: #fff;
+  color: #926fb1;
+}
+.side--web:hover .services__header::after {
+  background-color: #fff;
+}
+.side--security .services__icon-container {
+  background-color: #f62459;
+}
+.side--security .button--services {
+  background-color: #f62459;
+}
+.side--security .sideService-icon {
+  color: #f62459;
+}
+.side--security:hover {
+  background-color: #f62459;
+  color: #fff;
+}
+.side--security:hover div {
+  background-color: #fff;
+  color: #f62459;
+}
+.side--security:hover .services__header::after {
+  background-color: #fff;
+}
+.side--training .services__icon-container {
+  background-color: #926fb1;
+}
+.side--training .button--services {
+  background-color: #926fb1;
+}
+.side--training .sideService-icon {
+  color: #926fb1;
+}
+.side--training:hover {
+  background-color: #926fb1;
+  color: #fff;
+}
+.side--training:hover div {
+  background-color: #fff;
+  color: #926fb1;
+}
+.side--training:hover .services__header::after {
+  background-color: #fff;
+}
+.side--bespoke .services__icon::before {
+  content: "";
+}
+.side--bespoke .sideService-icon::before {
+  content: "";
+}
+.side--it .services__icon::before {
+  content: "";
+}
+.side--it .sideService-icon::before {
+  content: "";
+}
+.side--marketing .services__icon::before {
+  content: "";
+}
+.side--marketing .sideService-icon::before {
+  content: "";
+}
+.side--telecoms .services__icon::before {
+  content: "";
+}
+.side--telecoms .sideService-icon::before {
+  content: "";
+}
+.side--web .services__icon::before {
+  content: "";
+}
+.side--web .sideService-icon::before {
+  content: "";
+}
+.side--security .services__icon::before {
+  content: "";
+}
+.side--security .sideService-icon::before {
+  content: "";
+}
+.side--training .services__icon::before {
+  content: "";
+}
+.side--training .sideService-icon::before {
+  content: "";
 }
 
 /* ====================================================== */
@@ -2675,6 +2961,13 @@ header {
 
 .item--tel {
   margin-top: 22px;
+}
+
+.sideService__line1 {
+  display: block;
+  font-size: 10px;
+  padding-bottom: 2px;
+  line-height: 14px;
 }
 
 /*# sourceMappingURL=styles.css.map */

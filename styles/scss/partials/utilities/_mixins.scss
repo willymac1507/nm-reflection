@@ -103,6 +103,10 @@
                 background-color: $color;
             }
 
+            .sideService-icon {
+                color: $color;
+            }
+
             &:hover {
                 background-color: $color;
                 color: #fff;
@@ -123,6 +127,12 @@
     $icon in $icons {
         &--#{$theme} {
             .services__icon {
+                &::before {
+                    content: $icon;
+                }
+            }
+
+            .sideService-icon {
                 &::before {
                     content: $icon;
                 }

@@ -36,10 +36,11 @@ function addClick(button) {
 let pagePosition = 0;
 
 // Handle scroll event to determine whether to show sticky navbar
-$(document).on('scroll', () => {
+$(document).on('scroll', (e) => {
 
   let scrollValue = $(document).scrollTop();
   const headHeight = $('header').height();
+  console.log(scrollValue, e.target);
 
   if (scrollValue < pagePosition)
   // User is scrolling up
@@ -70,6 +71,7 @@ $('.page__container').on('click', (elem) => {
     $('.page__container').addClass('sidebar__shown');
   } else if (clicked.classList.contains('sidebar__overlay')) { 
     $('.page__container').removeClass('sidebar__shown');
+    $('.sidebar__container').scrollTop(0);
   } else {
     console.log('false');
   };

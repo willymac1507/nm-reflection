@@ -71,12 +71,11 @@ section {
 }
 
 #sidebar {
-    position: fixed;
-    width: 275px;
-    height: 100%;
-    top: 0;
-    right: 0;
-    background-color: $color-primary;
+    display: flex;
+    justify-content: flex-end;
+    // top: 0;
+    // bottom: 0;
+//     z-index: -1;
 }
 
 .sidebar--hidden {
@@ -84,5 +83,5 @@ section {
 }
 
 .sidebar--expanded {
-    z-index: 49;
+    z-index: 200;
 }
