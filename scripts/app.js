@@ -87,3 +87,14 @@ $('.button--cookieAccept').on('click', () => {
   $('#cookies').removeClass('show');
   $('body').removeAttr('style');
 })
+
+$('.sideService__container')
+  .mouseenter((e) => {
+    let but = $(e.currentTarget).children('.button');
+    // let button = service.children();
+    // 
+    but.toggleClass('hovered');
+  })
+  .mouseleave(() => {
+    $('.button.hovered').toggleClass('hovered');
+  });

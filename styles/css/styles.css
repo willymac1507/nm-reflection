@@ -1541,6 +1541,7 @@ h1 {
   }
 }
 .partners__container {
+  display: -ms-grid;
   display: grid;
   width: calc(100% - 48px);
   max-width: 100%;
@@ -1876,7 +1877,7 @@ section {
   padding-bottom: 18px;
   text-align: center;
 }
-.button--sideContact:hover, .button--sideService:hover {
+.button--sideContact:hover, .button--sideContact.hovered, .button--sideService:hover, .button--sideService.hovered {
   background-color: #3D404E !important;
 }
 
