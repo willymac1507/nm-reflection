@@ -40,7 +40,6 @@ $(document).on('scroll', (e) => {
 
   let scrollValue = $(document).scrollTop();
   const headHeight = $('header').height();
-  console.log(scrollValue, e.target);
 
   if (scrollValue < pagePosition)
   // User is scrolling up
@@ -63,17 +62,18 @@ $(document).on('scroll', (e) => {
 });
 
 // Open or close sidebar
-$('.page__container').on('click', (elem) => {
-  console.log(elem.target);
-  let clicked = elem.target;
+$('.page__container').on('click', (e) => {
+  let clicked = e.target;
   if (clicked.classList.contains('button--ham')) {
-    console.log('true');
     $('.page__container').addClass('sidebar__shown');
+    $('.header--hidden').removeClass('header--sticky');
+    $('body').css('overflow', 'hidden');
   } else if (clicked.classList.contains('sidebar__overlay')) { 
     $('.page__container').removeClass('sidebar__shown');
+    $('body').removeAttr('style');
     $('.sidebar__container').scrollTop(0);
   } else {
-    console.log('false');
+    return false;
   };
 });
 
