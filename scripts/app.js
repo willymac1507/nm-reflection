@@ -27,9 +27,15 @@ $(function () {
   };
 });
 
-function addClick(button) {
-  button.on('click', () => {
-    console.log('clicked');
+// Apply hover effect to button when mouse is over containing div
+function hover(container, target) {
+  $(container)
+  .mouseenter((e) => {
+    let but = $(e.currentTarget).children(target);
+    but.toggleClass('hovered');
+  })
+  .mouseleave(() => {
+    $(`${target}.hovered`).toggleClass('hovered');
   });
 };
 
@@ -88,13 +94,6 @@ $('.button--cookieAccept').on('click', () => {
   $('body').removeAttr('style');
 })
 
-$('.sideService__container')
-  .mouseenter((e) => {
-    let but = $(e.currentTarget).children('.button');
-    // let button = service.children();
-    // 
-    but.toggleClass('hovered');
-  })
-  .mouseleave(() => {
-    $('.button.hovered').toggleClass('hovered');
-  });
+hover('.sideService__container', '.button');
+hover('.sidebar__group', '.sideGroup__heading');
+

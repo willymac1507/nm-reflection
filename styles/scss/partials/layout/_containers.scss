@@ -12,6 +12,11 @@
 }
 
 .sidebar {
+    &__group {
+        border-bottom: 1px solid rgba(0, 0, 0, .25);
+        border-top: 1px solid rgba(255, 255, 255, .05);
+    }
+
     &__shown {
         left: -275px;
     }
@@ -27,9 +32,24 @@
 
     &__contents {
         flex: 275px 0 0;
-        padding: 21px;
         background-color: $color-primary;
         color: #fff;
+    }
+
+    &__smallServices {
+        padding: 21px;
+        border-bottom: 1px solid rgba(0, 0, 0, .25);
+
+        @include large {
+            display: none;
+        }
+    }
+
+    &__bigServices {
+        display: none;
+        @include large {
+            display: block;
+        }
     }
 
     &__shading {
@@ -700,34 +720,4 @@
     div:nth-of-type(4) {
         width: auto;
     }
-}
-
-.sideService__links {
-    background-color: rgba(0, 0, 0, .25);
-}
-
-.sideService__list {
-    list-style: none;
-    margin: 0 0 20px 0;
-    padding: 0;
-
-    &>li:not(:first-child) {
-        border-top: 1px solid rgba(0, 0, 0, .45);
-
-        &>a {
-            border-top: 1px solid rgba(255, 255, 255, .05);
-        }
-    }
-}
-
-.sideService__listItem {
-    text-align: center;
-    text-transform: uppercase;
-}
-
-a.sideService__link {
-    display: block;
-    padding: 10px;
-    font-size: 1rem;
-    color: #fff;
 }
