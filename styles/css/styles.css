@@ -1999,9 +1999,9 @@ section {
   transition: 0.4s;
 }
 .sidebar__shown .sidebar__overlay {
-  background: rgba(0, 0, 0, 0.4);
   z-index: 30;
-  transition: 0.4s;
+  background: rgba(0, 0, 0, 0.4);
+  transition: 0.4s background;
 }
 
 .carousel__image {
