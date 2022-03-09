@@ -75,12 +75,14 @@ $('.page__container').on('click', (e) => {
     $('.page__container').addClass('sidebar__shown');
     $('.header--hidden').addClass('header--pushed');
     $('body').css('overflow', 'hidden');
+    $('.hamburger').addClass('hamburger--open');
 
   } else if (clicked.classList.contains('sidebar__overlay')) { 
     $('.page__container').removeClass('sidebar__shown');
     $('body').removeAttr('style');
     $('.sidebar__container').scrollTop(0);
     $('.header--hidden').removeClass('header--pushed');
+    $('.hamburger').removeClass('hamburger--open');
     
   } else {
     return false;

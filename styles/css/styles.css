@@ -1760,6 +1760,18 @@ section {
   text-transform: uppercase;
   text-align: center;
 }
+.hamburger--open .hamburger__slice:nth-of-type(1) {
+  transform: translateY(11.5px) rotate(45deg);
+  transition: 0.5s;
+}
+.hamburger--open .hamburger__slice:nth-of-type(2) {
+  opacity: 0;
+  transition: 0.5s;
+}
+.hamburger--open .hamburger__slice:nth-of-type(3) {
+  transform: translateY(-11.5px) rotate(-45deg);
+  transition: 0.5s;
+}
 
 /* Other buttons */
 .button {
