@@ -7,7 +7,8 @@ header {
     background-color: #fff;
     position: relative;
     top: 0;
-    z-index: 100;
+    z-index: 101;
+    width: 100%;
 }
 
 .header {
@@ -16,16 +17,19 @@ header {
         position: fixed;
         top: -210px;
         left: 0;
-        right: 0;
-        z-index: 200;
+        z-index: 102;
     }
 
     &--animated {
-        transition: 0.4s top;
+        transition: 0.4s all;
     }
 
     &--sticky {
         top: 0;
+    }
+
+    &--pushed {
+        left: -275px;
     }
 
     &__logo-link {
