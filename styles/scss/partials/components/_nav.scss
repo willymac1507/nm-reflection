@@ -28,9 +28,9 @@ header {
         top: 0;
     }
 
-    &--pushed {
-        left: -275px;
-    }
+    // &--pushed {
+    //     left: -275px;
+    // }
 
     &__logo-link {
         @include flexy-center;

@@ -2105,9 +2105,6 @@ header {
 .header--sticky {
   top: 0;
 }
-.header--pushed {
-  left: -275px;
-}
 .header__logo-link {
   display: flex;
   align-items: center;

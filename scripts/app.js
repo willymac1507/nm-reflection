@@ -39,6 +39,16 @@ function hover(container, target) {
   });
 };
 
+function sbWidth() {
+  const side = ($('.sidebar__smallServices:visible').length === 1) ? document.querySelector('.sidebar__smallServices') : document.querySelector('.sidebar__bigServices');
+  const body = document.body;
+  const bodyRect = body.getBoundingClientRect();
+  const sideRect = side.getBoundingClientRect();
+  const sbWid = (bodyRect.width - sideRect.left) * -1;
+  console.log(sbWid, bodyRect.width, sideRect.left);
+  return sbWid;
+}
+
 let pagePosition = 0;
 
 // Handle scroll event to determine whether to show sticky navbar
@@ -72,16 +82,16 @@ $('.page__container').on('click', (e) => {
   let clicked = e.target;
 
   if (clicked.classList.contains('button--ham')) {
-    $('.page__container').addClass('sidebar__shown');
-    $('.header--hidden').addClass('header--pushed');
+    $('.page__container').css('left', sbWidth).addClass('sidebar__shown');
+    $('.header--hidden').css('left', sbWidth);
     $('body').css('overflow', 'hidden');
     $('.hamburger').addClass('hamburger--open');
 
   } else if (clicked.classList.contains('sidebar__overlay')) { 
-    $('.page__container').removeClass('sidebar__shown');
+    $('.page__container').removeClass('sidebar__shown').removeAttr('style');
     $('body').removeAttr('style');
     $('.sidebar__container').scrollTop(0);
-    $('.header--hidden').removeClass('header--pushed');
+    $('.header--hidden').removeAttr('style');
     $('.hamburger').removeClass('hamburger--open');
     
   } else {
