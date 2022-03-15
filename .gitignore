@@ -8,11 +8,14 @@
 .DS_Store
 .AppleDouble
 .LSOverride
+nano.*
+.gitignore
 
 # Icon must end with two \r
 Icon
 
 # Node modules
+<<<<<<< HEAD
 node_modules/
 
 # nano files
@@ -21,6 +24,10 @@ nano.*
 # gitignore
 .gitignore
 
+=======
+
+node_modules
+>>>>>>> Add-Features
 
 # Thumbnails
 ._*

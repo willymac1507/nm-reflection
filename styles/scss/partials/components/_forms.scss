@@ -1,3 +1,8 @@
+/* ====================================================== */
+/* === Forms                                          === */
+/* ====================================================== */
+@use '../utilities/utilities' as *;
+
 .header__form {
     @include flexy-center;
     width: 100%;
@@ -140,6 +145,7 @@
         -moz-appearance: initial;
         position: relative;
         cursor: pointer;
+        z-index: 60;
     }
 
     &__check:before {

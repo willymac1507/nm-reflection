@@ -1,6 +1,64 @@
 /* ====================================================== */
 /* === Containers                                     === */
 /* ====================================================== */
+@use '../utilities/utilities'as *;
+
+.page__container {
+    position: relative;
+    top: 0;
+    left: 0;
+    transition: 0.4s;
+}
+
+.sidebar {
+    &__group {
+        border-bottom: 1px solid rgba(0, 0, 0, .25);
+        border-top: 1px solid rgba(255, 255, 255, .05);
+    }
+
+    &__shown {
+        left: -275px;
+    }
+
+    &__container {
+        position: fixed;
+        width: 100vw;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        overflow-y: scroll;
+    }
+
+    &__contents {
+        flex: 275px 0 0;
+        background-color: $color-primary;
+        color: #fff;
+    }
+
+    &__smallServices {
+        padding: 21px;
+        border-bottom: 1px solid rgba(0, 0, 0, .25);
+
+        @include large {
+            display: none;
+        }
+    }
+
+    &__bigServices {
+        display: none;
+        @include large {
+            display: block;
+        }
+    }
+
+    &__shading {
+        flex-basis: calc(100vw - 275px);
+        flex-grow: 0;
+        flex-shrink: 0;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4);
+    }
+}
 
 .header {
     @include flexy-center;
@@ -128,6 +186,37 @@
     }
 }
 
+.cookies {
+
+    &__modal {
+        border-radius: 5px;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        width: 83%;
+        margin: auto;
+
+        @include medium {
+            width: 598px;
+        }
+    }
+
+    &__footer {
+        gap: 30px;
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        &include medium {
+            gap: 28px;
+        }
+    }
+}
+
 .main-nav {
     @include layout-div;
     display: none;
@@ -151,7 +240,7 @@
             height: 100%;
             border-left: 1px solid rgba(255, 255, 255, 0.1);
         }
-    
+
         &::after {
             content: "";
             height: 100%;
@@ -164,12 +253,28 @@
     }
 }
 
+.slick {
+    &-list {
+        height: 100%;
+        overflow: hidden;
+    }
+
+    &-track {
+        height: 100%;
+    }
+}
+
 .carousel {
+    @include cta($card-colors);
     @include layout-div;
     padding-top: 0;
 
     @include large {
         border-top: 1px solid rgba(51, 54, 69, 0.5);
+    }
+
+    &__main {
+        height: 100%;
     }
 
     &__container {
@@ -182,14 +287,14 @@
         position: absolute;
         top: 0;
         // left: 2vw;
-        z-index: 40;
+        z-index: 10;
 
         @include medium {
             left: calc((100vw - #{$container-med}) / 2);
         }
 
         @include large {
-            height: calc(100% - 110px);
+            // height: calc(100% - 110px);
             left: calc((100vw - #{$container-large}) / 2);
             align-items: flex-start;
         }
@@ -207,7 +312,7 @@
         width: 100%;
         height: 100%;
         display: inline-block;
-        background: linear-gradient(to left, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 1) 100%);
+        background: linear-gradient(to left, rgba(0, 0, 0, 0.2) 40%, rgba(0, 0, 0, 1) 100%);
     }
 }
 
@@ -293,7 +398,7 @@
         &--security,
         &--training {
             width: 455px;
-            
+
             .services__content {
                 height: auto;
             }
@@ -546,11 +651,13 @@
     }
 
     &__container {
+        display: -ms-grid;
         display: grid;
         width: calc(100% - 48px);
         max-width: 100%;
         height: 165px;
         grid-template-rows: 50% 34%;
+
         row-gap: 16%;
         margin: 0 24px;
         padding: 0 15px;

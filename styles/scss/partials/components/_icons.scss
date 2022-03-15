@@ -1,6 +1,7 @@
 /* ====================================================== */
 /* === Icons                                          === */
 /* ====================================================== */
+@use '../utilities/utilities' as *;
 
 .call-icon {
     @include flexy-center;
@@ -93,6 +94,7 @@
 }
 
 .icon {
+
     &--facebook {
         &::after {
             content: '\ec5c';
@@ -116,6 +118,13 @@
             content: '\ec96';
         }
     }
+}
+
+.sideService-icon {
+    display: block;
+    font-family: 'icomoon';
+    font-size: 1rem;
+    padding-bottom: 9px;
 }
 
 

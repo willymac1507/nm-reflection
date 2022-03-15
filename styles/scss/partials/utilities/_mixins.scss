@@ -1,3 +1,7 @@
+@use './media-queries'as *;
+@use './variables'as *;
+
+
 // New all-encompassing container for sections
 @mixin section-container {
     display: flex;
@@ -79,6 +83,7 @@
     .img--greyscale {
         display: none;
     }
+
     .img--coloured {
         display: initial;
     }
@@ -96,7 +101,11 @@
 
             .button--services {
                 background-color: $color;
-                }
+            }
+
+            .sideService-icon {
+                color: $color;
+            }
 
             &:hover {
                 background-color: $color;
@@ -118,6 +127,12 @@
     $icon in $icons {
         &--#{$theme} {
             .services__icon {
+                &::before {
+                    content: $icon;
+                }
+            }
+
+            .sideService-icon {
                 &::before {
                     content: $icon;
                 }
@@ -156,6 +171,23 @@
             .main-nav__icon {
                 &::before {
                     content: $icon;
+                }
+            }
+        }
+    }
+}
+
+@mixin cta($colors) {
+
+    @each $theme,
+    $color in $colors {
+        &--#{$theme} {
+            .button--cta {
+                background-color: $color;
+
+
+                &:hover {
+                    background-color: darken($color, 10%);
                 }
             }
         }

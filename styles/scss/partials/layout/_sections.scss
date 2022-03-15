@@ -1,10 +1,28 @@
 /* ====================================================== */
 /* === Sections                                       === */
 /* ====================================================== */
+@use '../utilities/utilities'as *;
 
 section {
     width: 100%;
     background-color: #fff;
+}
+
+#cookies {
+    padding: 0;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 40;
+}
+
+#cookies.show {
+    display: flex;
 }
 
 #banner {
@@ -15,6 +33,11 @@ section {
     @include medium {
         height: calc(100vh - 110px);
         min-height: 589px;
+    }
+
+    @include large {
+        height: calc(100vh - 210px);
+        min-height: 489px;
     }
 }
 
@@ -45,4 +68,20 @@ section {
     padding: 0 15px;
     color: $color-primary;
     background-color: $color-tertiary;
+}
+
+#sidebar {
+    display: flex;
+    justify-content: flex-end;
+    // top: 0;
+    // bottom: 0;
+//     z-index: -1;
+}
+
+.sidebar--hidden {
+    z-index: -1;
+}
+
+.sidebar--expanded {
+    z-index: 50;
 }

@@ -1,11 +1,10 @@
 /* ====================================================== */
 /* === Buttons                                        === */
 /* ====================================================== */
-
+@use '../utilities/utilities' as *;
 /* Hamburger Nav Button */
 
 .hamburger {
-    z-index: 100;
     background-color: $color-primary;
     border-radius: 3px;
     height: 100%;
@@ -19,6 +18,7 @@
 
     &:hover {
         background-color: $color-hover;
+        cursor: pointer;
     }
 
     &__slice {
@@ -26,6 +26,7 @@
         height: 3px;
         background-color: #fff;
         margin: 0 auto;
+        transition: 0.4s;
     }
 
     &__text {
@@ -34,6 +35,23 @@
         color: #fff;
         text-transform: uppercase;
         text-align: center;
+    }
+
+    &--open {
+        .hamburger__slice:nth-of-type(1) {
+            transform: translateY(8px) rotate(45deg);
+            transition: 0.4s;
+        }
+    
+        .hamburger__slice:nth-of-type(2) {
+            opacity: 0;
+            transition: 0.4s;
+        }
+    
+        .hamburger__slice:nth-of-type(3) {
+            transform: translateY(-8px) rotate(-45deg);
+            transition: 0.4s;
+        }
     }
 }
 
@@ -55,15 +73,29 @@
     background-color: $color-button;
     cursor: pointer;
 
+    &--cookieSettings,
+    &--cookieAccept {
+        flex: 100% 0 0;
+        height: 46px;
+        text-align: center;
+
+        @include medium {
+            flex: 47.2% 0 0;
+        }
+    }
+
+    &--cookieSettings {
+        background-color: $color-nav-input-primary;
+    }
+
+    &--cookieAccept {
+        background-color: $color-latest;
+    }
+
     &--cta {
-        $back-color: map-get($map: $card-colors, $key: 'web');
         font-size: 1.25rem;
-        background-color: $back-color;
         line-height: 50px;
         padding: 5px 20px;
-        &:hover {
-            background-color: darken($back-color, 10%);
-        }
     }
 
     &--services {
@@ -132,6 +164,25 @@
 
         &:hover {
             text-decoration: underline;
+        }
+    }
+
+    &--sideContact,
+    &--sideService {
+        width: 100%;
+        background-color: $color-primary;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        outline: 1px solid rgba(0,0,0,.25);
+        font-size: 1.125rem;
+        line-height: 25px;
+        margin-bottom: 20px;
+        padding-top: 19px;
+        padding-bottom: 18px;
+        text-align: center;
+
+        &:hover,
+        &.hovered {
+            background-color: $color-sidebar-hover!important;
         }
     }
 }

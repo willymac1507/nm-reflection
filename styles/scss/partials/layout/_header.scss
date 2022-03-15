@@ -2,9 +2,12 @@
 /* === Header                                         === */
 /* ====================================================== */
 
+@use '../utilities/mixins' as mix;
+@use '../utilities/media-queries' as mq;
+
 header {
-    @include medium {
-        @include flexy-center;
+    @include mq.medium {
+        @include mix.flexy-center;
         flex-direction: column;
         justify-content: center;
     }

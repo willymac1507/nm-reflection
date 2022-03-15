@@ -451,9 +451,6 @@ template {
 }
 
 /* ====================================================== */
-/* === Helper Placeholders                            === */
-/* ====================================================== */
-/* ====================================================== */
 /* === Base Styles                                    === */
 /* ====================================================== */
 * {
@@ -501,6 +498,58 @@ h1 {
 /* ====================================================== */
 /* === Containers                                     === */
 /* ====================================================== */
+.page__container {
+  position: relative;
+  top: 0;
+  left: 0;
+  transition: 0.4s;
+}
+
+.sidebar__group {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+.sidebar__shown {
+  left: -275px;
+}
+.sidebar__container {
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: scroll;
+}
+.sidebar__contents {
+  flex: 275px 0 0;
+  background-color: #333645;
+  color: #fff;
+}
+.sidebar__smallServices {
+  padding: 21px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+@media screen and (min-width: 992px) {
+  .sidebar__smallServices {
+    display: none;
+  }
+}
+.sidebar__bigServices {
+  display: none;
+}
+@media screen and (min-width: 992px) {
+  .sidebar__bigServices {
+    display: block;
+  }
+}
+.sidebar__shading {
+  flex-basis: calc(100vw - 275px);
+  flex-grow: 0;
+  flex-shrink: 0;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -655,6 +704,33 @@ h1 {
   height: 56px;
 }
 
+.cookies__modal {
+  border-radius: 5px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 83%;
+  margin: auto;
+}
+@media screen and (min-width: 768px) {
+  .cookies__modal {
+    width: 598px;
+  }
+}
+.cookies__footer {
+  gap: 30px;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.cookies__footerinclude medium {
+  gap: 28px;
+}
+
 .main-nav {
   position: relative;
   width: 100%;
@@ -713,6 +789,14 @@ h1 {
   }
 }
 
+.slick-list {
+  height: 100%;
+  overflow: hidden;
+}
+.slick-track {
+  height: 100%;
+}
+
 .carousel {
   position: relative;
   width: 100%;
@@ -721,10 +805,55 @@ h1 {
   box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
   padding-top: 0;
 }
+.carousel--bespoke .button--cta {
+  background-color: #67809f;
+}
+.carousel--bespoke .button--cta:hover {
+  background-color: #526781;
+}
+.carousel--it .button--cta {
+  background-color: #4183d7;
+}
+.carousel--it .button--cta:hover {
+  background-color: #286abd;
+}
+.carousel--marketing .button--cta {
+  background-color: #2ecc71;
+}
+.carousel--marketing .button--cta:hover {
+  background-color: #25a25a;
+}
+.carousel--telecoms .button--cta {
+  background-color: #d64541;
+}
+.carousel--telecoms .button--cta:hover {
+  background-color: #bc2c28;
+}
+.carousel--web .button--cta {
+  background-color: #926fb1;
+}
+.carousel--web .button--cta:hover {
+  background-color: #79539a;
+}
+.carousel--security .button--cta {
+  background-color: #f62459;
+}
+.carousel--security .button--cta:hover {
+  background-color: #de093f;
+}
+.carousel--training .button--cta {
+  background-color: #926fb1;
+}
+.carousel--training .button--cta:hover {
+  background-color: #79539a;
+}
 @media screen and (min-width: 992px) {
   .carousel {
     border-top: 1px solid rgba(51, 54, 69, 0.5);
   }
+}
+.carousel__main {
+  height: 100%;
 }
 .carousel__container {
   display: flex;
@@ -736,7 +865,7 @@ h1 {
   height: 100%;
   position: absolute;
   top: 0;
-  z-index: 40;
+  z-index: 10;
 }
 @media screen and (min-width: 768px) {
   .carousel__container {
@@ -761,7 +890,6 @@ h1 {
 }
 @media screen and (min-width: 992px) {
   .carousel__container {
-    height: calc(100% - 110px);
     left: calc((100vw - 970px) / 2);
     align-items: flex-start;
   }
@@ -779,7 +907,7 @@ h1 {
   width: 100%;
   height: 100%;
   display: inline-block;
-  background: linear-gradient(to left, rgba(0, 0, 0, 0.4) 0%, black 100%);
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.2) 40%, black 100%);
 }
 
 .latest__content-container, .services {
@@ -864,6 +992,9 @@ h1 {
 .card--bespoke .button--services {
   background-color: #67809f;
 }
+.card--bespoke .sideService-icon {
+  color: #67809f;
+}
 .card--bespoke:hover {
   background-color: #67809f;
   color: #fff;
@@ -880,6 +1011,9 @@ h1 {
 }
 .card--it .button--services {
   background-color: #4183d7;
+}
+.card--it .sideService-icon {
+  color: #4183d7;
 }
 .card--it:hover {
   background-color: #4183d7;
@@ -898,6 +1032,9 @@ h1 {
 .card--marketing .button--services {
   background-color: #2ecc71;
 }
+.card--marketing .sideService-icon {
+  color: #2ecc71;
+}
 .card--marketing:hover {
   background-color: #2ecc71;
   color: #fff;
@@ -914,6 +1051,9 @@ h1 {
 }
 .card--telecoms .button--services {
   background-color: #d64541;
+}
+.card--telecoms .sideService-icon {
+  color: #d64541;
 }
 .card--telecoms:hover {
   background-color: #d64541;
@@ -932,6 +1072,9 @@ h1 {
 .card--web .button--services {
   background-color: #926fb1;
 }
+.card--web .sideService-icon {
+  color: #926fb1;
+}
 .card--web:hover {
   background-color: #926fb1;
   color: #fff;
@@ -948,6 +1091,9 @@ h1 {
 }
 .card--security .button--services {
   background-color: #f62459;
+}
+.card--security .sideService-icon {
+  color: #f62459;
 }
 .card--security:hover {
   background-color: #f62459;
@@ -966,6 +1112,9 @@ h1 {
 .card--training .button--services {
   background-color: #926fb1;
 }
+.card--training .sideService-icon {
+  color: #926fb1;
+}
 .card--training:hover {
   background-color: #926fb1;
   color: #fff;
@@ -980,22 +1129,43 @@ h1 {
 .card--bespoke .services__icon::before {
   content: "";
 }
+.card--bespoke .sideService-icon::before {
+  content: "";
+}
 .card--it .services__icon::before {
+  content: "";
+}
+.card--it .sideService-icon::before {
   content: "";
 }
 .card--marketing .services__icon::before {
   content: "";
 }
+.card--marketing .sideService-icon::before {
+  content: "";
+}
 .card--telecoms .services__icon::before {
+  content: "";
+}
+.card--telecoms .sideService-icon::before {
   content: "";
 }
 .card--web .services__icon::before {
   content: "";
 }
+.card--web .sideService-icon::before {
+  content: "";
+}
 .card--security .services__icon::before {
   content: "";
 }
+.card--security .sideService-icon::before {
+  content: "";
+}
 .card--training .services__icon::before {
+  content: "";
+}
+.card--training .sideService-icon::before {
   content: "";
 }
 .card--latest {
@@ -1391,6 +1561,7 @@ h1 {
   }
 }
 .partners__container {
+  display: -ms-grid;
   display: grid;
   width: calc(100% - 48px);
   max-width: 100%;
@@ -1466,6 +1637,23 @@ section {
   background-color: #fff;
 }
 
+#cookies {
+  padding: 0;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 40;
+}
+
+#cookies.show {
+  display: flex;
+}
+
 #banner {
   padding: 0;
   height: calc(100vh - 166px);
@@ -1475,6 +1663,12 @@ section {
   #banner {
     height: calc(100vh - 110px);
     min-height: 589px;
+  }
+}
+@media screen and (min-width: 992px) {
+  #banner {
+    height: calc(100vh - 210px);
+    min-height: 489px;
   }
 }
 
@@ -1508,6 +1702,19 @@ section {
   background-color: #ddd;
 }
 
+#sidebar {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.sidebar--hidden {
+  z-index: -1;
+}
+
+.sidebar--expanded {
+  z-index: 50;
+}
+
 #footer__content {
   background-color: #333645;
   color: #fff;
@@ -1526,7 +1733,6 @@ section {
 /* ====================================================== */
 /* Hamburger Nav Button */
 .hamburger {
-  z-index: 100;
   background-color: #333645;
   border-radius: 3px;
   height: 100%;
@@ -1539,12 +1745,14 @@ section {
 }
 .hamburger:hover {
   background-color: #222;
+  cursor: pointer;
 }
 .hamburger__slice {
   width: 33px;
   height: 3px;
   background-color: #fff;
   margin: 0 auto;
+  transition: 0.4s;
 }
 .hamburger__text {
   margin-top: 7px;
@@ -1552,6 +1760,18 @@ section {
   color: #fff;
   text-transform: uppercase;
   text-align: center;
+}
+.hamburger--open .hamburger__slice:nth-of-type(1) {
+  transform: translateY(8px) rotate(45deg);
+  transition: 0.4s;
+}
+.hamburger--open .hamburger__slice:nth-of-type(2) {
+  opacity: 0;
+  transition: 0.4s;
+}
+.hamburger--open .hamburger__slice:nth-of-type(3) {
+  transform: translateY(-8px) rotate(-45deg);
+  transition: 0.4s;
 }
 
 /* Other buttons */
@@ -1571,14 +1791,26 @@ section {
   background-color: #bbbfbc;
   cursor: pointer;
 }
+.button--cookieSettings, .button--cookieAccept {
+  flex: 100% 0 0;
+  height: 46px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .button--cookieSettings, .button--cookieAccept {
+    flex: 47.2% 0 0;
+  }
+}
+.button--cookieSettings {
+  background-color: #999aa2;
+}
+.button--cookieAccept {
+  background-color: #926fb1;
+}
 .button--cta {
   font-size: 1.25rem;
-  background-color: #926fb1;
   line-height: 50px;
   padding: 5px 20px;
-}
-.button--cta:hover {
-  background-color: #79539a;
 }
 .button--services {
   padding: 5px 18px;
@@ -1637,6 +1869,21 @@ section {
 }
 .button--news:hover {
   text-decoration: underline;
+}
+.button--sideContact, .button--sideService {
+  width: 100%;
+  background-color: #333645;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  outline: 1px solid rgba(0, 0, 0, 0.25);
+  font-size: 1.125rem;
+  line-height: 25px;
+  margin-bottom: 20px;
+  padding-top: 19px;
+  padding-bottom: 18px;
+  text-align: center;
+}
+.button--sideContact:hover, .button--sideContact.hovered, .button--sideService:hover, .button--sideService.hovered {
+  background-color: #3D404E !important;
 }
 
 /* ====================================================== */
@@ -1736,6 +1983,13 @@ section {
   content: "";
 }
 
+.sideService-icon {
+  display: block;
+  font-family: "icomoon";
+  font-size: 1rem;
+  padding-bottom: 9px;
+}
+
 /* ====================================================== */
 /* === Images                                         === */
 /* ====================================================== */
@@ -1743,9 +1997,25 @@ section {
   width: 100%;
 }
 
+.sidebar__overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0);
+  transition: 0.4s;
+}
+.sidebar__shown .sidebar__overlay {
+  z-index: 30;
+  background: rgba(0, 0, 0, 0.4);
+  transition: 0.4s background;
+}
+
 .carousel__image {
   display: block;
-  height: 100%;
+  height: 120%;
   transform: translate(calc(-50% + 50vw));
 }
 
@@ -1787,6 +2057,9 @@ section {
   display: flex;
 }
 
+.partners__item {
+  cursor: pointer;
+}
 .partners__item img {
   height: 60%;
   max-width: 100%;
@@ -1801,6 +2074,10 @@ section {
 }
 .partners__item:hover .img--coloured {
   display: initial;
+}
+
+.clients__client {
+  cursor: pointer;
 }
 
 .row--second img {
@@ -1818,6 +2095,26 @@ section {
 /* ====================================================== */
 /* === Nav                                            === */
 /* ====================================================== */
+header {
+  background-color: #fff;
+  position: relative;
+  top: 0;
+  z-index: 19;
+  width: 100%;
+}
+
+.header--hidden {
+  position: fixed;
+  top: -210px;
+  left: 0;
+  z-index: 20;
+}
+.header--animated {
+  transition: 0.4s all;
+}
+.header--sticky {
+  top: 0;
+}
 .header__logo-link {
   display: flex;
   align-items: center;
@@ -1878,7 +2175,6 @@ section {
   width: 100%;
   height: 45px;
   padding: 0 calc((100vw - 970px) / 2);
-  z-index: 70;
 }
 @media screen and (min-width: 1260px) {
   .main-nav__popunder {
@@ -2002,7 +2298,7 @@ section {
 .carousel__nav {
   display: flex;
   justify-content: space-around;
-  z-index: 40;
+  z-index: 10;
   position: absolute;
   bottom: 14px;
   width: 185px;
@@ -2080,6 +2376,268 @@ section {
   background-color: #0077b5;
 }
 
+.side--bespoke .services__icon-container {
+  background-color: #67809f;
+}
+.side--bespoke .button--services {
+  background-color: #67809f;
+}
+.side--bespoke .sideService-icon {
+  color: #67809f;
+}
+.side--bespoke:hover {
+  background-color: #67809f;
+  color: #fff;
+}
+.side--bespoke:hover div {
+  background-color: #fff;
+  color: #67809f;
+}
+.side--bespoke:hover .services__header::after {
+  background-color: #fff;
+}
+.side--it .services__icon-container {
+  background-color: #4183d7;
+}
+.side--it .button--services {
+  background-color: #4183d7;
+}
+.side--it .sideService-icon {
+  color: #4183d7;
+}
+.side--it:hover {
+  background-color: #4183d7;
+  color: #fff;
+}
+.side--it:hover div {
+  background-color: #fff;
+  color: #4183d7;
+}
+.side--it:hover .services__header::after {
+  background-color: #fff;
+}
+.side--marketing .services__icon-container {
+  background-color: #2ecc71;
+}
+.side--marketing .button--services {
+  background-color: #2ecc71;
+}
+.side--marketing .sideService-icon {
+  color: #2ecc71;
+}
+.side--marketing:hover {
+  background-color: #2ecc71;
+  color: #fff;
+}
+.side--marketing:hover div {
+  background-color: #fff;
+  color: #2ecc71;
+}
+.side--marketing:hover .services__header::after {
+  background-color: #fff;
+}
+.side--telecoms .services__icon-container {
+  background-color: #d64541;
+}
+.side--telecoms .button--services {
+  background-color: #d64541;
+}
+.side--telecoms .sideService-icon {
+  color: #d64541;
+}
+.side--telecoms:hover {
+  background-color: #d64541;
+  color: #fff;
+}
+.side--telecoms:hover div {
+  background-color: #fff;
+  color: #d64541;
+}
+.side--telecoms:hover .services__header::after {
+  background-color: #fff;
+}
+.side--web .services__icon-container {
+  background-color: #926fb1;
+}
+.side--web .button--services {
+  background-color: #926fb1;
+}
+.side--web .sideService-icon {
+  color: #926fb1;
+}
+.side--web:hover {
+  background-color: #926fb1;
+  color: #fff;
+}
+.side--web:hover div {
+  background-color: #fff;
+  color: #926fb1;
+}
+.side--web:hover .services__header::after {
+  background-color: #fff;
+}
+.side--security .services__icon-container {
+  background-color: #f62459;
+}
+.side--security .button--services {
+  background-color: #f62459;
+}
+.side--security .sideService-icon {
+  color: #f62459;
+}
+.side--security:hover {
+  background-color: #f62459;
+  color: #fff;
+}
+.side--security:hover div {
+  background-color: #fff;
+  color: #f62459;
+}
+.side--security:hover .services__header::after {
+  background-color: #fff;
+}
+.side--training .services__icon-container {
+  background-color: #926fb1;
+}
+.side--training .button--services {
+  background-color: #926fb1;
+}
+.side--training .sideService-icon {
+  color: #926fb1;
+}
+.side--training:hover {
+  background-color: #926fb1;
+  color: #fff;
+}
+.side--training:hover div {
+  background-color: #fff;
+  color: #926fb1;
+}
+.side--training:hover .services__header::after {
+  background-color: #fff;
+}
+.side--bespoke .services__icon::before {
+  content: "";
+}
+.side--bespoke .sideService-icon::before {
+  content: "";
+}
+.side--it .services__icon::before {
+  content: "";
+}
+.side--it .sideService-icon::before {
+  content: "";
+}
+.side--marketing .services__icon::before {
+  content: "";
+}
+.side--marketing .sideService-icon::before {
+  content: "";
+}
+.side--telecoms .services__icon::before {
+  content: "";
+}
+.side--telecoms .sideService-icon::before {
+  content: "";
+}
+.side--web .services__icon::before {
+  content: "";
+}
+.side--web .sideService-icon::before {
+  content: "";
+}
+.side--security .services__icon::before {
+  content: "";
+}
+.side--security .sideService-icon::before {
+  content: "";
+}
+.side--training .services__icon::before {
+  content: "";
+}
+.side--training .sideService-icon::before {
+  content: "";
+}
+
+.sideService__links {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+.sideService__list {
+  list-style: none;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+.sideService__list > li:not(:first-child) {
+  border-top: 1px solid rgba(0, 0, 0, 0.45);
+}
+.sideService__list > li:not(:first-child) > a {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+.sideService__listItem {
+  text-align: center;
+  text-transform: uppercase;
+}
+.sideService__listItem a {
+  display: block;
+  padding: 10px;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.sideGroup__heading {
+  width: 100%;
+  height: 100%;
+}
+.sideGroup__heading:hover, .sideGroup__heading.hovered {
+  background-color: #3D404E !important;
+}
+.sideGroup__heading a {
+  display: block;
+  font-size: 1rem;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: left;
+  padding: 20px;
+}
+.sideGroup__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.sideGroup__list > li:not(:first-child) {
+  border-top: 1px solid rgba(0, 0, 0, 0.45);
+}
+.sideGroup__list > li:not(:first-child) > a {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+.sideGroup__listItem {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+.sideGroup__listItem a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 15px 20px;
+  font-size: 0.875rem;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: left;
+}
+.sideGroup__listItem a::before {
+  content: "»";
+  padding-right: 15px;
+}
+
+@media screen and (min-width: 992px) {
+  .hidden--large {
+    display: none;
+  }
+}
+
+/* ====================================================== */
+/* === Forms                                          === */
+/* ====================================================== */
 .header__form {
   display: flex;
   align-items: center;
@@ -2215,6 +2773,7 @@ section {
   -moz-appearance: initial;
   position: relative;
   cursor: pointer;
+  z-index: 19;
 }
 .news-form__check:before {
   box-sizing: border-box;
@@ -2263,6 +2822,25 @@ section {
 /* ====================================================== */
 /* === Typography                                     === */
 /* ====================================================== */
+.cookies__container {
+  color: #333645;
+}
+.cookies__heading {
+  font-size: 26px;
+  font-weight: 400;
+  margin: 0;
+  padding: 15px 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.cookies__text {
+  font-size: 16px;
+  line-height: 30px;
+  color: #666;
+  padding: 20px 20px 45px;
+  margin: 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
 .main-nav {
   text-transform: uppercase;
 }
@@ -2473,6 +3051,13 @@ section {
 
 .item--tel {
   margin-top: 22px;
+}
+
+.sideService__line1 {
+  display: block;
+  font-size: 10px;
+  padding-bottom: 2px;
+  line-height: 14px;
 }
 
 /*# sourceMappingURL=styles.css.map */

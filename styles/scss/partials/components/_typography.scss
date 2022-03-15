@@ -1,6 +1,31 @@
 /* ====================================================== */
 /* === Typography                                     === */
 /* ====================================================== */
+@use '../utilities/utilities' as *;
+
+.cookies {
+    &__container {
+        color: $color-primary;
+    }
+
+    &__heading {
+        font-size: 26px;
+        font-weight: 400;
+        margin: 0;
+        padding: 15px 20px;
+        border-bottom: 1px solid $color-form-input-border;
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 30px;
+        color: $color-secondary;
+        padding: 20px 20px 45px;
+        margin: 0;
+        border-bottom: 1px solid $color-form-input-border;
+    }
+}
+
 
 .main-nav {
     text-transform: uppercase;
@@ -246,4 +271,11 @@
 
 .item--tel {
     margin-top: 22px;
+}
+
+.sideService__line1 {
+    display: block;
+    font-size: 10px;
+    padding-bottom: 2px;
+    line-height: 14px;
 }

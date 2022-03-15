@@ -1,27 +1,21 @@
 // Partials imports
 
 // Normalize
-@import 'partials/reset/normalize/import-now';
-
-// Utilities
-@import 'partials/utilities/variables',
-        'partials/utilities/mixins',
-        'partials/utilities/helpers',
-        'partials/utilities/media-queries';
+@use "partials/reset/normalize/import-now";
 
 // Base styles
-@import 'partials/base/base';
+@use "partials/base/base";
 
 // Layout
-@import 'partials/layout/header',
-        'partials/layout/containers',
-        'partials/layout/sections',
-        'partials/layout/footer';
+@use "partials/layout/header";
+@use "partials/layout/containers";
+@use "partials/layout/sections";
+@use "partials/layout/footer";
 
 //Components
-@import 'partials/components/buttons',
-        'partials/components/icons',
-        'partials/components/images',
-        'partials/components/nav',
-        'partials/components/forms',
-        'partials/components/typography';
+@use "partials/components/buttons";
+@use "partials/components/icons";
+@use "partials/components/images";
+@use "partials/components/nav";
+@use "partials/components/forms";
+@use "partials/components/typography";

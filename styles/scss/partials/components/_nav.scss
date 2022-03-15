@@ -1,8 +1,37 @@
 /* ====================================================== */
 /* === Nav                                            === */
 /* ====================================================== */
+@use '../utilities/utilities'as *;
+
+header {
+    background-color: #fff;
+    position: relative;
+    top: 0;
+    z-index: 19;
+    width: 100%;
+}
 
 .header {
+
+    &--hidden {
+        position: fixed;
+        top: -210px;
+        left: 0;
+        z-index: 20;
+    }
+
+    &--animated {
+        transition: 0.4s all;
+    }
+
+    &--sticky {
+        top: 0;
+    }
+
+    // &--pushed {
+    //     left: -275px;
+    // }
+
     &__logo-link {
         @include flexy-center;
     }
@@ -64,7 +93,6 @@
         width: 100%;
         height: 45px;
         padding: 0 calc((100vw - #{$container-large}) / 2);
-        z-index: 70;
 
         @include xlarge {
             padding: 0 calc((100vw - #{$container-xlarge}) / 2);
@@ -81,7 +109,7 @@
 .carousel__nav {
     display: flex;
     justify-content: space-around;
-    z-index: 40;
+    z-index: 10;
     position: absolute;
     bottom: 14px;
     width: 185px;
@@ -146,7 +174,7 @@
         padding: 10px 7px;
 
         &:hover {
-            text-decoration: none!important;
+            text-decoration: none !important;
         }
     }
 }
@@ -165,4 +193,104 @@
 
 .linkedin:hover {
     background-color: #0077b5;
+}
+
+.side {
+    @include service($card-colors, $card-icons);
+}
+
+.sideService {
+    &__links {
+        background-color: rgba(0, 0, 0, .25);
+    }
+
+    &__list {
+        list-style: none;
+        margin: 0 0 20px 0;
+        padding: 0;
+
+        &>li:not(:first-child) {
+            border-top: 1px solid rgba(0, 0, 0, .45);
+
+            &>a {
+                border-top: 1px solid rgba(255, 255, 255, .05);
+            }
+        }
+    }
+
+    &__listItem {
+        text-align: center;
+        text-transform: uppercase;
+
+        & a {
+            display: block;
+            padding: 10px;
+            font-size: 1rem;
+            color: #fff;
+        }
+    }
+}
+
+.sideGroup {
+
+    &__heading {
+        width: 100%;
+        height: 100%;
+
+        &:hover,
+        &.hovered {
+            background-color: $color-sidebar-hover!important;
+        }
+
+        & a {
+            display: block;
+            font-size: 1rem;
+            color: #fff;
+            text-transform: uppercase;
+            text-align: left;
+            padding: 20px;
+        }
+    }
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        &>li:not(:first-child) {
+            border-top: 1px solid rgba(0, 0, 0, .45);
+
+            &>a {
+                border-top: 1px solid rgba(255, 255, 255, .05);
+            }
+        }
+    }
+
+    &__links {}
+
+    &__listItem {
+        width: 100%;
+        background-color: rgba(0, 0, 0, .25);
+
+        & a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            padding: 15px 20px;
+            font-size: 0.875rem;
+            color: #fff;
+            text-transform: uppercase;
+            text-align: left;
+
+            &::before {
+                content: "\BB";
+                padding-right: 15px;
+            }
+        }
+    }
+}
+
+.hidden--large {
+    @include large {
+        display: none;
+    }
 }
