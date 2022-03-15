@@ -76,6 +76,7 @@
 }
 
 .partners__item {
+    cursor: pointer;
     img {
         height: 60%;
         max-width: 100%;
@@ -88,6 +89,10 @@
     &:hover {
         @include colorize;
     }
+}
+
+.clients__client {
+    cursor: pointer;
 }
 
 .row--second {

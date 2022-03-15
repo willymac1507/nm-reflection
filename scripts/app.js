@@ -16,6 +16,8 @@ $(function () {
     pauseOnDotsHover: true,
   });
 
+  // Instantiate scrollPane plugin
+
   // Check if cookie consent has been given in this session
   const cookieConsent = sessionStorage.getItem('cookies');
   if (!cookieConsent) {
@@ -30,13 +32,13 @@ $(function () {
 // Apply hover effect to button when mouse is over containing div
 function hover(container, target) {
   $(container)
-  .mouseenter((e) => {
-    let but = $(e.currentTarget).children(target);
-    but.toggleClass('hovered');
-  })
-  .mouseleave(() => {
-    $(`${target}.hovered`).toggleClass('hovered');
-  });
+    .mouseenter((e) => {
+      let but = $(e.currentTarget).children(target);
+      but.toggleClass('hovered');
+    })
+    .mouseleave(() => {
+      $(`${target}.hovered`).toggleClass('hovered');
+    });
 };
 
 function sbWidth() {
@@ -45,7 +47,6 @@ function sbWidth() {
   const bodyRect = body.getBoundingClientRect();
   const sideRect = side.getBoundingClientRect();
   const sbWid = (bodyRect.width - sideRect.left) * -1;
-  console.log(sbWid, bodyRect.width, sideRect.left);
   return sbWid;
 }
 
@@ -84,18 +85,18 @@ $('.page__container').on('click', (e) => {
   if (clicked.classList.contains('button--ham')) {
     $('.page__container').css('left', sbWidth).addClass('sidebar__shown');
     $('.header--hidden').css('left', sbWidth);
-    $('body').css('overflow', 'hidden');
+    $('body').css('overflow-y', 'hidden');
     $('.hamburger').addClass('hamburger--open');
 
-  } else if (clicked.classList.contains('sidebar__overlay')) { 
+  } else if (clicked.classList.contains('sidebar__overlay')) {
     $('.page__container').removeClass('sidebar__shown').removeAttr('style');
     $('body').removeAttr('style');
     $('.sidebar__container').scrollTop(0);
     $('.header--hidden').removeAttr('style');
     $('.hamburger').removeClass('hamburger--open');
-    
+
   } else {
-    return false;
+    // return false;
   };
 });
 
@@ -109,3 +110,8 @@ $('.button--cookieAccept').on('click', () => {
 hover('.sideService__container', '.button');
 hover('.sidebar__group', '.sideGroup__heading');
 
+function noScroll() {
+  var scrollTop = parseInt($('html').css('top'));
+  $('html').removeClass('noscroll');
+  $('html,body').scrollTop(-scrollTop);
+}

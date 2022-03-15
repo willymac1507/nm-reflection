@@ -145,6 +145,7 @@
         -moz-appearance: initial;
         position: relative;
         cursor: pointer;
+        z-index: 60;
     }
 
     &__check:before {

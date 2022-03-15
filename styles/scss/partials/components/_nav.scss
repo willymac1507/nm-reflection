@@ -7,7 +7,7 @@ header {
     background-color: #fff;
     position: relative;
     top: 0;
-    z-index: 20;
+    z-index: 19;
     width: 100%;
 }
 
@@ -17,7 +17,7 @@ header {
         position: fixed;
         top: -210px;
         left: 0;
-        z-index: 21;
+        z-index: 20;
     }
 
     &--animated {
@@ -286,5 +286,11 @@ header {
                 padding-right: 15px;
             }
         }
+    }
+}
+
+.hidden--large {
+    @include large {
+        display: none;
     }
 }

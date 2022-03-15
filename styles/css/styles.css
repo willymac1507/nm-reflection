@@ -1970,6 +1970,9 @@ section {
   line-height: 0.8rem;
 }
 
+.icon--facebook::after {
+  content: "";
+}
 .icon--twitter::after {
   content: "";
 }
@@ -2054,6 +2057,9 @@ section {
   display: flex;
 }
 
+.partners__item {
+  cursor: pointer;
+}
 .partners__item img {
   height: 60%;
   max-width: 100%;
@@ -2068,6 +2074,10 @@ section {
 }
 .partners__item:hover .img--coloured {
   display: initial;
+}
+
+.clients__client {
+  cursor: pointer;
 }
 
 .row--second img {
@@ -2089,7 +2099,7 @@ header {
   background-color: #fff;
   position: relative;
   top: 0;
-  z-index: 20;
+  z-index: 19;
   width: 100%;
 }
 
@@ -2097,7 +2107,7 @@ header {
   position: fixed;
   top: -210px;
   left: 0;
-  z-index: 21;
+  z-index: 20;
 }
 .header--animated {
   transition: 0.4s all;
@@ -2619,6 +2629,12 @@ header {
   padding-right: 15px;
 }
 
+@media screen and (min-width: 992px) {
+  .hidden--large {
+    display: none;
+  }
+}
+
 /* ====================================================== */
 /* === Forms                                          === */
 /* ====================================================== */
@@ -2757,6 +2773,7 @@ header {
   -moz-appearance: initial;
   position: relative;
   cursor: pointer;
+  z-index: 60;
 }
 .news-form__check:before {
   box-sizing: border-box;

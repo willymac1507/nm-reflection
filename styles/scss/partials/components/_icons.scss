@@ -95,6 +95,12 @@
 
 .icon {
 
+    &--facebook {
+        &::after {
+            content: '\ec5c';
+        }
+    }
+
     &--twitter {
         &::after {
             content: '\ec62';
