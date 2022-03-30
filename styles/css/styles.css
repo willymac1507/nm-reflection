@@ -460,6 +460,7 @@ template {
 body {
   line-height: 1.42857143;
   margin: 0;
+  height: 100vh;
 }
 
 html {
@@ -483,6 +484,10 @@ h1 {
   line-height: 1.1;
 }
 
+.noScroll {
+  position: fixed;
+}
+
 /* ====================================================== */
 /* === Header                                         === */
 /* ====================================================== */
@@ -503,6 +508,13 @@ h1 {
   top: 0;
   left: 0;
   transition: 0.4s;
+  height: 100%;
+}
+
+.main__holder {
+  position: relative;
+  height: 100%;
+  overflow-y: auto;
 }
 
 .sidebar__group {
@@ -2773,7 +2785,7 @@ header {
   -moz-appearance: initial;
   position: relative;
   cursor: pointer;
-  z-index: 19;
+  z-index: 60;
 }
 .news-form__check:before {
   box-sizing: border-box;
