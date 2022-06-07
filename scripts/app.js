@@ -60,7 +60,7 @@ $('.main__holder').on('scroll', (e) => {
 
   let scrollValue = $('.main__holder').scrollTop();
   const headHeight = $('header').height();
-
+  console.log(scrollValue, pagePosition);
   if (scrollValue < pagePosition)
   // User is scrolling up
   {
