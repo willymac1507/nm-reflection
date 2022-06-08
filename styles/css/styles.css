@@ -739,8 +739,10 @@ h1 {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.cookies__footerinclude medium {
-  gap: 28px;
+@media screen and (min-width: 768px) {
+  .cookies__footer {
+    gap: 28px;
+  }
 }
 
 .main-nav {
@@ -998,6 +1000,13 @@ h1 {
     max-width: 1200px;
   }
 }
+.card.latest--bespoke .button--latest,
+.card.latest--bespoke .button--news {
+  background-color: #67809f;
+}
+.card.latest--bespoke .latest__headline {
+  color: #67809f;
+}
 .card--bespoke .services__icon-container {
   background-color: #67809f;
 }
@@ -1017,6 +1026,13 @@ h1 {
 }
 .card--bespoke:hover .services__header::after {
   background-color: #fff;
+}
+.card.latest--it .button--latest,
+.card.latest--it .button--news {
+  background-color: #4183d7;
+}
+.card.latest--it .latest__headline {
+  color: #4183d7;
 }
 .card--it .services__icon-container {
   background-color: #4183d7;
@@ -1038,6 +1054,13 @@ h1 {
 .card--it:hover .services__header::after {
   background-color: #fff;
 }
+.card.latest--marketing .button--latest,
+.card.latest--marketing .button--news {
+  background-color: #2ecc71;
+}
+.card.latest--marketing .latest__headline {
+  color: #2ecc71;
+}
 .card--marketing .services__icon-container {
   background-color: #2ecc71;
 }
@@ -1057,6 +1080,13 @@ h1 {
 }
 .card--marketing:hover .services__header::after {
   background-color: #fff;
+}
+.card.latest--telecoms .button--latest,
+.card.latest--telecoms .button--news {
+  background-color: #d64541;
+}
+.card.latest--telecoms .latest__headline {
+  color: #d64541;
 }
 .card--telecoms .services__icon-container {
   background-color: #d64541;
@@ -1078,6 +1108,13 @@ h1 {
 .card--telecoms:hover .services__header::after {
   background-color: #fff;
 }
+.card.latest--web .button--latest,
+.card.latest--web .button--news {
+  background-color: #926fb1;
+}
+.card.latest--web .latest__headline {
+  color: #926fb1;
+}
 .card--web .services__icon-container {
   background-color: #926fb1;
 }
@@ -1098,6 +1135,13 @@ h1 {
 .card--web:hover .services__header::after {
   background-color: #fff;
 }
+.card.latest--security .button--latest,
+.card.latest--security .button--news {
+  background-color: #f62459;
+}
+.card.latest--security .latest__headline {
+  color: #f62459;
+}
 .card--security .services__icon-container {
   background-color: #f62459;
 }
@@ -1117,6 +1161,13 @@ h1 {
 }
 .card--security:hover .services__header::after {
   background-color: #fff;
+}
+.card.latest--training .button--latest,
+.card.latest--training .button--news {
+  background-color: #926fb1;
+}
+.card.latest--training .latest__headline {
+  color: #926fb1;
 }
 .card--training .services__icon-container {
   background-color: #926fb1;
@@ -1183,6 +1234,13 @@ h1 {
 .card--latest {
   margin-top: 30px;
   align-items: flex-start;
+  top: 0;
+  transition: top 0.5s;
+}
+@media screen and (min-width: 992px) {
+  .card--latest:hover {
+    top: -15px;
+  }
 }
 @media screen and (min-width: 768px) {
   .card {
@@ -2040,13 +2098,6 @@ section {
   width: 100%;
   border-radius: 3px 3px 0 0;
 }
-@media screen and (min-width: 992px) {
-  .latest__image:hover img {
-    transform: scale(1.1);
-    opacity: 0.75;
-    transition: all 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
-  }
-}
 
 .img--coloured {
   display: none;
@@ -2387,6 +2438,13 @@ header {
   background-color: #0077b5;
 }
 
+.side.latest--bespoke .button--latest,
+.side.latest--bespoke .button--news {
+  background-color: #67809f;
+}
+.side.latest--bespoke .latest__headline {
+  color: #67809f;
+}
 .side--bespoke .services__icon-container {
   background-color: #67809f;
 }
@@ -2406,6 +2464,13 @@ header {
 }
 .side--bespoke:hover .services__header::after {
   background-color: #fff;
+}
+.side.latest--it .button--latest,
+.side.latest--it .button--news {
+  background-color: #4183d7;
+}
+.side.latest--it .latest__headline {
+  color: #4183d7;
 }
 .side--it .services__icon-container {
   background-color: #4183d7;
@@ -2427,6 +2492,13 @@ header {
 .side--it:hover .services__header::after {
   background-color: #fff;
 }
+.side.latest--marketing .button--latest,
+.side.latest--marketing .button--news {
+  background-color: #2ecc71;
+}
+.side.latest--marketing .latest__headline {
+  color: #2ecc71;
+}
 .side--marketing .services__icon-container {
   background-color: #2ecc71;
 }
@@ -2446,6 +2518,13 @@ header {
 }
 .side--marketing:hover .services__header::after {
   background-color: #fff;
+}
+.side.latest--telecoms .button--latest,
+.side.latest--telecoms .button--news {
+  background-color: #d64541;
+}
+.side.latest--telecoms .latest__headline {
+  color: #d64541;
 }
 .side--telecoms .services__icon-container {
   background-color: #d64541;
@@ -2467,6 +2546,13 @@ header {
 .side--telecoms:hover .services__header::after {
   background-color: #fff;
 }
+.side.latest--web .button--latest,
+.side.latest--web .button--news {
+  background-color: #926fb1;
+}
+.side.latest--web .latest__headline {
+  color: #926fb1;
+}
 .side--web .services__icon-container {
   background-color: #926fb1;
 }
@@ -2487,6 +2573,13 @@ header {
 .side--web:hover .services__header::after {
   background-color: #fff;
 }
+.side.latest--security .button--latest,
+.side.latest--security .button--news {
+  background-color: #f62459;
+}
+.side.latest--security .latest__headline {
+  color: #f62459;
+}
 .side--security .services__icon-container {
   background-color: #f62459;
 }
@@ -2506,6 +2599,13 @@ header {
 }
 .side--security:hover .services__header::after {
   background-color: #fff;
+}
+.side.latest--training .button--latest,
+.side.latest--training .button--news {
+  background-color: #926fb1;
+}
+.side.latest--training .latest__headline {
+  color: #926fb1;
 }
 .side--training .services__icon-container {
   background-color: #926fb1;

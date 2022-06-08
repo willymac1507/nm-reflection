@@ -94,6 +94,21 @@
 
     @each $theme,
     $color in $colors {
+        &.latest--#{$theme} {
+            .button--latest,
+            .button--news {
+                background-color: $color;
+            }
+
+            //.button--latest:hover {
+            //    background-color: darken($color, 10%);
+            //}
+
+            .latest__headline {
+                color: $color;
+            }
+
+        }
         &--#{$theme} {
             .services__icon-container {
                 background-color: $color;

@@ -24,7 +24,7 @@ function getLatestCardHtml($latest): string
         echo $e->getMessage();
         exit();
     }
-    return '<div class="card card--latest">'
+    return '<div class="card card--latest latest--' . $latest['department'] . '">'
       . '<a href="#" class="latest__image">'
       . '<img src="' . $latest['title_img'] . '" alt="' . $latest['title_name'] . '"></a>'
       . '<a href="#" class="button button--news">news</a>'
