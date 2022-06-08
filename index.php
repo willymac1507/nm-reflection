@@ -9,4 +9,3 @@ include 'inc/clients.php';
 include 'inc/newsletter.php';
 echo '</main>';
 include 'inc/footer.php';
-

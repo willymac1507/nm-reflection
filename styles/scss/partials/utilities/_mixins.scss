@@ -73,9 +73,17 @@
     overflow: hidden;
     background-color: #fff;
     border: 1px solid #ccc;
-    border-radius: 3px;
+    border-radius: 15px;
     box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
     padding: 30px;
+    top: 0;
+    transition: top 0.5s;
+
+    @include large {
+        &:hover {
+            top: -15px;
+        }
+    }
 }
 
 // Image hover effects

@@ -980,9 +980,11 @@ h1 {
   overflow: hidden;
   background-color: #fff;
   border: 1px solid #ccc;
-  border-radius: 3px;
+  border-radius: 15px;
   box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
   padding: 30px;
+  top: 0;
+  transition: top 0.5s;
 }
 @media screen and (min-width: 768px) {
   .card {
@@ -998,6 +1000,11 @@ h1 {
 @media screen and (min-width: 1260px) {
   .card {
     max-width: 1200px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .card:hover {
+    top: -15px;
   }
 }
 .card.latest--bespoke .button--latest,
@@ -1233,14 +1240,9 @@ h1 {
 }
 .card--latest {
   margin-top: 30px;
+  border-radius: 0 0 3px 3px;
   align-items: flex-start;
   top: 0;
-  transition: top 0.5s;
-}
-@media screen and (min-width: 992px) {
-  .card--latest:hover {
-    top: -15px;
-  }
 }
 @media screen and (min-width: 768px) {
   .card {

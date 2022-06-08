@@ -6,7 +6,7 @@
 function getAllLatest(): array
 {
     include 'connection.php';
-    $query = 'SELECT * FROM latest_cards';
+    $query = 'SELECT * FROM latest_cards ORDER BY posted_date DESC LIMIT 3';
     $results = $db->prepare($query);
     $results->execute();
     return $results->fetchAll(PDO::FETCH_ASSOC);

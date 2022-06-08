@@ -359,15 +359,9 @@
 
   &--latest {
     margin-top: 30px;
+    border-radius: 0 0 3px 3px;
     align-items: flex-start;
     top: 0;
-    transition: top 0.5s;
-
-    @include large {
-      &:hover {
-        top: -15px;
-      }
-    }
   }
 
   @include medium {
