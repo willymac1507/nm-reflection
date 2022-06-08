@@ -1,3 +1,5 @@
+<?php ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -467,8 +469,10 @@
 
                     <div class="header__top-container header--search">
                         <form method="get" class="header__form">
+                          <label>
                             <input class="input input--search" type="text" name="search" placeholder="Search...">
-                            <a class="header__form-link" title="search" href="#">
+                          </label>
+                          <a class="header__form-link" title="search" href="#">
                                 <span class="search-icon"></span>
                             </a>
                         </form>
@@ -550,7 +554,7 @@
                             <p class="main-nav__large-text">security</p>
                             <div class="main-nav__popunder">
                                 <div class="main-nav__popunder-link">assessment</div>
-                                <div class="main-nav__popunder-link">managament</div>
+                                <div class="main-nav__popunder-link">management</div>
                                 <div class="main-nav__popunder-link">penetration testing</div>
                                 <div class="main-nav__popunder-link">cyber essentials</div>
                                 <div class="main-nav__popunder-link">pci/dss</div>
