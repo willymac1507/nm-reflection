@@ -1,6 +1,6 @@
 <section id="newsletter">
     <div class="newsletter">
-        <form action="post" class="news-form">
+        <form method="post" class="news-form">
             <div class="news-form__title">Email Newsletter Sign-Up</div>
             <div class="news-form__inputs-container">
                 <div class="news-form__input-group form-group">
