@@ -279,3 +279,37 @@
     padding-bottom: 2px;
     line-height: 14px;
 }
+
+.contact {
+    &__headline {
+        margin: 0;
+        font-size: 2.25rem;
+        font-weight: 400;
+        color: #fff;
+    }
+}
+
+.office {
+
+    &__name {
+        font-size: 1.125rem;
+        font-weight: 400;
+        line-height: 19.8px;
+        color: $color-primary;
+    }
+
+    &__address {
+        padding: 15px 0;
+        font-size: 0.8125rem;
+        font-weight: 400;
+        line-height: 22px;
+        color: #666666;
+    }
+
+    &__phone {
+        font-size: 1.625rem;
+        font-weight: 700;
+        line-height: 28.6px;
+        color: $color-latest;
+    }
+}

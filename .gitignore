@@ -15,19 +15,8 @@ nano.*
 Icon
 
 # Node modules
-<<<<<<< HEAD
 node_modules/
-
-# nano files
-nano.*
-
-# gitignore
-.gitignore
-
-=======
-
-node_modules
->>>>>>> Add-Features
+vendor/
 
 # Thumbnails
 ._*

@@ -118,6 +118,17 @@
         }
     }
 
+    &--office {
+        font-size: 0.9rem;
+        line-height: 35px;
+        margin-top: 15px;
+        padding: 5px 30px;
+        background-color: $color-latest;
+        &:hover {
+            background-color: darken($color-latest, 10%);
+        }
+    }
+
     &--subscribe {
         background-color: $color-primary;
         &:hover {

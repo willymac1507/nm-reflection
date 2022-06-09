@@ -1002,7 +1002,7 @@ h1 {
     max-width: 1200px;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
   .card:hover {
     top: -15px;
   }
@@ -1241,6 +1241,12 @@ h1 {
 .card--latest {
   margin-top: 30px;
   border-radius: 0 0 3px 3px;
+}
+.card--contact {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.card--latest, .card--contact {
   align-items: flex-start;
   top: 0;
 }
@@ -1700,6 +1706,34 @@ h1 {
   width: auto;
 }
 
+.contact {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
+}
+.contact__header {
+  width: 100%;
+  padding: 24px 15px;
+  margin-bottom: 50px;
+  background-color: #333645;
+}
+@media screen and (min-width: 992px) {
+  .contact__header {
+    display: none;
+  }
+}
+.contact__content {
+  padding: 30px 15px;
+}
+.contact__map {
+  height: 300px;
+  width: 100%;
+  margin-bottom: 30px;
+  background-color: #007bff;
+}
+
 /* ====================================================== */
 /* === Sections                                       === */
 /* ====================================================== */
@@ -1900,6 +1934,16 @@ section {
 .button--latest:hover {
   background-color: #79539a;
 }
+.button--office {
+  font-size: 0.9rem;
+  line-height: 35px;
+  margin-top: 15px;
+  padding: 5px 30px;
+  background-color: #926fb1;
+}
+.button--office:hover {
+  background-color: #79539a;
+}
 .button--subscribe {
   background-color: #333645;
 }
@@ -2090,13 +2134,15 @@ section {
   transform: translate(calc(-50% + 50vw));
 }
 
-.latest__image {
+.latest__image,
+.office__image {
   align-self: center;
   height: auto;
   width: calc(100% + 62px);
   margin: -31px 0 30px;
 }
-.latest__image img {
+.latest__image img,
+.office__image img {
   width: 100%;
   border-radius: 3px 3px 0 0;
 }
@@ -2165,6 +2211,7 @@ header {
   top: 0;
   z-index: 19;
   width: 100%;
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
 }
 
 .header--hidden {
@@ -3171,6 +3218,33 @@ header {
   font-size: 10px;
   padding-bottom: 2px;
   line-height: 14px;
+}
+
+.contact__headline {
+  margin: 0;
+  font-size: 2.25rem;
+  font-weight: 400;
+  color: #fff;
+}
+
+.office__name {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 19.8px;
+  color: #333645;
+}
+.office__address {
+  padding: 15px 0;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 22px;
+  color: #666666;
+}
+.office__phone {
+  font-size: 1.625rem;
+  font-weight: 700;
+  line-height: 28.6px;
+  color: #926fb1;
 }
 
 /*# sourceMappingURL=styles.css.map */

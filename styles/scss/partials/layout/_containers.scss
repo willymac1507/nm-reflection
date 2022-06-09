@@ -360,6 +360,15 @@
   &--latest {
     margin-top: 30px;
     border-radius: 0 0 3px 3px;
+  }
+
+  &--contact {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  &--latest,
+  &--contact {
     align-items: flex-start;
     top: 0;
   }
@@ -727,5 +736,31 @@
 
   div:nth-of-type(4) {
     width: auto;
+  }
+}
+
+.contact {
+  @include layout-div;
+
+  &__header {
+    width: 100%;
+    padding: 24px 15px;
+    margin-bottom: 50px;
+    background-color: $color-primary;
+
+    @include large {
+      display: none;
+    }
+  }
+
+  &__content {
+    padding: 30px 15px;
+  }
+
+  &__map {
+    height: 300px;
+    width: 100%;
+    margin-bottom: 30px;
+    background-color: #007bff;
   }
 }

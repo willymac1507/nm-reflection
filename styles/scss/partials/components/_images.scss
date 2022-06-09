@@ -32,7 +32,8 @@
     transform: translate(calc(-50% + 50vw));
 }
 
-.latest__image {
+.latest__image,
+.office__image {
     align-self: center;
     height: auto;
     width: calc(100% + 62px);
