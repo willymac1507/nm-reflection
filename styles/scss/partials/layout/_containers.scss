@@ -377,7 +377,6 @@
     margin: 0;
 
     &--bespoke,
-
     &--it,
     &--marketing {
       width: 100%;
@@ -742,6 +741,11 @@
 .contact {
   @include layout-div;
 
+  &__container {
+    display: flex;
+    justify-content: center;
+  }
+
   &__header {
     width: 100%;
     padding: 24px 15px;
@@ -754,13 +758,50 @@
   }
 
   &__content {
+    display: flex;
+    flex-wrap: wrap;
     padding: 30px 15px;
+
+    @include medium {
+      max-width: $container-med;
+    }
+
+    @include large {
+      max-width: $container-large;
+      gap: 30px;
+    }
+
+    @include xlarge {
+      max-width: $container-xlarge;
+    }
   }
 
   &__map {
     height: 300px;
     width: 100%;
     margin-bottom: 30px;
-    background-color: #007bff;
+  }
+}
+
+.office__container {
+  flex: 0 0 100%;
+
+  @include large {
+    flex: 1 1 30%;
+  }
+}
+
+.map--responsive {
+  overflow: hidden;
+  padding-bottom: 300px;
+  position: relative;
+  height: 0;
+
+  & iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
   }
 }

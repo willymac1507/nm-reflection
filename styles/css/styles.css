@@ -1713,6 +1713,10 @@ h1 {
   overflow: hidden;
   box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
 }
+.contact__container {
+  display: flex;
+  justify-content: center;
+}
 .contact__header {
   width: 100%;
   padding: 24px 15px;
@@ -1725,13 +1729,53 @@ h1 {
   }
 }
 .contact__content {
+  display: flex;
+  flex-wrap: wrap;
   padding: 30px 15px;
+}
+@media screen and (min-width: 768px) {
+  .contact__content {
+    max-width: 750px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .contact__content {
+    max-width: 970px;
+    gap: 30px;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .contact__content {
+    max-width: 1200px;
+  }
 }
 .contact__map {
   height: 300px;
   width: 100%;
   margin-bottom: 30px;
-  background-color: #007bff;
+}
+
+.office__container {
+  flex: 0 0 100%;
+}
+@media screen and (min-width: 992px) {
+  .office__container {
+    flex: 1 1 30%;
+  }
+}
+
+.map--responsive {
+  overflow: hidden;
+  padding-bottom: 300px;
+  position: relative;
+  height: 0;
+}
+.map--responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
 
 /* ====================================================== */
@@ -1935,6 +1979,7 @@ section {
   background-color: #79539a;
 }
 .button--office {
+  display: block;
   font-size: 0.9rem;
   line-height: 35px;
   margin-top: 15px;
