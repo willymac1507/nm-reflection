@@ -280,12 +280,16 @@
     line-height: 14px;
 }
 
-.contact {
+.offices {
     &__headline {
         margin: 0;
         font-size: 2.25rem;
         font-weight: 400;
         color: #fff;
+
+        @include large {
+            color: $color-primary;
+        }
     }
 }
 
@@ -327,5 +331,33 @@
 
     &__home a {
         font-weight: 700;
+    }
+}
+
+.contact-form__input {
+    font-size: .8125rem;
+    color: #555555;
+    line-height: 1.43;
+}
+
+.contact-details {
+    &__standard {
+        font-size: 1rem;
+    }
+
+    &__large {
+        font-size: 1.625rem;
+        color: $color-latest;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__large,
+    &__standard {
+        font-weight: 600;
+        line-height: 30px;
+        margin: 0 0 25px;
     }
 }

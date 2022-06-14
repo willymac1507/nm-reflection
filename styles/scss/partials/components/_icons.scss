@@ -9,7 +9,7 @@
     border-bottom: solid 2px #fff;
 
     &::before {
-        font-family: 'icomoon';
+        font-family: 'icomoon', serif;
         font-size: 1.5rem;
         color: $color-primary;
         content: "\e9e5";
@@ -43,8 +43,16 @@
     margin: 0 -4px 0 12px;
 
     &::before {
-        font-family: 'icomoon';
+        font-family: 'icomoon', serif;
         content: '\ebc8';
+    }
+}
+
+.down-arrow {
+    &::before {
+        font-family: 'icomoon', serif;
+        font-size: .875rem;
+        content: '\ebbb';
     }
 }
 
@@ -60,7 +68,7 @@
     margin-right: 5px;
 
     &::before {
-        font-family: 'icomoon';
+        font-family: 'icomoon', serif;
         font-size: 1.4rem;
         margin-bottom: -2px;
     }
@@ -81,14 +89,14 @@
 .main-nav {
     &__icon {
         margin: 0;
-        font-family: 'icomoon';
+        font-family: 'icomoon', emoji;
         font-size: 1.3rem;
         line-height: 1.3rem;
     }
 }
 
 .social-icon {
-    font-family: 'icomoon';
+    font-family: 'icomoon', emoji;
     font-size: 0.8rem;
     line-height: 0.8rem;
 }
@@ -122,7 +130,7 @@
 
 .sideService-icon {
     display: block;
-    font-family: 'icomoon';
+    font-family: 'icomoon', emoji;
     font-size: 1rem;
     padding-bottom: 9px;
 }

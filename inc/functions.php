@@ -56,10 +56,9 @@ function getLatestCardHtml($latest): string
 function getOfficeCardHtml($office): string
 {
     return '<div class="office__container">'
-      . '<div class="office__container">'
-      . '<div class="card card--contact">'
+      . '<div class="card card--office">'
       . '<img src="' . $office['image'] . '" alt="' . $office['name'] . '" class="office__image">'
-      . '<div class="contact__details">'
+      . '<div>'
       . '<a href="#" class="office__name">' . $office['name'] . '</a>'
       . '<div class="office__address">'
       . $office['addr1'] . '<br>'
@@ -71,13 +70,13 @@ function getOfficeCardHtml($office): string
       . '<a href = "#" class="office__phone">' . $office['phone'] . '</a>'
       . '<button class="button button--office">view more</button>'
       . '</div></div>'
-      . '<div class="contact__map">'
+      . '<div>'
       . '<div class="map--responsive" >'
       . '<iframe '
       . 'src="' . $office['map-src'] . '" '
       . 'width="100%" height = "100%" style = "border:0;" allowfullscreen = "" '
       . 'loading = "lazy" referrerpolicy = "no-referrer-when-downgrade"></iframe>'
-      . '</div></div></div></div>';
+      . '</div></div></div>';
 }
 
 function buildBreadcrumbs(): array

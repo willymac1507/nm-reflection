@@ -71,7 +71,8 @@
     }
 }
 
-.news-form {
+.news-form,
+.contact-form {
     background-color: transparent;
     padding: 50px 30px;
     max-width: calc(#{$container-med});
@@ -105,7 +106,6 @@
         background-color: #fff;
         width: 100%;
         display: block;
-        height: 47px;
         padding: 5px 15px;
         border: 1px solid #ccc;
         border-radius: 2px;
@@ -124,6 +124,10 @@
         @include xlarge {
             width: 540px;
         }
+    }
+
+    &__input:not(textarea) {
+        height: 47px;
     }
 
     &__opt-out {
@@ -159,7 +163,7 @@
         left: 0;
         border: 3px solid $color-primary;
         border-radius: 3px;
-        background-color: $color-tertiary;
+        background-color: $color-form-contact-back;
     }
 
     &__check:checked:after {
@@ -171,7 +175,7 @@
         left: 1px;
         width: 30px;
         height: 30px;
-        font-family: 'icomoon';
+        font-family: 'icomoon', serif;
         font-size: 1.3rem;
         color: #fff;
         background-color: $color-primary;
@@ -185,6 +189,10 @@
     @include xlarge {
         width: $container-xlarge;
     }
+}
+
+.contact-form {
+    padding: 30px;
 }
 
 .required {

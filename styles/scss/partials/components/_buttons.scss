@@ -137,6 +137,13 @@
         }
     }
 
+    &--enquiry {
+        background-color: $color-latest;
+        &:hover {
+            background-color: darken($color-latest, 10%);
+        }
+    }
+
     &--support, &--contact {
         display: flex;
         line-height: 43.5px;

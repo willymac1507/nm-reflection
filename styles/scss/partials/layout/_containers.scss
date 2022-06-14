@@ -230,6 +230,7 @@
 
 .main-nav {
   @include layout-div;
+  box-shadow: none;
   display: none;
   overflow: visible;
   height: 100px;
@@ -372,7 +373,7 @@
   }
 
   &--latest,
-  &--contact {
+  &--office {
     align-items: flex-start;
     top: 0;
   }
@@ -742,8 +743,9 @@
   }
 }
 
-.contact {
+.offices {
   @include layout-div;
+  box-shadow: none;
 
   &__container {
     display: flex;
@@ -752,18 +754,39 @@
 
   &__header {
     width: 100%;
-    padding: 24px 15px;
+    padding: 24px 0;
     margin-bottom: 50px;
     background-color: $color-primary;
 
     @include large {
-      display: none;
+      padding: 50px 0;
+      margin: 0;
+      background-color: #fff;
+    }
+  }
+
+  &__headline-container {
+    margin: 0 auto;
+    padding: 0 15px;
+
+    @include medium {
+      max-width: $container-med;
+    }
+
+    @include large {
+      max-width: $container-large;
+      gap: 30px;
+    }
+
+    @include xlarge {
+      max-width: $container-xlarge;
     }
   }
 
   &__content {
     display: flex;
     flex-wrap: wrap;
+    gap: 30px;
     padding: 30px 15px;
 
     @include medium {
@@ -810,13 +833,71 @@
   }
 }
 
-.above__bread {
-  height: 50px;
-  background-color: #fff;
-}
 .bread {
+  //display: flex;
+  //justify-content: center;
+  @include layout-div;
+  width: 100%;
+  border-top: 1px solid $color-primary;
+
   &__container {
+    display: none;
     width: 100%;
+    margin: 0 auto;
     padding: 14px 15px 13px;
+
+
+    @include medium {
+      display: flex;
+      max-width: $container-med;
+    }
+
+    @include large {
+      max-width: $container-large;
+      gap: 30px;
+    }
+
+    @include xlarge {
+      max-width: $container-xlarge;
+    }
+
+  }
+}
+
+.contact {
+  &__container {
+    @include layout-div;
+    box-shadow: none;
+    padding: 15px;
+  }
+
+  &-form,
+  &-details {
+    &__container {
+      margin: 0 auto;
+      width: 100%;
+
+
+      @include medium {
+        max-width: $container-med;
+      }
+
+      @include large {
+        max-width: $container-large;
+        gap: 30px;
+      }
+
+      @include xlarge {
+        max-width: $container-xlarge;
+      }
+    }
+  }
+
+  &-form {
+    &__container {
+      display: flex;
+      background-color: $color-form-contact-back;
+      border-radius: 10px;
+    }
   }
 }
