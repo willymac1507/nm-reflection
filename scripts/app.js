@@ -86,6 +86,7 @@ $('.page__container').on('click', (e) => {
     let clicked = e.target;
 
     if (clicked.classList.contains('button--ham')) {
+        $('.sidebar__contents').show();
         $('.page__container').css('left', sbWidth).addClass('sidebar__shown');
         $('.header--hidden').css('left', sbWidth);
         // $('body').css('top', -(document.documentElement.scrollTop) + 'px').addClass('noScroll');
@@ -97,6 +98,7 @@ $('.page__container').on('click', (e) => {
         $('.sidebar__container').scrollTop(0);
         $('.header--hidden').removeAttr('style').css('width', `${headerWidth()}px`);
         $('.hamburger').removeClass('hamburger--open');
+        $('.sidebar__contents').delay(200).fadeOut('fast');
 
     } else {
         // return false;

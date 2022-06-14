@@ -299,7 +299,7 @@
     }
 
     &__address {
-        padding: 15px 0;
+        padding: 11px 0 15px;
         font-size: 0.8125rem;
         font-weight: 400;
         line-height: 22px;
@@ -311,5 +311,21 @@
         font-weight: 700;
         line-height: 28.6px;
         color: $color-latest;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.bread {
+    &__home a,
+    &__crumb {
+        font-size: 0.8125rem;
+        line-height: 1.16rem;
+    }
+
+    &__home a {
+        font-weight: 700;
     }
 }

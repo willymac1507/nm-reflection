@@ -295,3 +295,20 @@ header {
         display: none;
     }
 }
+
+.bread {
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+
+        & li {
+            display: inline-block;
+        }
+    }
+
+    &__crumb:before {
+        content: '/';
+        padding: 0 5px;
+    }
+}

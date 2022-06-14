@@ -43,7 +43,7 @@
 
     <div class="sidebar__container">
         <div id="sidebar">
-            <div class="sidebar__contents">
+            <div class="sidebar__contents sidebar--hidden">
                 <div class="sidebar__smallServices">
                     <div class="button button--sideContact">contact us</div>
                     <div class="sideService__container">
@@ -469,9 +469,7 @@
 
                     <div class="header__top-container header--search">
                         <form method="get" class="header__form">
-                          <label>
                             <input class="input input--search" type="text" name="search" placeholder="Search...">
-                          </label>
                           <a class="header__form-link" title="search" href="#">
                                 <span class="search-icon"></span>
                             </a>

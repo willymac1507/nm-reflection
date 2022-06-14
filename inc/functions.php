@@ -13,6 +13,18 @@ function getAllLatest(): array
 }
 
 /**
+ * @return array
+ */
+function getAllOffices(): array
+{
+    include 'connection.php';
+    $query = 'SELECT * FROM offices';
+    $results = $db->prepare($query);
+    $results->execute();
+    return $results->fetchAll(PDO::FETCH_ASSOC);
+}
+
+/**
  * @param $latest
  * @return string
  */
@@ -39,4 +51,46 @@ function getLatestCardHtml($latest): string
       . '</div>'
       . '</div>'
       . '</div>';
+}
+
+function getOfficeCardHtml($office): string
+{
+    return '<div class="office__container">'
+      . '<div class="office__container">'
+      . '<div class="card card--contact">'
+      . '<img src="' . $office['image'] . '" alt="' . $office['name'] . '" class="office__image">'
+      . '<div class="contact__details">'
+      . '<a href="#" class="office__name">' . $office['name'] . '</a>'
+      . '<div class="office__address">'
+      . $office['addr1'] . '<br>'
+      . $office['addr2'] . '<br>'
+      . $office['addr3'] . '<br>'
+      . $office['addr4'] . '<br>'
+      . $office['postcode']
+      . '</div>'
+      . '<a href = "#" class="office__phone">' . $office['phone'] . '</a>'
+      . '<button class="button button--office">view more</button>'
+      . '</div></div>'
+      . '<div class="contact__map">'
+      . '<div class="map--responsive" >'
+      . '<iframe '
+      . 'src="' . $office['map-src'] . '" '
+      . 'width="100%" height = "100%" style = "border:0;" allowfullscreen = "" '
+      . 'loading = "lazy" referrerpolicy = "no-referrer-when-downgrade"></iframe>'
+      . '</div></div></div></div>';
+}
+
+function buildBreadcrumbs(): array
+{
+    $crumbArray = [];
+    $path = array_filter(explode('/', parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)));
+
+    foreach ($path as $page) {
+        $crumbName = str_replace(['_', '-'], ' ', $page);
+        $crumbName = str_replace(['.php', '.html'], '', $crumbName);
+        $crumbName = ucwords($crumbName);
+        $crumbArray[] = $crumbName;
+    }
+
+    return $crumbArray;
 }
