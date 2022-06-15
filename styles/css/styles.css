@@ -514,6 +514,7 @@ h1 {
 .main__holder {
   position: relative;
   height: 100%;
+  width: 100%;
   overflow-y: auto;
 }
 
@@ -1246,7 +1247,7 @@ h1 {
   margin-top: 30px;
   border-radius: 0 0 3px 3px;
 }
-.card--contact {
+.card--office {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
@@ -1501,15 +1502,18 @@ h1 {
   border-width: 35px 36px 0;
 }
 
-.news-form__inputs-container {
+.news-form__inputs-container,
+.contact-form__inputs-container {
   display: flex;
   flex-direction: column;
 }
 @media screen and (min-width: 992px) {
-  .news-form__inputs-container {
+  .news-form__inputs-container,
+.contact-form__inputs-container {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    column-gap: 30px;
   }
 }
 
@@ -1845,12 +1849,19 @@ h1 {
   height: 100%;
   overflow: hidden;
   box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap;
   box-shadow: none;
-  padding: 15px;
+  padding: 15px 15px 50px;
+}
+@media screen and (min-width: 1260px) {
+  .contact__container {
+    justify-content: space-between;
+  }
 }
 .contact-form__container, .contact-details__container {
   margin: 0 auto;
-  width: 100%;
+  flex: 0 0 100%;
 }
 @media screen and (min-width: 768px) {
   .contact-form__container, .contact-details__container {
@@ -1866,12 +1877,21 @@ h1 {
 @media screen and (min-width: 1260px) {
   .contact-form__container, .contact-details__container {
     max-width: 1200px;
+    flex: 0 0 30%;
+    order: 2;
   }
 }
 .contact-form__container {
   display: flex;
+  flex: 0 0 100%;
   background-color: #e6e7e9;
   border-radius: 10px;
+}
+@media screen and (min-width: 1260px) {
+  .contact-form__container {
+    flex: 0 0 64%;
+    order: 1;
+  }
 }
 
 /* ====================================================== */
@@ -3023,12 +3043,18 @@ header {
   }
 }
 
+.contact-form {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
 .news-form,
 .contact-form {
   background-color: transparent;
-  padding: 50px 30px;
-  max-width: calc(750px);
   margin: 0 auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  max-width: calc(750px);
 }
 .news-form__title,
 .contact-form__title {
@@ -3053,6 +3079,13 @@ header {
 .news-form__input-group,
 .contact-form__input-group {
   margin-bottom: 15px;
+  flex: 1 1 100%;
+}
+@media screen and (min-width: 992px) {
+  .news-form__input-group:nth-of-type(-1n+4),
+.contact-form__input-group:nth-of-type(-1n+4) {
+    flex: 1 1 45%;
+  }
 }
 .news-form__input,
 .contact-form__input {
@@ -3069,18 +3102,6 @@ header {
   border-color: #5bc0de;
   outline: 0;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08), 0 0 8px rgba(91, 192, 222, 0.6);
-}
-@media screen and (min-width: 992px) {
-  .news-form__input,
-.contact-form__input {
-    width: 425px;
-  }
-}
-@media screen and (min-width: 1260px) {
-  .news-form__input,
-.contact-form__input {
-    width: 540px;
-  }
 }
 .news-form__input:not(textarea),
 .contact-form__input:not(textarea) {
@@ -3124,7 +3145,7 @@ header {
 }
 .news-form__check:checked:after,
 .contact-form__check:checked:after {
-  content: "";
+  content: "";
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3140,14 +3161,13 @@ header {
 @media screen and (min-width: 992px) {
   .news-form,
 .contact-form {
-    max-width: 1440px;
-    width: 970px;
+    max-width: 970px;
   }
 }
 @media screen and (min-width: 1260px) {
   .news-form,
 .contact-form {
-    width: 1200px;
+    max-width: 1200px;
   }
 }
 
