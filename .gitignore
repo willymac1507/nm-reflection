@@ -10,6 +10,7 @@
 .LSOverride
 nano.*
 .gitignore
+scipts/jquery-3.6.0.js
 
 # Icon must end with two \r
 Icon

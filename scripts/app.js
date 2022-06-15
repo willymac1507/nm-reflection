@@ -1,5 +1,4 @@
-$(function ()
-{
+$(function () {
     // Create clone of header and hide above body
     // const headHeight = $('header').height();
     $("header").clone().insertBefore('header').addClass("header--hidden").removeClass('header--fixed').css('width', `${headerWidth()}px`);
@@ -28,9 +27,77 @@ $(function ()
     }
 });
 
+// Form text input validate
+function textValidate(field) {
+    const text = $('#' + field);
+    const textContents = text.val();
+    if (textContents.length === 0) {
+        $(text).addClass('input--invalid');
+    } else {
+        $(text).removeClass('input--invalid');
+    }
+}
+
+// Form telephone number validate
+function telValidate(field) {
+    const tel = $('#' + field);
+    const telContents = tel.val();
+    if (telContents.length === 0 || isNaN(telContents)) {
+        $(tel).addClass('input--invalid');
+    } else {
+        $(tel).removeClass('input--invalid');
+    }
+}
+
+// Form email validate
+function emailValidate(field) {
+    const email = $('#' + field);
+    const emailContents = email.val();
+    const pattern = new RegExp(
+        /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    );
+    if (emailContents.length === 0) {
+        $(email).addClass("input--invalid");
+    } else if (pattern.test(emailContents)) {
+        $(email).removeClass("input--invalid");
+    } else {
+        $(email).addClass("input--invalid");
+    }
+}
+
+//Contact form validation
+function formValidate() {
+    let getRequiredLabels = $(".contact-form__label.required");
+    let requiredLabels = Object.values(getRequiredLabels);
+    requiredLabels.forEach((e) => {
+        let field = e.nextElementSibling;
+        if (field) {
+            let inputName = field.id;
+            if (inputName === 'contact-email') {
+                emailValidate(inputName);
+            } else if (inputName === 'contact-tel') {
+                telValidate(inputName);
+            } else {
+                textValidate(inputName);
+            }
+        }
+    })
+    // console.log(requiredLabels);
+    // let requiredFields = [];
+    // requiredLabels.forEach((label) => {
+    //     requiredFields.push(label);
+    // });
+    // let failedFields = [];
+    // if (!$("#contact-name").val()) {
+    //     failedFields.push("contact-name");
+    // }
+    // console.log(requiredLabels, failedFields, requiredFields);
+
+
+}
+
 // Apply hover effect to button when mouse is over containing div
-function hover(container, target)
-{
+function hover(container, target) {
     $(container)
         .mouseenter((e) => {
             let but = $(e.currentTarget).children(target);
@@ -41,8 +108,7 @@ function hover(container, target)
         });
 }
 
-function sbWidth()
-{
+function sbWidth() {
     const side = ($('.sidebar__smallServices:visible').length === 1) ? document.querySelector('.sidebar__smallServices') : document.querySelector('.sidebar__bigServices');
     const body = document.body;
     const bodyRect = body.getBoundingClientRect();
@@ -50,19 +116,22 @@ function sbWidth()
     return (bodyRect.width - sideRect.left) * -1;
 }
 
-function headerWidth()
-{
+function headerWidth() {
     return $('.header--fixed').width();
 }
 
 let pagePosition = 0;
+
+$('.button--enquiry').on('click', () => {
+    formValidate();
+});
 
 // Handle scroll event to determine whether to show sticky navbar
 $('.main__holder').on('scroll', (e) => {
 
     let scrollValue = $('.main__holder').scrollTop();
     const headHeight = $('header').height();
-    console.log(scrollValue, pagePosition);
+    // console.log(scrollValue, pagePosition);
 
     if (scrollValue < pagePosition) {
         if (scrollValue > headHeight) {
@@ -76,7 +145,7 @@ $('.main__holder').on('scroll', (e) => {
     } else if (scrollValue > pagePosition) {
         $('.header--hidden').removeClass('header--sticky');
     } else {
-        console.log('top');
+        // console.log('top');
     }
     pagePosition = scrollValue;
 });
@@ -115,9 +184,8 @@ $('.button--cookieAccept').on('click', () => {
 hover('.sideService__container', '.button');
 hover('.sidebar__group', '.sideGroup__heading');
 
-function noScroll()
-{
-    var scrollTop = parseInt($('html').css('top'));
+function noScroll() {
+    let scrollTop = parseInt($('html').css('top'));
     $('html').removeClass('noscroll');
     $('html,body').scrollTop(-scrollTop);
 }

@@ -34,8 +34,7 @@
           </div>
           <div class="contact-form__input-group form-group">
             <label for="contact-message" class="contact-form__label required">Message</label>
-            <textarea cols="50" rows="5" class="contact-form__input" id="contact-message" name="telephone">
-                        </textarea>
+            <textarea cols="50" rows="5" class="contact-form__input" id="contact-message" name="telephone"></textarea>
           </div>
           <div class="contact-form__opt-out form-group">
             <div class="contact-form__check-container">
@@ -50,7 +49,7 @@
           </div>
 
         </div>
-        <a href="#" class="button button--enquiry">send enquiry</a>
+        <a href="#" id="contact-form__submit" class="button button--enquiry">send enquiry</a>
       </form>
     </div>
 
