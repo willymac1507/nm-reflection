@@ -45,7 +45,7 @@
         <div id="sidebar">
             <div class="sidebar__contents sidebar--hidden">
                 <div class="sidebar__smallServices">
-                    <div class="button button--sideContact">contact us</div>
+                    <a href="/contact-us.php" class="button button--sideContact">contact us</a>
                     <div class="sideService__container">
                         <div class="button button--sideService side--bespoke">
                             <span class="icon sideService-icon"></span>
@@ -433,7 +433,7 @@
 
                     <div class="header__top-container header--logo">
                         <div class="header__logo-container">
-                            <a href="#" class="header__logo-link">
+                            <a href="/" class="header__logo-link">
                                 <img class="header__logo-img" src="/images/f-logo.png" alt="Netmatters logo">
                             </a>
                         </div>

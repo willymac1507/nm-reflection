@@ -93,3 +93,37 @@ function buildBreadcrumbs(): array
 
     return $crumbArray;
 }
+
+/**
+ * @param $name
+ * @param $company
+ * @param $email
+ * @param $telephone
+ * @param $subject
+ * @param $message
+ * @param $marketing
+ * @param $datePosted
+ * @return bool
+ */
+function addContact($name, $company, $email, $telephone, $subject, $message, $marketing, $datePosted): bool
+{
+    include 'connection.php';
+    $sql = "INSERT INTO contacts (name, company, email, telephone, subject, message, marketing, date_posted)"
+        . "VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+    $query = $db->prepare($sql);
+    $query->bindParam(1, $name, PDO::PARAM_STR);
+    $query->bindParam(2, $company, PDO::PARAM_STR);
+    $query->bindParam(3, $email, PDO::PARAM_STR);
+    $query->bindParam(4, $telephone, PDO::PARAM_STR);
+    $query->bindParam(5, $subject, PDO::PARAM_STR);
+    $query->bindParam(6, $message, PDO::PARAM_STR);
+    $query->bindParam(7, $marketing, PDO::PARAM_BOOL);
+    $query->bindParam(8, $datePosted, PDO::PARAM_STR);
+    try {
+        $query->execute();
+        return true;
+    } catch (Exception $e) {
+        echo "Error!: " . $e->getMessage();
+        return false;
+    }
+}

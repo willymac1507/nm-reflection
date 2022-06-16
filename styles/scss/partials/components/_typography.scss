@@ -4,360 +4,383 @@
 @use '../utilities/utilities' as *;
 
 .cookies {
-    &__container {
-        color: $color-primary;
-    }
+  &__container {
+    color: $color-primary;
+  }
 
-    &__heading {
-        font-size: 26px;
-        font-weight: 400;
-        margin: 0;
-        padding: 15px 20px;
-        border-bottom: 1px solid $color-form-input-border;
-    }
+  &__heading {
+    font-size: 26px;
+    font-weight: 400;
+    margin: 0;
+    padding: 15px 20px;
+    border-bottom: 1px solid $color-form-input-border;
+  }
 
-    &__text {
-        font-size: 16px;
-        line-height: 30px;
-        color: $color-secondary;
-        padding: 20px 20px 45px;
-        margin: 0;
-        border-bottom: 1px solid $color-form-input-border;
-    }
+  &__text {
+    font-size: 16px;
+    line-height: 30px;
+    color: $color-secondary;
+    padding: 20px 20px 45px;
+    margin: 0;
+    border-bottom: 1px solid $color-form-input-border;
+  }
 }
 
 
 .main-nav {
-    text-transform: uppercase;
+  text-transform: uppercase;
 
-    &__small-text {
-        margin: auto 0 0;
-        font-size: 0.625rem;
+  &__small-text {
+    margin: auto 0 0;
+    font-size: 0.625rem;
+  }
+
+  &__large-text {
+    margin: 0;
+    font-size: 1.125rem;
+    line-height: calc(1.125rem - 2px);
+  }
+
+  &__popunder {
+
+    &-link {
+      padding-left: 20px;
+      color: #fff;
+      font-size: 0.8125rem;
+      text-transform: uppercase;
+
+      &::after {
+        padding-left: 20px;
+        content: "-";
+      }
+
+      @include xlarge {
+        padding-left: 30px;
+        font-size: 1rem;
+
+        &::after {
+          padding-left: 30px;
+        }
+      }
     }
 
-    &__large-text {
-        margin: 0;
-        font-size: 1.125rem;
-        line-height: calc(1.125rem - 2px);
+    div:nth-of-type(1) {
+      padding-left: 10px;
     }
 
-    &__popunder {
-
-        &-link {
-            padding-left: 20px;
-            color: #fff;
-            font-size: 0.8125rem;
-            text-transform: uppercase;
-            &::after {
-                padding-left: 20px;
-                content: "-";
-            }
-
-            @include xlarge {
-                padding-left: 30px;
-                font-size: 1rem;
-
-                &::after {
-                    padding-left: 30px;
-                }
-            }
-        }
-
-        div:nth-of-type(1) {
-            padding-left: 10px;
-        }
-
-        div:last-of-type {
-            &::after {
-                content: "";
-            }
-        }
+    div:last-of-type {
+      &::after {
+        content: "";
+      }
     }
+  }
 }
 
 .carousel__title {
-    color: #fff;
-    font-size: 3rem;
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 25px;
+  color: #fff;
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 25px;
 }
 
 .carousel__text {
-    font-size: 1.3rem;
-    line-height: 2.25rem;
-    margin: 0 0 35px;
-    color: #fff;
-    text-align: center;
+  font-size: 1.3rem;
+  line-height: 2.25rem;
+  margin: 0 0 35px;
+  color: #fff;
+  text-align: center;
 
-    @include large {
-        text-align: left;
-    }
+  @include large {
+    text-align: left;
+  }
 }
 
 .services__header {
-    font-size: 1.125rem;
-    font-weight: 400;
-    line-height: 0.9em;
-    padding-bottom: 17px;
-    margin-bottom: 11px;
-    display:block;
-    &::after {
-        content: "";
-        position: relative;
-        bottom: -17px;
-        margin: auto;
-        width: 28px;
-        height: 3px;
-        display: block;
-        background-color: $color-primary;
-    }
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 0.9em;
+  padding-bottom: 17px;
+  margin-bottom: 11px;
+  display: block;
+
+  &::after {
+    content: "";
+    position: relative;
+    bottom: -17px;
+    margin: auto;
+    width: 28px;
+    height: 3px;
+    display: block;
+    background-color: $color-primary;
+  }
 }
 
 .services__content {
-    display: block;
-    font-size: .8125rem;
-    line-height: 1.375rem;
-    margin-bottom: 13px;
-    font-weight: 400;
-    text-align: center;
-    }
+  display: block;
+  font-size: .8125rem;
+  line-height: 1.375rem;
+  margin-bottom: 13px;
+  font-weight: 400;
+  text-align: center;
+}
 
 
 .about {
+  p {
+    margin: 0 0 25px;
+    line-height: 30px;
+  }
+
+  &__header {
+    font-size: 2.25rem;
+    font-weight: 400;
+    margin: -6px 0 28px;
+    text-transform: uppercase;
+  }
+
+  &__intro {
+    font-weight: 600;
+  }
+
+  &__content {
+    font-weight: 400;
+  }
+
+  @include xlarge {
     p {
-        margin: 0 0 25px;
-        line-height: 30px;
+      width: 49%;
     }
-
-    &__header {
-        font-size: 2.25rem;
-        font-weight: 400;
-        margin: -6px 0 28px;
-        text-transform: uppercase;
-    }
-
-    &__intro {
-        font-weight: 600;
-    }
-
-    &__content {
-        font-weight: 400;
-    }
-
-    @include xlarge {
-        p {
-            width: 49%;
-        }
-    }
+  }
 }
 
 .latest {
-    &__heading {
-        display: block;
-        width: auto;
-        font-size: 1.25rem;
-        font-weight: 600;
-        line-height: 24px;
-        text-transform: uppercase;
-        margin: 0 auto 0 0;
-        &::after {
-            content: "latest";
-            display: inline-block;
-            width: auto;
-            height: 5px;
-            position: absolute;
-            left: 15px;
-            bottom: 0;
-            color: transparent;
-            background-color: $color-primary;
-        }
-    }
+  &__heading {
+    display: block;
+    width: auto;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 24px;
+    text-transform: uppercase;
+    margin: 0 auto 0 0;
 
-    &__headline {
-        font-weight: 600;
-        line-height: 24px;
-        min-height: 48px;
-        color: $color-latest;
-        margin-bottom: 15px;
-        &:hover {
-            text-decoration: underline;
-        }
+    &::after {
+      content: "latest";
+      display: inline-block;
+      width: auto;
+      height: 5px;
+      position: absolute;
+      left: 15px;
+      bottom: 0;
+      color: transparent;
+      background-color: $color-primary;
     }
+  }
 
-    &__content {
-        font-size: 0.8125rem;
-        line-height: 22px;
-        margin: 0 0 25px;
-        color: $color-secondary;
-        @include medium {
-            margin-top: auto;
-        }
+  &__headline {
+    font-weight: 600;
+    line-height: 24px;
+    min-height: 48px;
+    color: $color-latest;
+    margin-bottom: 15px;
+
+    &:hover {
+      text-decoration: underline;
     }
+  }
+
+  &__content {
+    font-size: 0.8125rem;
+    line-height: 22px;
+    margin: 0 0 25px;
+    color: $color-secondary;
+    @include medium {
+      margin-top: auto;
+    }
+  }
 
 }
 
 .poster {
 
-    &__details {
-        font-size: .875rem;
-        line-height: 22px;
-    }
+  &__details {
+    font-size: .875rem;
+    line-height: 22px;
+  }
 
-    &__name {
-        color: $color-primary;
-        font-weight: 600;
-    }
+  &__name {
+    color: $color-primary;
+    font-weight: 600;
+  }
 
-    &__date {
-        color: $color-secondary;
-        font-weight: 400;
-    }
+  &__date {
+    color: $color-secondary;
+    font-weight: 400;
+  }
 }
 
 .tooltip {
-    &__header {
-        position: relative;
-        font-size: 1.125rem;
-        padding-bottom: 17px;
-        margin-bottom: 11px;
+  &__header {
+    position: relative;
+    font-size: 1.125rem;
+    padding-bottom: 17px;
+    margin-bottom: 11px;
 
-        &::after {
-            content: "";
-            display: block;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin: auto;
-            height: 3px;
-            width: 28px;
-            background-color: #fff;
-        }
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      height: 3px;
+      width: 28px;
+      background-color: #fff;
     }
+  }
 
-    &__content {
-        font-size: .8125rem;
-        line-height: 1.375rem;
-        text-align: center;
-    }
+  &__content {
+    font-size: .8125rem;
+    line-height: 1.375rem;
+    text-align: center;
+  }
 }
 
 .footer {
-    &__title {
-        font-weight: 400;
-        text-transform: uppercase;
-        margin-bottom: 26px;
-    }
+  &__title {
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 26px;
+  }
 
-    &__item {
-        display: block;
-        font-size: .8125rem;
-        line-height: 22px;
-    }
+  &__item {
+    display: block;
+    font-size: .8125rem;
+    line-height: 22px;
+  }
 
-    &__bottom {
-        font-size: .8125rem;
-    }
+  &__bottom {
+    font-size: .8125rem;
+  }
 
-    &__copy, &__divider, &__sitemap {
-        padding-top: 5px;
-    }
+  &__copy, &__divider, &__sitemap {
+    padding-top: 5px;
+  }
 
-    &__divider {
-        text-align: center;
-    }
+  &__divider {
+    text-align: center;
+  }
 }
 
 .item--tel {
-    margin-top: 22px;
+  margin-top: 22px;
 }
 
 .sideService__line1 {
-    display: block;
-    font-size: 10px;
-    padding-bottom: 2px;
-    line-height: 14px;
+  display: block;
+  font-size: 10px;
+  padding-bottom: 2px;
+  line-height: 14px;
 }
 
 .offices {
-    &__headline {
-        margin: 0;
-        font-size: 2.25rem;
-        font-weight: 400;
-        color: #fff;
+  &__headline {
+    margin: 0;
+    font-size: 2.25rem;
+    font-weight: 400;
+    color: #fff;
 
-        @include large {
-            color: $color-primary;
-        }
+    @include large {
+      color: $color-primary;
     }
+  }
 }
 
 .office {
 
-    &__name {
-        font-size: 1.125rem;
-        font-weight: 400;
-        line-height: 19.8px;
-        color: $color-primary;
-    }
+  &__name {
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 19.8px;
+    color: $color-primary;
+  }
 
-    &__address {
-        padding: 11px 0 15px;
-        font-size: 0.8125rem;
-        font-weight: 400;
-        line-height: 22px;
-        color: #666666;
-    }
+  &__address {
+    padding: 11px 0 15px;
+    font-size: 0.8125rem;
+    font-weight: 400;
+    line-height: 22px;
+    color: #666666;
+  }
 
-    &__phone {
-        font-size: 1.625rem;
-        font-weight: 700;
-        line-height: 28.6px;
-        color: $color-latest;
+  &__phone {
+    font-size: 1.625rem;
+    font-weight: 700;
+    line-height: 28.6px;
+    color: $color-latest;
 
-        &:hover {
-            text-decoration: underline;
-        }
+    &:hover {
+      text-decoration: underline;
     }
+  }
 }
 
 .bread {
-    &__home a,
-    &__crumb {
-        font-size: 0.8125rem;
-        line-height: 1.16rem;
-    }
+  &__home a,
+  &__crumb {
+    font-size: 0.8125rem;
+    line-height: 1.16rem;
+  }
 
-    &__home a {
-        font-weight: 700;
-    }
+  &__home a {
+    font-weight: 700;
+  }
 }
 
 .contact-form__input {
-    font-size: .8125rem;
-    color: #555555;
-    line-height: 1.43;
+  font-size: .8125rem;
+  color: #555555;
+  line-height: 1.43;
 }
 
 .contact-details {
-    &__standard {
-        font-size: 1rem;
-    }
+  &__standard {
+    font-size: 1rem;
+  }
 
-    &__large {
-        font-size: 1.625rem;
-        color: $color-latest;
+  &__large {
+    font-size: 1.625rem;
+    color: $color-latest;
 
-        &:hover {
-            text-decoration: underline;
-        }
+    &:hover {
+      text-decoration: underline;
     }
+  }
 
-    &__large,
-    &__standard {
-        font-weight: 600;
-        line-height: 30px;
-        margin: 0 0 25px;
-    }
+  &__large,
+  &__standard {
+    font-weight: 600;
+    line-height: 30px;
+    margin: 0 0 25px;
+  }
 }
+
+.contact-support {
+  &__normal-text {
+    color: $color-secondary;
+  }
+
+  &__bold-text {
+    font-weight: 600;
+  }
+}
+
+.ooh-support {
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
+

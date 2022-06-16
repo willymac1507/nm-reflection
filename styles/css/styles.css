@@ -1220,10 +1220,10 @@ h1 {
   content: "";
 }
 .card--telecoms .services__icon::before {
-  content: "";
+  content: "";
 }
 .card--telecoms .sideService-icon::before {
-  content: "";
+  content: "";
 }
 .card--web .services__icon::before {
   content: "";
@@ -1232,16 +1232,16 @@ h1 {
   content: "";
 }
 .card--security .services__icon::before {
-  content: "";
+  content: "";
 }
 .card--security .sideService-icon::before {
-  content: "";
+  content: "";
 }
 .card--training .services__icon::before {
-  content: "";
+  content: "";
 }
 .card--training .sideService-icon::before {
-  content: "";
+  content: "";
 }
 .card--latest {
   margin-top: 30px;
@@ -1859,6 +1859,12 @@ h1 {
     justify-content: space-between;
   }
 }
+.contact-support__normal-text:nth-of-type(1) {
+  margin-top: 0;
+}
+.contact-support__container {
+  display: none;
+}
 .contact-form__container, .contact-details__container {
   margin: 0 auto;
   flex: 0 0 100%;
@@ -1875,7 +1881,7 @@ h1 {
   }
 }
 @media screen and (min-width: 1260px) {
-  .contact-form__container, .contact-details__container {
+  .contact-details__container {
     max-width: 1200px;
     flex: 0 0 30%;
     order: 2;
@@ -1983,6 +1989,22 @@ section {
 }
 #footer__partners {
   background-color: #fff;
+}
+
+/* ====================================================== */
+/* === Messages                                       === */
+/* ====================================================== */
+.message--success, .message--failure {
+  width: 100%;
+  text-align: center;
+  font-size: 0.8125rem;
+  color: #fff;
+}
+.message--success {
+  background-color: #2ecc71;
+}
+.message--failure {
+  background-color: #bc2c28;
 }
 
 /* ====================================================== */
@@ -2202,7 +2224,7 @@ section {
 }
 .right-arrow::before {
   font-family: "icomoon", serif;
-  content: "";
+  content: "";
 }
 
 .down-arrow::before {
@@ -2559,16 +2581,16 @@ header {
   content: "";
 }
 .nav-link--telecoms .main-nav__icon::before {
-  content: "";
+  content: "";
 }
 .nav-link--web .main-nav__icon::before {
   content: "";
 }
 .nav-link--security .main-nav__icon::before {
-  content: "";
+  content: "";
 }
 .nav-link--training .main-nav__icon::before {
-  content: "";
+  content: "";
 }
 
 .carousel__nav {
@@ -2860,10 +2882,10 @@ header {
   content: "";
 }
 .side--telecoms .services__icon::before {
-  content: "";
+  content: "";
 }
 .side--telecoms .sideService-icon::before {
-  content: "";
+  content: "";
 }
 .side--web .services__icon::before {
   content: "";
@@ -2872,16 +2894,16 @@ header {
   content: "";
 }
 .side--security .services__icon::before {
-  content: "";
+  content: "";
 }
 .side--security .sideService-icon::before {
-  content: "";
+  content: "";
 }
 .side--training .services__icon::before {
-  content: "";
+  content: "";
 }
 .side--training .sideService-icon::before {
-  content: "";
+  content: "";
 }
 
 .sideService__links {
@@ -3488,6 +3510,18 @@ header {
   font-weight: 600;
   line-height: 30px;
   margin: 0 0 25px;
+}
+
+.contact-support__normal-text {
+  color: #666;
+}
+.contact-support__bold-text {
+  font-weight: 600;
+}
+
+.ooh-support:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=styles.css.map */

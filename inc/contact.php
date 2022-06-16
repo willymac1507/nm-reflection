@@ -1,4 +1,4 @@
-<?php //include 'functions.php' ?>
+<?php ?>
 
 <section id="contact">
   <div class="contact__container">
@@ -7,10 +7,24 @@
       <p class="contact-details__large">sales@netmatters.com</p>
       <p class="contact-details__standard">Business hours:</p>
       <p class="contact-details__standard">Monday - Friday 07:00 - 18:00</p>
-      <p class="contact-details__standard">Out of Hours IT Support <span class="down-arrow"></span></p>
+<!--      TODO Add functionality to the OOH support.-->
+      <p class="contact-details__standard ooh-support">Out of Hours IT Support <span class="down-arrow"></span></p>
+      <div class="contact-support__container">
+        <p class="contact-support__normal-text">
+          Netmatters IT are offering an Out of Hours service for Emergency and Critical tasks.
+        </p>
+        <p class="contact-support__bold-text">
+          Monday - Friday 18:00 - 22:00 Saturday 08:00 - 16:00<br>Sunday 10:00 - 18:00
+        </p>
+        <p class="contact-support__normal-text">
+          To log a critical task, you will need to call our main line number and select Option 2 to leave an Out of
+          Hours voicemail. A technician will contact you on the number provided within 45 minutes of your call.
+        </p>
+      </div>
     </div>
+
     <div class="contact-form__container">
-      <form method="post" class="contact-form">
+      <form method="post" action="/inc/sendSupportRequest.php" class="contact-form">
         <div class="contact-form__inputs-container">
           <div class="contact-form__input-group form-group">
             <label for="contact-name" class="contact-form__label required">Your Name</label>
@@ -34,7 +48,7 @@
           </div>
           <div class="contact-form__input-group form-group">
             <label for="contact-message" class="contact-form__label required">Message</label>
-            <textarea cols="50" rows="5" class="contact-form__input" id="contact-message" name="telephone"></textarea>
+            <textarea cols="50" rows="5" class="contact-form__input" id="contact-message" name="message"></textarea>
           </div>
           <div class="contact-form__opt-out form-group">
             <div class="contact-form__check-container">

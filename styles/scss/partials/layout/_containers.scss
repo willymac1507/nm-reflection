@@ -880,6 +880,15 @@
     }
   }
 
+  &-support {
+    &__normal-text:nth-of-type(1) {
+      margin-top: 0;
+    }
+    &__container {
+      display: none;
+    }
+  }
+
   &-form,
   &-details {
     &__container {
@@ -895,7 +904,11 @@
         max-width: $container-large;
         gap: 30px;
       }
+    }
+  }
 
+  &-details {
+    &__container {
       @include xlarge {
         max-width: $container-xlarge;
         flex: 0 0 30%;
