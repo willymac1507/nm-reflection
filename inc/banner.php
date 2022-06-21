@@ -1,7 +1,7 @@
 <section id="banner">
     <div class="carousel__main">
         <div class="carousel">
-            <img class="carousel__image" src="/images/home-sqvx.webp" alt="Software.">
+            <img class="carousel__image" src="images/home-sqvx.webp" alt="Software.">
             <div class="carousel__container carousel--bespoke">
                 <div class="carousel__title">bespoke software</div>
                 <p class="carousel__text">
@@ -15,7 +15,7 @@
             </div>
         </div>
         <div class="carousel">
-            <img class="carousel__image" src="/images/home-57sJ.webp" alt="Meeting.">
+            <img class="carousel__image" src="images/home-57sJ.webp" alt="Meeting.">
             <div class="carousel__container carousel--it">
                 <div class="carousel__title">IT Support</div>
                 <p class="carousel__text">
@@ -29,7 +29,7 @@
             </div>
         </div>
         <div class="carousel">
-            <img class="carousel__image" src="/images/home-JQsO.webp" alt="Business results.">
+            <img class="carousel__image" src="images/home-JQsO.webp" alt="Business results.">
             <div class="carousel__container carousel--marketing">
                 <div class="carousel__title">Digital Marketing</div>
                 <p class="carousel__text">
@@ -43,7 +43,7 @@
             </div>
         </div>
         <div class="carousel">
-            <img class="carousel__image" src="/images/home-5yqm.webp" alt="Telephone keypad.">
+            <img class="carousel__image" src="images/home-5yqm.webp" alt="Telephone keypad.">
             <div class="carousel__container carousel--telecoms">
                 <div class="carousel__title">Telecoms Services</div>
                 <p class="carousel__text">
@@ -57,7 +57,7 @@
             </div>
         </div>
         <div class="carousel">
-            <img class="carousel__image" src="/images/home-3wAI.webp" alt="Designing on a tablet.">
+            <img class="carousel__image" src="images/home-3wAI.webp" alt="Designing on a tablet.">
             <div class="carousel__container carousel--web">
                 <div class="carousel__title">Web Design</div>
                 <p class="carousel__text">
@@ -71,7 +71,7 @@
             </div>
         </div>
         <div class="carousel">
-            <img class="carousel__image" src="/images/home-lQs1.webp" alt="Padlock.">
+            <img class="carousel__image" src="images/home-lQs1.webp" alt="Padlock.">
             <div class="carousel__container carousel--security">
                 <div class="carousel__title">Cyber Security</div>
                 <p class="carousel__text">

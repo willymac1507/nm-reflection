@@ -8,15 +8,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Netmatters | Full Service Digital Agency | Cambridgeshire & Norfolk | Netmatters </title>
-    <link rel="icon" type="image/x-icon" href="/images/netmatters-ltd-VXAv.png">
+    <link rel="icon" type="image/x-icon" href="images/netmatters-ltd-VXAv.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet"
         crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="/scripts/slick/slick.css" />
-    <link rel="stylesheet" type="text/css" href="/scripts/slick/slick-theme.css" />
-    <link rel="stylesheet" href="/styles/css/styles.css">
-    <link rel="stylesheet" href="/fonts/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="scripts/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="scripts/slick/slick-theme.css" />
+    <link rel="stylesheet" href="styles/css/styles.css">
+    <link rel="stylesheet" href="fonts/stylesheet.css">
     <script src="https://kit.fontawesome.com/47144c0296.js" crossorigin="anonymous"></script>
 </head>
 
@@ -45,7 +45,7 @@
         <div id="sidebar">
             <div class="sidebar__contents sidebar--hidden">
                 <div class="sidebar__smallServices">
-                    <a href="/contact-us.php" class="button button--sideContact">contact us</a>
+                    <a href="contact-us.php" class="button button--sideContact">contact us</a>
                     <div class="sideService__container">
                         <div class="button button--sideService side--bespoke">
                             <span class="icon sideService-icon"></span>
@@ -433,8 +433,8 @@
 
                     <div class="header__top-container header--logo">
                         <div class="header__logo-container">
-                            <a href="/" class="header__logo-link">
-                                <img class="header__logo-img" src="/images/f-logo.png" alt="Netmatters logo">
+                            <a href="index.php" class="header__logo-link">
+                                <img class="header__logo-img" src="images/f-logo.png" alt="Netmatters logo">
                             </a>
                         </div>
                     </div>
@@ -444,7 +444,7 @@
                             <div id='supportButton' class="button button--support"><span
                                     class="icon support-icon"></span>support
                             </div>
-                            <a href="/contact-us.php" id='contactButton' class="button button--contact"><span
+                            <a href="contact-us.php" id='contactButton' class="button button--contact"><span
                                     class="icon contact-icon"></span>contact
                             </a>
                         </div>

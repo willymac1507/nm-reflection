@@ -53,6 +53,10 @@ function getLatestCardHtml($latest): string
       . '</div>';
 }
 
+/**
+ * @param $office
+ * @return string
+ */
 function getOfficeCardHtml($office): string
 {
     return '<div class="office__container">'
@@ -79,6 +83,9 @@ function getOfficeCardHtml($office): string
       . '</div></div></div>';
 }
 
+/**
+ * @return array
+ */
 function buildBreadcrumbs(): array
 {
     $crumbArray = [];
@@ -92,6 +99,25 @@ function buildBreadcrumbs(): array
     }
 
     return $crumbArray;
+}
+
+/**
+ * form validation function
+ * @param $name
+ * @param $email
+ * @param $telephone
+ * @param $subject
+ * @param $message
+ * @return array|null
+ */
+function formValidation($name, $email, $telephone, $subject, $message): ?array
+{
+    $outcome = false;
+    if ($outcome) {
+        return null;
+    } else {
+        return ['Your name is required.', 'This is not a valid email address.'];
+    }
 }
 
 /**

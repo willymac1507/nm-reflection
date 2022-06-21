@@ -873,9 +873,19 @@
     display: flex;
     flex-wrap: wrap;
     box-shadow: none;
+    margin: 0 auto;
     padding: 15px 15px 50px;
 
+    @include medium {
+      max-width: $container-med;
+    }
+
+    @include large {
+      max-width: $container-large;
+    }
+
     @include xlarge {
+      max-width: $container-xlarge;
       justify-content: space-between;
     }
   }

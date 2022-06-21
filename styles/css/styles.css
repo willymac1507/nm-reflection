@@ -1852,10 +1852,22 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   box-shadow: none;
+  margin: 0 auto;
   padding: 15px 15px 50px;
+}
+@media screen and (min-width: 768px) {
+  .contact__container {
+    max-width: 750px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .contact__container {
+    max-width: 970px;
+  }
 }
 @media screen and (min-width: 1260px) {
   .contact__container {
+    max-width: 1200px;
     justify-content: space-between;
   }
 }

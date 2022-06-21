@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include 'functions.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -15,9 +15,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $marketing = 0;
     }
     $datePosted = date("Y-m-d H:i:s");
-}
 
-if (addContact($name, $company, $email, $telephone, $subject, $message, $marketing, $datePosted)) {
+    $validForm = formValidation($name, $email, $telephone, $subject, $message);
+    if (!empty($validForm)) {
+        $_SESSION['name'] = $name;
+        $_SESSION['company'] = $company;
+        $_SESSION['email'] = $email;
+        $_SESSION['telephone'] = $telephone;
+        $_SESSION['subject'] = $subject;
+        $_SESSION['message'] = $message;
+        $_SESSION['errors'] = $validForm;
+
+        header('Location: ../contact-us.php?message=2#messages');
+        exit();
+    }
+
+    if (addContact($name, $company, $email, $telephone, $subject, $message, $marketing, $datePosted)) {
 //    echo '<h1>Success</h1>';
 //    echo '<p>Name: '. $name . '</p>';
 //    echo '<p>Company: '. $company . '</p>';
@@ -26,9 +39,10 @@ if (addContact($name, $company, $email, $telephone, $subject, $message, $marketi
 //    echo '<p>Subject: '. $subject . '</p>';
 //    echo '<p>Message: '. $message . '</p>';
 //    echo '<p>Opt-in: '. $marketing . '</p>';
-    header('Location: /../contact-us.php?success=1');
-} else {
-    header('Location: /../contact-us.php?success=0');
+        header('Location: ../contact-us.php?message=1#messages');
+    } else {
+        header('Location: ../contact-us.php?message=0#messages');
+    }
 }
 
 

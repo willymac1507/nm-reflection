@@ -1,4 +1,4 @@
-<?php ?>
+<?php session_start(); ?>
 
 <section id="contact">
   <div class="contact__container">
@@ -7,7 +7,6 @@
       <p class="contact-details__large">sales@netmatters.com</p>
       <p class="contact-details__standard">Business hours:</p>
       <p class="contact-details__standard">Monday - Friday 07:00 - 18:00</p>
-<!--      TODO Add functionality to the OOH support.-->
       <p class="contact-details__standard ooh-support">Out of Hours IT Support <span class="down-arrow"></span></p>
       <div class="contact-support__container">
         <p class="contact-support__normal-text">
@@ -24,11 +23,16 @@
     </div>
 
     <div class="contact-form__container">
-      <form method="post" action="/inc/sendSupportRequest.php" class="contact-form">
+      <form method="post" action="inc/sendSupportRequest.php" class="contact-form">
         <div class="contact-form__inputs-container">
           <div class="contact-form__input-group form-group">
             <label for="contact-name" class="contact-form__label required">Your Name</label>
-            <input type="text" class="contact-form__input" id="contact-name" name="name">
+            <input type="text" class="contact-form__input" id="contact-name" name="name"
+            <?php if (isset($_SESSION['name'])) {
+                echo "value={$_SESSION['name']}";
+            };
+            ?>
+            >
           </div>
           <div class="contact-form__input-group form-group">
             <label for="company-name" class="contact-form__label">Company Name</label>
