@@ -17,7 +17,7 @@ if (isset($_GET['message'])) {
     } elseif ($_GET['message'] == 2) {
         foreach ($_SESSION['errors'] as $error) {
             echo '<div class="message--failure">'
-                . 'Sorry. ' . $error . ' Please try again.'
+                . $error
                 . '</div>';
         }
     }

@@ -37,20 +37,20 @@ function getLatestCardHtml($latest): string
         exit();
     }
     return '<div class="card card--latest latest--' . $latest['department'] . '">'
-      . '<a href="#" class="latest__image">'
-      . '<img src="' . $latest['title_img'] . '" alt="' . $latest['title_name'] . '"></a>'
-      . '<a href="#" class="button button--news">news</a>'
-      . '<a href="#" class="latest__headline">' . $latest['headline'] . '</a>'
-      . '<p class="latest__content">' . $latest['content'] . '</p>'
-      . '<button class="button button--latest" >read more</button >'
-      . '<div class="poster">'
-      . '<img class="poster__avatar" src="' . $latest['posted_img'] . '" alt = "logo">'
-      . '<div class="poster__details">'
-      . '<div class="poster__name">' . $latest['posted_by'] . '</div >'
-      . '<div class="poster__date">' . date_format($posted_date, 'jS F Y') . '</div>'
-      . '</div>'
-      . '</div>'
-      . '</div>';
+        . '<a href="#" class="latest__image">'
+        . '<img src="' . $latest['title_img'] . '" alt="' . $latest['title_name'] . '"></a>'
+        . '<a href="#" class="button button--news">news</a>'
+        . '<a href="#" class="latest__headline">' . $latest['headline'] . '</a>'
+        . '<p class="latest__content">' . $latest['content'] . '</p>'
+        . '<button class="button button--latest" >read more</button >'
+        . '<div class="poster">'
+        . '<img class="poster__avatar" src="' . $latest['posted_img'] . '" alt = "logo">'
+        . '<div class="poster__details">'
+        . '<div class="poster__name">' . $latest['posted_by'] . '</div >'
+        . '<div class="poster__date">' . date_format($posted_date, 'jS F Y') . '</div>'
+        . '</div>'
+        . '</div>'
+        . '</div>';
 }
 
 /**
@@ -60,27 +60,27 @@ function getLatestCardHtml($latest): string
 function getOfficeCardHtml($office): string
 {
     return '<div class="office__container">'
-      . '<div class="card card--office">'
-      . '<img src="' . $office['image'] . '" alt="' . $office['name'] . '" class="office__image">'
-      . '<div>'
-      . '<a href="#" class="office__name">' . $office['name'] . '</a>'
-      . '<div class="office__address">'
-      . $office['addr1'] . '<br>'
-      . $office['addr2'] . '<br>'
-      . $office['addr3'] . '<br>'
-      . $office['addr4'] . '<br>'
-      . $office['postcode']
-      . '</div>'
-      . '<a href = "#" class="office__phone">' . $office['phone'] . '</a>'
-      . '<button class="button button--office">view more</button>'
-      . '</div></div>'
-      . '<div>'
-      . '<div class="map--responsive" >'
-      . '<iframe '
-      . 'src="' . $office['map-src'] . '" '
-      . 'width="100%" height = "100%" style = "border:0;" allowfullscreen = "" '
-      . 'loading = "lazy" referrerpolicy = "no-referrer-when-downgrade"></iframe>'
-      . '</div></div></div>';
+        . '<div class="card card--office">'
+        . '<img src="' . $office['image'] . '" alt="' . $office['name'] . '" class="office__image">'
+        . '<div>'
+        . '<a href="#" class="office__name">' . $office['name'] . '</a>'
+        . '<div class="office__address">'
+        . $office['addr1'] . '<br>'
+        . $office['addr2'] . '<br>'
+        . $office['addr3'] . '<br>'
+        . $office['addr4'] . '<br>'
+        . $office['postcode']
+        . '</div>'
+        . '<a href = "#" class="office__phone">' . $office['phone'] . '</a>'
+        . '<button class="button button--office">view more</button>'
+        . '</div></div>'
+        . '<div>'
+        . '<div class="map--responsive" >'
+        . '<iframe '
+        . 'src="' . $office['map-src'] . '" '
+        . 'width="100%" height = "100%" style = "border:0;" allowfullscreen = "" '
+        . 'loading = "lazy" referrerpolicy = "no-referrer-when-downgrade"></iframe>'
+        . '</div></div></div>';
 }
 
 /**
@@ -112,12 +112,30 @@ function buildBreadcrumbs(): array
  */
 function formValidation($name, $email, $telephone, $subject, $message): ?array
 {
-    $outcome = false;
-    if ($outcome) {
-        return null;
-    } else {
-        return ['Your name is required.', 'This is not a valid email address.'];
+    $errors = [];
+    $pattern = '/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}])|(([a-zA-Z\-\d]+\.)+[a-zA-Z]{2,}))$/';
+    if (strlen($name) == 0) {
+        $errors[] = 'Your name cannot be blank.';
     }
+    if (strlen($telephone) == 0) {
+        $errors[] = 'Your telephone number cannot be blank.';
+    }
+    if (strlen($subject) == 0) {
+        $errors[] = 'The subject cannot be blank.';
+    }
+    if (strlen($message) == 0) {
+        $errors[] = 'The message cannot be blank.';
+    }
+    if (!preg_match($pattern, $email) == 1) {
+        $errors[] = 'Email is invalid.';
+    }
+    if (!count($errors) == 0) {
+        return $errors;
+    } else {
+        return null;
+    }
+
+
 }
 
 /**

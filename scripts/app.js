@@ -122,7 +122,7 @@ function headerWidth() {
 let pagePosition = 0;
 
 $('.button--enquiry').on('click', () => {
-    formValidate();
+    $('.contact-form').submit();
 });
 
 // Handle scroll event to determine whether to show sticky navbar

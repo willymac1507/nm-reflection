@@ -28,31 +28,57 @@
           <div class="contact-form__input-group form-group">
             <label for="contact-name" class="contact-form__label required">Your Name</label>
             <input type="text" class="contact-form__input" id="contact-name" name="name"
-            <?php if (isset($_SESSION['name'])) {
-                echo "value={$_SESSION['name']}";
-            };
-            ?>
+                <?php if (isset($_SESSION['name'])) {
+                    echo "value={$_SESSION['name']}";
+                };
+                ?>
             >
           </div>
           <div class="contact-form__input-group form-group">
             <label for="company-name" class="contact-form__label">Company Name</label>
-            <input type="text" class="contact-form__input" id="company-name" name="company">
+            <input type="text" class="contact-form__input" id="company-name" name="company"
+                <?php if (isset($_SESSION['company'])) {
+                    echo "value={$_SESSION['company']}";
+                };
+                ?>
+            >
           </div>
           <div class="contact-form__input-group form-group">
             <label for="contact-email" class="contact-form__label required">Your Email</label>
-            <input type="email" class="contact-form__input" id="contact-email" name="email">
+            <input type="email" class="contact-form__input" id="contact-email" name="email"
+                <?php if (isset($_SESSION['email'])) {
+                    echo "value={$_SESSION['email']}";
+                };
+                ?>
+            >
           </div>
           <div class="contact-form__input-group form-group">
             <label for="contact-tel" class="contact-form__label required">Your Telephone Number</label>
-            <input type="tel" class="contact-form__input" id="contact-tel" name="telephone">
+            <input type="tel" class="contact-form__input" id="contact-tel" name="telephone"
+                <?php if (isset($_SESSION['telephone'])) {
+                    echo "value={$_SESSION['telephone']}";
+                };
+                ?>
+            >
           </div>
           <div class="contact-form__input-group form-group">
             <label for="contact-subject" class="contact-form__label required">Subject</label>
-            <input type="text" class="contact-form__input" id="contact-subject" name="subject">
+            <input type="text" class="contact-form__input" id="contact-subject" name="subject"
+                <?php if (isset($_SESSION['subject'])) {
+                    echo "value={$_SESSION['subject']}";
+                };
+                ?>
+            >
           </div>
           <div class="contact-form__input-group form-group">
             <label for="contact-message" class="contact-form__label required">Message</label>
-            <textarea cols="50" rows="5" class="contact-form__input" id="contact-message" name="message"></textarea>
+            <textarea cols="50" rows="5" class="contact-form__input" id="contact-message" name="message"
+                <?php if (isset($_SESSION['name'])) {
+                    echo '>' . $_SESSION['message'] . '</textarea>';
+                } else {
+                    echo '></textarea>';
+                };
+                ?>
           </div>
           <div class="contact-form__opt-out form-group">
             <div class="contact-form__check-container">

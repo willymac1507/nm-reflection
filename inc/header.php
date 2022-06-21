@@ -381,7 +381,7 @@
 
                 <div class="sidebar__group">
                     <div class="sideGroup__heading">
-                        <a href="">contact us</a>
+                        <a href="contact-us.php">contact us</a>
                     </div>
                     <div class="sideGroup__links">
                         <ul class="sideGroup__list">
