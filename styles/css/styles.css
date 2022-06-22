@@ -985,7 +985,7 @@ h1 {
   overflow: hidden;
   background-color: #fff;
   border: 1px solid #ccc;
-  border-radius: 15px;
+  border-radius: 3px;
   box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
   padding: 30px;
   top: 0;
@@ -1005,11 +1005,6 @@ h1 {
 @media screen and (min-width: 1260px) {
   .card {
     max-width: 1200px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .card:hover {
-    top: -15px;
   }
 }
 .card.latest--bespoke .button--latest,
@@ -1734,7 +1729,7 @@ h1 {
 }
 @media screen and (min-width: 992px) {
   .offices__header {
-    padding: 50px 0;
+    padding: 50px 0 0 0;
     margin: 0;
     background-color: #fff;
   }
@@ -1868,7 +1863,7 @@ h1 {
 @media screen and (min-width: 1260px) {
   .contact__container {
     max-width: 1200px;
-    justify-content: space-between;
+    column-gap: 30px;
   }
 }
 .contact-support__normal-text:nth-of-type(1) {
@@ -1895,19 +1890,25 @@ h1 {
 @media screen and (min-width: 1260px) {
   .contact-details__container {
     max-width: 1200px;
-    flex: 0 0 30%;
+    margin: 0 0 0 auto;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 370px;
     order: 2;
   }
 }
 .contact-form__container {
   display: flex;
   flex: 0 0 100%;
+  margin: 0 auto 0 0;
   background-color: #e6e7e9;
   border-radius: 10px;
 }
 @media screen and (min-width: 1260px) {
   .contact-form__container {
-    flex: 0 0 64%;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 770px;
     order: 1;
   }
 }
@@ -2118,7 +2119,7 @@ section {
   background-color: #926fb1;
 }
 .button--latest:hover {
-  background-color: #79539a;
+  background-color: #79539a !important;
 }
 .button--office {
   display: block;
@@ -2346,6 +2347,17 @@ section {
   border-radius: 3px 3px 0 0;
 }
 
+.latest__image img {
+  transition: 0.25s;
+}
+@media screen and (min-width: 992px) {
+  .latest__image:hover img {
+    transform: scale(1.1);
+    opacity: 0.75;
+    transition: all 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+}
+
 .img--coloured {
   display: none;
 }
@@ -2420,7 +2432,7 @@ header {
   z-index: 20;
 }
 .header--animated {
-  transition: 0.4s all;
+  transition: 0.4s top;
 }
 .header--sticky {
   top: 0;
@@ -2603,6 +2615,27 @@ header {
 }
 .nav-link--training .main-nav__icon::before {
   content: "";
+}
+.nav-link--web {
+  order: 1;
+}
+.nav-link--it {
+  order: 2;
+}
+.nav-link--telecoms {
+  order: 3;
+}
+.nav-link--bespoke {
+  order: 4;
+}
+.nav-link--marketing {
+  order: 5;
+}
+.nav-link--security {
+  order: 6;
+}
+.nav-link--training {
+  order: 7;
 }
 
 .carousel__nav {
@@ -3216,6 +3249,10 @@ header {
 
 .input--invalid {
   border: 1px solid #d24d57;
+}
+
+.contact__message {
+  resize: vertical;
 }
 
 /* ====================================================== */

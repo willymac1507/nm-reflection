@@ -1,4 +1,8 @@
-<?php session_start(); ?>
+<?php
+if (session_status() !== PHP_SESSION_ACTIVE) {
+    session_start();
+}
+?>
 
 <section id="contact">
   <div class="contact__container">
@@ -56,7 +60,7 @@
             <label for="contact-tel" class="contact-form__label required">Your Telephone Number</label>
             <input type="tel" class="contact-form__input" id="contact-tel" name="telephone"
                 <?php if (isset($_SESSION['telephone'])) {
-                    echo "value={$_SESSION['telephone']}";
+                    echo 'value="' . $_SESSION['telephone'] . '"';
                 };
                 ?>
             >
@@ -72,8 +76,12 @@
           </div>
           <div class="contact-form__input-group form-group">
             <label for="contact-message" class="contact-form__label required">Message</label>
-            <textarea cols="50" rows="5" class="contact-form__input" id="contact-message" name="message"
-                <?php if (isset($_SESSION['name'])) {
+            <textarea class="contact-form__input contact__message"
+                      cols="50"
+                      rows="5"
+                      id="contact-message"
+                      name="message"
+                <?php if (isset($_SESSION['message'])) {
                     echo '>' . $_SESSION['message'] . '</textarea>';
                 } else {
                     echo '></textarea>';

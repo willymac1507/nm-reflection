@@ -1,14 +1,16 @@
 <?php
-session_start();
+if (session_status() !== PHP_SESSION_ACTIVE) {
+    session_start();
+};
 include 'functions.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
-    $company = filter_input(INPUT_POST, 'company', FILTER_SANITIZE_STRING);
-    $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
-    $telephone = filter_input(INPUT_POST, 'telephone', FILTER_SANITIZE_STRING);
-    $subject = filter_input(INPUT_POST, 'subject', FILTER_SANITIZE_STRING);
-    $message = filter_input(INPUT_POST, 'message', FILTER_SANITIZE_STRING);
+    $name = htmlspecialchars($_POST['name']);
+    $company = htmlspecialchars($_POST['company']);
+    $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+    $telephone = htmlspecialchars($_POST['telephone']);
+    $subject = htmlspecialchars($_POST['subject']);
+    $message = htmlspecialchars($_POST['message']);
     if (isset($_POST['opt-in'])) {
         $marketing = filter_input(INPUT_POST, 'opt-in', FILTER_SANITIZE_NUMBER_INT);
     } else {
@@ -16,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
     $datePosted = date("Y-m-d H:i:s");
 
-    $validForm = formValidation($name, $email, $telephone, $subject, $message);
+    $validForm = contactFormValidation($name, $email, $telephone, $subject, $message);
     if (!empty($validForm)) {
         $_SESSION['name'] = $name;
         $_SESSION['company'] = $company;

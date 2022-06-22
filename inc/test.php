@@ -3,6 +3,4 @@
 include 'functions.php';
 
 
-//foreach (getAllLatest() as $latest) {
-//    echo getLatestCardHtml($latest);
-//}
+echo $_SERVER['REQUEST_URI'];

@@ -22,7 +22,7 @@ header {
     }
 
     &--animated {
-        transition: 0.4s all;
+        transition: 0.4s top;
     }
 
     &--sticky {
@@ -105,6 +105,34 @@ header {
 
 .nav-link {
     @include nav-content($card-colors, $card-icons);
+
+    &--web {
+        order: 1;
+    }
+
+    &--it {
+        order: 2;
+    }
+
+    &--telecoms {
+        order: 3;
+    }
+
+    &--bespoke {
+        order: 4;
+    }
+
+    &--marketing {
+        order: 5;
+    }
+
+    &--security {
+        order: 6;
+    }
+
+    &--training {
+        order: 7;
+    }
 }
 
 .carousel__nav {

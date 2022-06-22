@@ -1,15 +1,29 @@
+<?php
+$refArray = explode('?', $_SERVER['REQUEST_URI']);
+?>
+
 <section id="newsletter">
     <div class="newsletter">
-        <form method="post" class="news-form">
+        <form method="post" action="inc/sendNewsletterRequest.php?referrer=<?php echo $refArray[0] ?>" class="news-form">
             <div class="news-form__title">Email Newsletter Sign-Up</div>
             <div class="news-form__inputs-container">
                 <div class="news-form__input-group form-group">
                     <label for="news-name" class="news-form__label required">Your Name</label>
-                    <input type="text" class="news-form__input" id="news-name" name="name">
+                    <input type="text" class="news-form__input" id="news-name" name="name"
+                        <?php if (isset($_SESSION['name'])) {
+                            echo "value={$_SESSION['name']}";
+                        };
+                        ?>
+                    >
                 </div>
                 <div class="news-form__input-group form-group">
                     <label for="news-email" class="news-form__label required">Your Email</label>
-                    <input type="email" class="news-form__input" id="news-email" name="email">
+                    <input type="email" class="news-form__input" id="news-email" name="email"
+                        <?php if (isset($_SESSION['email'])) {
+                            echo "value={$_SESSION['email']}";
+                        };
+                        ?>
+                    >
                 </div>
                 <div class="news-form__opt-out form-group">
                     <div class="news-form__check-container">

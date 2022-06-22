@@ -114,7 +114,7 @@
     &--latest {
         background-color: $color-latest;
         &:hover {
-            background-color: darken($color-latest, 10%);
+            background-color: darken($color-latest, 10%)!important;
         }
     }
 

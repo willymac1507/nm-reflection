@@ -3,6 +3,10 @@ $(function () {
     // const headHeight = $('header').height();
     $("header").clone().insertBefore('header').addClass("header--hidden").removeClass('header--fixed').css('width', `${headerWidth()}px`);
 
+    // Ensure the hidden header resizes with the window
+    $(window).resize(() => {
+        $('.header--hidden').css('width', `${headerWidth()}px`);
+    })
     // Instantiate slick carousel plugin
     $('.carousel__main').slick({
         slidesToShow: 1,
@@ -92,7 +96,8 @@ function formValidate() {
     })
     if (formValid) {
         $('.contact-form').submit();
-    };
+    }
+    ;
 }
 
 // Apply hover effect to button when mouse is over containing div
@@ -125,12 +130,16 @@ $('.button--enquiry').on('click', () => {
     $('.contact-form').submit();
 });
 
+$('.button--subscribe').on('click', () => {
+    $('.news-form').submit();
+});
+
 // Handle scroll event to determine whether to show sticky navbar
 $('.main__holder').on('scroll', (e) => {
 
     let scrollValue = $('.main__holder').scrollTop();
-    const headHeight = $('header').height();
-    // console.log(scrollValue, pagePosition);
+    let headHeight = $('header').height();
+    // console.log('scrollvalue=' + scrollValue, 'pagePosition=' + pagePosition, 'headHeight=' + headHeight);
 
     if (scrollValue < pagePosition) {
         if (scrollValue > headHeight) {
