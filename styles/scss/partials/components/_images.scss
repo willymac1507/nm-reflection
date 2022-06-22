@@ -32,7 +32,8 @@
     transform: translate(calc(-50% + 50vw));
 }
 
-.latest__image {
+.latest__image,
+.office__image {
     align-self: center;
     height: auto;
     width: calc(100% + 62px);
@@ -42,7 +43,12 @@
         width: 100%;
         border-radius: 3px 3px 0 0;
     }
+}
 
+.latest__image {
+    & img {
+        transition: 0.25s;
+    }
     @include large {
         &:hover {
             img {
@@ -52,7 +58,6 @@
             }
         }
     }
-
 }
 
 .img--coloured {
