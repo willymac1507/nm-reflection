@@ -9,6 +9,7 @@ header {
     top: 0;
     z-index: 19;
     width: 100%;
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
 }
 
 .header {
@@ -21,7 +22,7 @@ header {
     }
 
     &--animated {
-        transition: 0.4s all;
+        transition: 0.4s top;
     }
 
     &--sticky {
@@ -104,6 +105,34 @@ header {
 
 .nav-link {
     @include nav-content($card-colors, $card-icons);
+
+    &--web {
+        order: 1;
+    }
+
+    &--it {
+        order: 2;
+    }
+
+    &--telecoms {
+        order: 3;
+    }
+
+    &--bespoke {
+        order: 4;
+    }
+
+    &--marketing {
+        order: 5;
+    }
+
+    &--security {
+        order: 6;
+    }
+
+    &--training {
+        order: 7;
+    }
 }
 
 .carousel__nav {
@@ -292,5 +321,22 @@ header {
 .hidden--large {
     @include large {
         display: none;
+    }
+}
+
+.bread {
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+
+        & li {
+            display: inline-block;
+        }
+    }
+
+    &__crumb:before {
+        content: '/';
+        padding: 0 5px;
     }
 }

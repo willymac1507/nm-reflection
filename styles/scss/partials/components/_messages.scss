@@ -1,0 +1,21 @@
+/* ====================================================== */
+/* === Messages                                       === */
+/* ====================================================== */
+
+.message {
+  &--success,
+  &--failure {
+    width: 100%;
+    text-align: center;
+    font-size: 0.8125rem;
+    color: #fff;
+  }
+
+  &--success {
+    background-color: #2ecc71;
+  }
+
+  &--failure {
+    background-color: #bc2c28;
+  }
+}

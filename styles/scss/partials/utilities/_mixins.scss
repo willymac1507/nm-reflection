@@ -76,6 +76,14 @@
     border-radius: 3px;
     box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
     padding: 30px;
+    top: 0;
+    transition: top 0.5s;
+
+    //@include medium {
+    //    &:hover {
+    //        top: -15px;
+    //    }
+    //}
 }
 
 // Image hover effects
@@ -94,6 +102,21 @@
 
     @each $theme,
     $color in $colors {
+        &.latest--#{$theme} {
+            .button--latest,
+            .button--news {
+                background-color: $color;
+            }
+
+            //.button--latest:hover {
+            //    background-color: darken($color, 10%);
+            //}
+
+            .latest__headline {
+                color: $color;
+            }
+
+        }
         &--#{$theme} {
             .services__icon-container {
                 background-color: $color;
