@@ -3194,7 +3194,7 @@ header {
   -moz-appearance: initial;
   position: relative;
   cursor: pointer;
-  z-index: 60;
+  z-index: 19;
 }
 .news-form__check:before,
 .contact-form__check:before {
