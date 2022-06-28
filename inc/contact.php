@@ -6,9 +6,9 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
 
 <section id="contact">
   <div class="contact__container">
-    <?php
-    include 'inc/contactMessages.php';
-    ?>
+      <?php
+        include 'inc/contactMessages.php';
+        ?>
     <div class="contact-details__container">
       <p class="contact-details__standard">Email us on:</p>
       <p class="contact-details__large">sales@netmatters.com</p>
@@ -29,12 +29,27 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
       </div>
     </div>
 
+      <?php
+        $errorFields = [];
+        if (isset($_SESSION['errors'])) {
+            foreach ($_SESSION['errors'] as $error) {
+                $errorFields[] = $error['id'];
+            }
+        }
+        ?>
+
     <div class="contact-form__container">
       <form method="post" action="inc/sendSupportRequest.php" class="contact-form">
         <div class="contact-form__inputs-container">
           <div class="contact-form__input-group form-group">
             <label for="contact-name" class="contact-form__label required">Your Name</label>
-            <input type="text" class="contact-form__input" id="contact-name" name="name"
+            <input type="text" class="contact-form__input
+              <?php
+                if (in_array('contact-name', $errorFields)) {
+                    echo ' input--invalid';
+                }
+                ?>
+             " id="contact-name" name="name"
                 <?php if (isset($_SESSION['name'])) {
                     echo "value={$_SESSION['name']}";
                 };
@@ -52,7 +67,13 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
           </div>
           <div class="contact-form__input-group form-group">
             <label for="contact-email" class="contact-form__label required">Your Email</label>
-            <input type="email" class="contact-form__input" id="contact-email" name="email"
+            <input type="email" class="contact-form__input
+                <?php
+                if (in_array('contact-email', $errorFields)) {
+                    echo ' input--invalid';
+                }
+                ?>
+            " id="contact-email" name="email"
                 <?php if (isset($_SESSION['email'])) {
                     echo "value={$_SESSION['email']}";
                 };
@@ -61,7 +82,13 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
           </div>
           <div class="contact-form__input-group form-group">
             <label for="contact-tel" class="contact-form__label required">Your Telephone Number</label>
-            <input type="tel" class="contact-form__input" id="contact-tel" name="telephone"
+            <input type="tel" class="contact-form__input
+                <?php
+                if (in_array('contact-tel', $errorFields)) {
+                    echo ' input--invalid';
+                }
+                ?>
+            " id="contact-tel" name="telephone"
                 <?php if (isset($_SESSION['telephone'])) {
                     echo 'value="' . $_SESSION['telephone'] . '"';
                 };
@@ -70,7 +97,13 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
           </div>
           <div class="contact-form__input-group form-group">
             <label for="contact-subject" class="contact-form__label required">Subject</label>
-            <input type="text" class="contact-form__input" id="contact-subject" name="subject"
+            <input type="text" class="contact-form__input
+                <?php
+                if (in_array('contact-subject', $errorFields)) {
+                    echo ' input--invalid';
+                }
+                ?>
+            " id="contact-subject" name="subject"
                 <?php if (isset($_SESSION['subject'])) {
                     echo "value={$_SESSION['subject']}";
                 };
@@ -79,16 +112,22 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
           </div>
           <div class="contact-form__input-group form-group">
             <label for="contact-message" class="contact-form__label required">Message</label>
-            <textarea class="contact-form__input contact__message"
+            <textarea class="contact-form__input
+                <?php
+                if (in_array('contact-message', $errorFields)) {
+                    echo ' input--invalid';
+                }
+                ?>
+            contact__message"
                       cols="50"
                       rows="5"
                       id="contact-message"
                       name="message"
-                <?php if (isset($_SESSION['message'])) {
+              <?php if (isset($_SESSION['message'])) {
                     echo '>' . $_SESSION['message'] . '</textarea>';
-                } else {
-                    echo '></textarea>';
-                };
+              } else {
+                  echo '></textarea>';
+              };
                 ?>
           </div>
           <div class="contact-form__opt-out form-group">

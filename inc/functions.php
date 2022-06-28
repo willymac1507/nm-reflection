@@ -120,8 +120,8 @@ function hasMessages($section): void
             } elseif ($_GET['message'] == 2) {
                 if (isset($_SESSION['errors'])) {
                     foreach ($_SESSION['errors'] as $error) {
-                        echo '<div class="message--failure">'
-                            . $error
+                        echo '<div class="message--failure">The '
+                            . $error['field'] . ' is ' . $error['error']
                             . '</div>';
                     }
                 }
@@ -148,9 +148,7 @@ function hasMessages($section): void
             }
         }
     }
-
 }
-
 
 /**
  * form validation function
@@ -164,30 +162,33 @@ function hasMessages($section): void
 function contactFormValidation($name, $email, $telephone, $subject, $message): ?array
 {
     $errors = [];
-    $phonePattern = '/^(?:(?:\(?(?:0(?:0|11)\)?[\s-]?\(?|\+)44\)?[\s-]?(?:\(?0\)?[\s-]?)?)|(?:\(?0))(?:(?:\d{5}\)?[\s-]?\d{4,5})|(?:\d{4}\)?[\s-]?(?:\d{5}|\d{3}[\s-]?\d{3}))|(?:\d{3}\)?[\s-]?\d{3}[\s-]?\d{3,4})|(?:\d{2}\)?[\s-]?\d{4}[\s-]?\d{4}))(?:[\s-]?(?:x|ext\.?|\#)\d{3,4})?$/';
-    $emailPattern = '/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}])|(([a-zA-Z\-\d]+\.)+[a-zA-Z]{2,}))$/';
+    $phonePattern = '/^(?:(?:\(?(?:0(?:0|11)\)?[\s-]?\(?|\+)44\)?[\s-]?(?:\(?0\)?[\s-]?)?)|(?:\(?0))(?:(?:\d{5}\)' .
+        '?[\s-]?\d{4,5})|(?:\d{4}\)?[\s-]?(?:\d{5}|\d{3}[\s-]?\d{3}))|(?:\d{3}\)?[\s-]?\d{3}[\s-]?\d{3,4})|(?:\d' .
+        '{2}\)?[\s-]?\d{4}[\s-]?\d{4}))(?:[\s-]?(?:x|ext\.?|\#)\d{3,4})?$/';
+    $emailPattern = '/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[\d{1,3}\.\d{1,3}\.\d' .
+        '{1,3}\.\d{1,3}])|(([a-zA-Z\-\d]+\.)+[a-zA-Z]{2,}))$/';
     if (strlen($name) == 0) {
-        $errors[] = 'Your name cannot be blank.';
+        $errors[] = array("field"=>"name", "error"=>"blank", "id"=>"contact-name");
+    }
+    if (strlen($email) == 0) {
+        $errors[] = array("field"=>"email", "error"=>"blank", "id"=>"contact-email");
+    } else {
+        if (!preg_match($emailPattern, $email) == 1) {
+            $errors[] = array("field"=>"email", "error"=>"invalid", "id"=>"contact-email");
+        }
     }
     if (strlen($telephone) == 0) {
-        $errors[] = 'Your telephone number cannot be blank.';
+        $errors[] = array("field"=>"telephone", "error"=>"blank", "id"=>"contact-tel");
     } else {
         if (!preg_match($phonePattern, $telephone) == 1) {
-            $errors[] = 'Telephone number is invalid.';
+            $errors[] = array("field"=>"telephone", "error"=>"invalid", "id"=>"contact-tel");
         }
     }
     if (strlen($subject) == 0) {
-        $errors[] = 'The subject cannot be blank.';
+        $errors[] = array("field"=>"subject", "error"=>"blank", "id"=>"contact-subject");
     }
     if (strlen($message) == 0) {
-        $errors[] = 'The message cannot be blank.';
-    }
-    if (strlen($email) == 0) {
-        $errors[] = 'Your email address cannot be blank.';
-    } else {
-        if (!preg_match($emailPattern, $email) == 1) {
-            $errors[] = 'Email is invalid.';
-        }
+        $errors[] = array("field"=>"message", "error"=>"blank", "id"=>"contact-message");
     }
     if (!count($errors) == 0) {
         return $errors;
@@ -200,15 +201,13 @@ function contactFormValidation($name, $email, $telephone, $subject, $message): ?
  * form validation function
  * @param $name
  * @param $email
- * @param $telephone
- * @param $subject
- * @param $message
  * @return array|null
  */
 function newsFormValidation($name, $email): ?array
 {
     $errors = [];
-    $pattern = '/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}])|(([a-zA-Z\-\d]+\.)+[a-zA-Z]{2,}))$/';
+    $pattern = '/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}' .
+        '])|(([a-zA-Z\-\d]+\.)+[a-zA-Z]{2,}))$/';
     if (strlen($name) == 0) {
         $errors[] = 'Your name cannot be blank.';
     }

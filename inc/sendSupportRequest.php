@@ -33,14 +33,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     if (addContact($name, $company, $email, $telephone, $subject, $message, $marketing, $datePosted)) {
-//    echo '<h1>Success</h1>';
-//    echo '<p>Name: '. $name . '</p>';
-//    echo '<p>Company: '. $company . '</p>';
-//    echo '<p>Email: '. $email . '</p>';
-//    echo '<p>Telephone: '. $telephone . '</p>';
-//    echo '<p>Subject: '. $subject . '</p>';
-//    echo '<p>Message: '. $message . '</p>';
-//    echo '<p>Opt-in: '. $marketing . '</p>';
         header('Location: ../contact-us.php?message=1#messages');
     } else {
         header('Location: ../contact-us.php?message=0#messages');
