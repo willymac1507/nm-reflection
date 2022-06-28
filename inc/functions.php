@@ -132,8 +132,8 @@ function hasMessages($section): void
             if ($_GET['message'] == 3) {
                 if (isset($_SESSION['errors'])) {
                     foreach ($_SESSION['errors'] as $error) {
-                        echo '<div class="message--failure">'
-                            . $error
+                        echo '<div class="message--failure">The '
+                            . $error['field'] . ' is ' . $error['error']
                             . '</div>';
                     }
                 }
@@ -209,13 +209,13 @@ function newsFormValidation($name, $email): ?array
     $pattern = '/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}' .
         '])|(([a-zA-Z\-\d]+\.)+[a-zA-Z]{2,}))$/';
     if (strlen($name) == 0) {
-        $errors[] = 'Your name cannot be blank.';
+        $errors[] = array("field"=>"name", "error"=>"blank", "id"=>"news-name");
     }
     if (strlen($email) == 0) {
-        $errors[] = 'Your email address cannot be blank.';
+        $errors[] = array("field"=>"email", "error"=>"blank", "id"=>"news-email");
     } else {
         if (!preg_match($pattern, $email) == 1) {
-            $errors[] = 'Email is invalid.';
+            $errors[] = array("field"=>"email", "error"=>"invalid", "id"=>"news-email");
         }
     }
     if (!count($errors) == 0) {

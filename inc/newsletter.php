@@ -1,5 +1,11 @@
 <?php
 $refArray = explode('?', $_SERVER['REQUEST_URI']);
+$errorFields = [];
+if (isset($_SESSION['errors'])) {
+    foreach ($_SESSION['errors'] as $error) {
+        $errorFields[] = $error['id'];
+    }
+}
 ?>
 
 <section id="newsletter">
@@ -9,7 +15,13 @@ $refArray = explode('?', $_SERVER['REQUEST_URI']);
             <div class="news-form__inputs-container">
                 <div class="news-form__input-group form-group">
                     <label for="news-name" class="news-form__label required">Your Name</label>
-                    <input type="text" class="news-form__input" id="news-name" name="name"
+                    <input type="text" class="news-form__input
+<?php
+if (in_array('news-name', $errorFields)) {
+    echo ' input--invalid';
+}
+?>
+                    " id="news-name" name="name"
                         <?php if (isset($_SESSION['name'])) {
                             echo "value={$_SESSION['name']}";
                         };
@@ -18,7 +30,13 @@ $refArray = explode('?', $_SERVER['REQUEST_URI']);
                 </div>
                 <div class="news-form__input-group form-group">
                     <label for="news-email" class="news-form__label required">Your Email</label>
-                    <input type="email" class="news-form__input" id="news-email" name="email"
+                    <input type="email" class="news-form__input
+<?php
+if (in_array('news-email', $errorFields)) {
+    echo ' input--invalid';
+}
+?>
+                    " id="news-email" name="email"
                         <?php if (isset($_SESSION['email'])) {
                             echo "value={$_SESSION['email']}";
                         };
