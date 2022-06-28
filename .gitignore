@@ -17,7 +17,6 @@ Icon
 
 # Node modules
 node_modules/
-vendor/
 
 # Thumbnails
 ._*

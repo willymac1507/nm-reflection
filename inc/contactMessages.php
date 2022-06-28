@@ -1,2 +1,6 @@
 <?php ?>
-<section id="messages"></section>
+<div id="messages" class="contact-messages__container">
+    <?php
+    hasMessages('contact');
+    ?>
+</div>

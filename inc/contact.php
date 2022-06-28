@@ -6,6 +6,9 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
 
 <section id="contact">
   <div class="contact__container">
+    <?php
+    include 'inc/contactMessages.php';
+    ?>
     <div class="contact-details__container">
       <p class="contact-details__standard">Email us on:</p>
       <p class="contact-details__large">sales@netmatters.com</p>

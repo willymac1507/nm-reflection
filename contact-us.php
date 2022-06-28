@@ -10,8 +10,8 @@ include 'inc/header.php';
 echo '<main>';
 
 include 'inc/offices.php';
-include 'inc/contactMessages.php';
-hasMessages('contact');
+//include 'inc/contactMessages.php';
+//hasMessages('contact');
 include 'inc/contact.php';
 include 'inc/newsMessages.php';
 hasMessages('news');

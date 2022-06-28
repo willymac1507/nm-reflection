@@ -1887,6 +1887,21 @@ h1 {
     gap: 30px;
   }
 }
+.contact-messages__container {
+  margin-bottom: 5px;
+  flex: 0 0 100%;
+  order: 2;
+  border-radius: 10px;
+  overflow: hidden;
+}
+@media screen and (min-width: 1260px) {
+  .contact-messages__container {
+    order: 1;
+  }
+}
+.contact-details__container {
+  order: 1;
+}
 @media screen and (min-width: 1260px) {
   .contact-details__container {
     max-width: 1200px;
@@ -1900,6 +1915,7 @@ h1 {
 .contact-form__container {
   display: flex;
   flex: 0 0 100%;
+  order: 3;
   margin: 0 auto 0 0;
   background-color: #e6e7e9;
   border-radius: 10px;
